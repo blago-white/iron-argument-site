@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Железный аргумент</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, target-densitydpi=device-dpi">
+
+    <link type="text/css" rel="stylesheet" href="../static/css/base.css">
+    <link type="text/css" rel="stylesheet" href="../static/css/main.css">
+    <link type="text/css" rel="stylesheet" href="../static/css/second-section.css">
+</head>
+<body>
+    <div style="
+        position: sticky;
+        top: 0px;
+    "><img class="hero-bg" style="position: absolute;z-index: -1;filter: brightness(0.5) saturate(0.5);width: -webkit-fill-available;top: 0px;" src="../static/img/bg.png"></div>
+    <div style="
+    position: sticky;
+    height: 0px;
+    top: 0px;
+    z-index: 998;
+">
+        <div style="
+            position: sticky;
+            height: 30vh;
+            width: 100%;
+            background: linear-gradient(180deg, rgb(0 0 0 / 90%) 10%, rgba(0, 0, 0, 0) 82%);
+            top: 0px;
+            z-index: 998;
+            pointer-events: none;
+        "></div>
+    </div>
+    <div style="
+        height: 0px;
+        position: sticky;
+        top: 100vh;
+        display: flex;
+        align-items: flex-end;
+        z-index: 10000;
+    ">
+        <span style="
+        padding: 25px;
+        padding-inline: var(--w-col);
+        color: rgb(255, 255, 255, .5);
+        width: 100vw;
+        text-align: right;
+    ">ИП "Логинов Богдан Николаевич" ИНН: 312348585325</span>
+    </div>
+
+    <div class="cookie-agr-wrapper" id="cookiesAgr">
+        <div class="cookie-agr"><span style="
+            max-width: 30ch;
+            color: rgb(255 255 255 / 75%);
+        ">Продолжая пользоваться сайтом, вы принимаете использование куки.</span>
+            <button class="cookie-btn" onclick="this.parentElement.classList.add('hidden');setCookie('agree-cookie', 1);">
+                X
+            </button>
+        </div>
+    </div>
+    <div id="loaderScreen" style="position: sticky;top: 0px;left: 0px;width: 100vw;height: 0px;z-index: 10000;opacity: 1;pointer-events: none;transition: all 2s ease;">
+        <div id="loaderScreenBg" style="height: 90vh;background: #121212;display: flex;align-items: self-end;padding: 5vh;padding-left: 8.33vw;transition: all 2s ease;">
+            <img src="../static/img/big-logo.png">
+        </div>
+    </div>
+    <header style="position: sticky;top: 7.5vh;z-index: 1000;">
+        <div class="h-logo">
+            <a href="/" style="display: flex;align-items: flex-start;grid-row: 1;grid-column: 1;justify-content: flex-start;height: fit-content;">
+                <img class="h-logo-img" src="../static/img/logo.png">
+            </a>
+            <img class="h-logo-shadow a" src="../static/img/logo-shadow-1.png">
+            <img class="h-logo-shadow b" src="../static/img/logo-shadow-2.png">
+        </div>
+        <nav class="h-nav">
+            <a href="#products">Каталог</a>
+            <a href="#about">О нас</a>
+            <a href="#order">Заказать</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+        <img class="h-bl" src="../static/img/bl.png" style="opacity: .5;">
+        <a class="bucket" style="font-family: monospace;">0
+        <img src="https://cdn-icons-png.flaticon.com/512/2077/2077502.png" style="width: 2ch;filter: invert(1);opacity: .5;">
+        </a>
+    </header>
+    <main>
+        Текст
+    </main>
+    <script src="../static/js/utils.js"></script>
+    <script src="../static/js/cookies.js"></script>
+</body>
+</html>

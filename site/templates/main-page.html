@@ -1,0 +1,415 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Железный аргумент</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, target-densitydpi=device-dpi">
+
+    <link type="text/css" rel="stylesheet" href="../static/css/base.css">
+    <link type="text/css" rel="stylesheet" href="../static/css/main.css">
+    <link type="text/css" rel="stylesheet" href="../static/css/second-section.css">
+</head>
+<body>
+    <div style="
+        position: sticky;
+        top: 0px;
+    "><img class="hero-bg" style="position: absolute;z-index: -1;filter: brightness(0.5) saturate(0.5);width: -webkit-fill-available;top: 0px;" src="../static/img/bg.png"></div>
+    <div style="
+    position: sticky;
+    height: 0px;
+    top: 0px;
+    z-index: 998;
+">
+        <div style="
+            position: sticky;
+            height: 30vh;
+            width: 100%;
+            background: linear-gradient(180deg, rgb(0 0 0 / 90%) 10%, rgba(0, 0, 0, 0) 82%);
+            top: 0px;
+            z-index: 998;
+            pointer-events: none;
+        "></div>
+    </div>
+    <div style="
+        height: 0px;
+        position: sticky;
+        top: 100vh;
+        display: flex;
+        align-items: flex-end;
+        z-index: 10000;
+    ">
+        <span style="
+        padding: 25px;
+        padding-inline: var(--w-col);
+        color: rgb(255, 255, 255, .5);
+        width: 100vw;
+        text-align: right;
+    ">ИП "Логинов Богдан Николаевич"</span>
+    </div>
+
+    <div class="cookie-agr-wrapper" id="cookiesAgr">
+        <div class="cookie-agr"><span style="
+            max-width: 30ch;
+            color: rgb(255 255 255 / 75%);
+        ">Продолжая пользоваться сайтом, вы принимаете использование куки.</span>
+            <button class="cookie-btn" onclick="this.parentElement.classList.add('hidden');setCookie('agree-cookie', 1);">
+                X
+            </button>
+        </div>
+    </div>
+    <div class="cookie-agr-wrapper" id="notification" style="visibility: hidden;">
+        <div class="cookie-agr" id="notificationContent">
+            <span id="notificationTextContent" style="
+                max-width: 30ch;
+                color: rgb(255 255 255 / 75%);
+            "></span>
+            <button class="cookie-btn" onclick="this.parentElement.parentElement.style.visibility = 'hidden';">
+                X
+            </button>
+        </div>
+    </div>
+    <div id="loaderScreen" style="position: sticky;top: 0px;left: 0px;width: 100vw;height: 0px;z-index: 10000;opacity: 1;pointer-events: none;transition: all 2s ease;">
+        <div id="loaderScreenBg" style="height: 90vh;background: #121212;display: flex;align-items: self-end;padding: 5vh;padding-left: 8.33vw;transition: all 2s ease;">
+            <img src="../static/img/big-logo.png">
+        </div>
+    </div>
+    <div style="height: 0px;">
+        <img src="../static/img/yellow-glow.png" id="cursor" style="position: fixed;top: -9vw;left: -10vw;width: 20vw;opacity: 0;z-index: 1000;filter: blur(50px);transition: opacity 1s ease;">
+    </div>
+    <header style="position: sticky;top: 7.5vh;z-index: 1000;">
+        <div class="h-logo">
+            <a href="/" style="display: flex;align-items: flex-start;grid-row: 1;grid-column: 1;justify-content: flex-start;height: fit-content;">
+                <img class="h-logo-img" src="../static/img/logo.png">
+            </a>
+            <img class="h-logo-shadow a" src="../static/img/logo-shadow-1.png">
+            <img class="h-logo-shadow b" src="../static/img/logo-shadow-2.png">
+        </div>
+        <nav class="h-nav">
+            <a href="#products">Каталог</a>
+            <a href="#about">О нас</a>
+            <a href="#order">Заказать</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+        <img class="h-bl" src="../static/img/bl.png" style="opacity: .5;">
+        <a class="bucket" style="font-family: monospace;">0
+        <img src="https://cdn-icons-png.flaticon.com/512/2077/2077502.png" style="width: 2ch;filter: invert(1);opacity: .5;">
+        </a>
+    </header>
+    <main class="main-screen-content" id="hero" style="position: sticky;top: 18.7vh;z-index: 1;">
+        <div class="hero-info-islands">
+            <span class="hero-info-island">г. Белгород</span>
+            <span class="hero-info-island">+7 995 248 17 51</span>
+        </div>
+
+        <h1>
+            Железный
+            <span class="second-word"><span class="second-word-shifter">— </span>Аргумент.</span>
+        </h1>
+
+        <h2 class="dealer-content">
+            <img src="../static/img/pmlogo.png" class="pm-logo">
+            <img src="../static/img/pmdash.png" class="pm-dash" style="opacity: .8;">
+            <span class="dealer-text">
+                Оффициальный диллер продукции “НПО Промет”.
+            </span>
+        </h2>
+
+        <div class="target-action-form">
+            <aside class="main-desc">
+                <img src="../static/img/Frame 78.png">
+                <p class="target-action-desc">
+                    У нас — Широчайший ассортимент металлической мебели.<br>От сейфов до гардеробных.<br>Лучшие цены, полный цикл услуг.
+                </p>
+            </aside>
+
+            <button class="order-btn" onclick="document.getElementById('products').scrollIntoView();">
+                Подобрать <img src="../static/img/arrow.png" style="width: 3ch;margin-left: auto;">
+            </button>
+        </div>
+
+        <img src="../static/img/ellp.png" class="ellp a">
+        <img src="../static/img/ellp-2.png" class="ellp b">
+
+        <div class="gear b parallaxed-mouse" style="width: 0px;height: 0px;">
+            <img src="../static/img/g.png">
+        </div>
+        <div class="gear a parallaxed-mouse" style="width: 0px;height: 0px;">
+            <img src="../static/img/g.png" class="">
+        </div>
+
+        <div class="gear c parallaxed-mouse" style="width: 0px;height: 0px;">
+            <img src="../static/img/screw.png">
+        </div>
+        <div class="gear d parallaxed-mouse" style="width: 0px;height: 0px;">
+            <img src="../static/img/screw.png" class="">
+        </div>
+
+        <img src="../static/img/safe-s.png" class="safe s">
+        <img src="../static/img/safe.png" class="safe parallaxed-mouse">
+
+    </main>
+    <section class="second-section">
+        <div style="height: 0px;">
+            <img src="../static/img/yellow-glow.png" style="position: absolute;top: -15%;z-index: -1;">
+        </div>
+        <div style="height: 0px;">
+            <img src="../static/img/yellow-glow.png" style="position: absolute;top: 285vh;left: 30%;z-index: -1;">
+        </div>
+        <div style="height: 0px;">
+            <img src="../static/img/white-glow.png" style="position: absolute;top: 15%;left: -75%;z-index: -1;opacity: .5;">
+        </div>
+        <div style="height: 0px;" class="contacts-glow">
+            <img src="../static/img/white-glow.png">
+        </div>
+        <div style="height: 0px;">
+            <img src="../static/img/h-beam.png" class="h-beam a">
+        </div>
+        <div style="height: 0px;">
+            <img src="../static/img/h-beam-2.png" class="h-beam b">
+        </div>
+
+        <div class="gear e parallaxed-mouse" style="width: 0px;height: 0px;">
+            <img src="../static/img/screw.png">
+        </div>
+        <div class="gear f parallaxed-mouse" style="width: 0px;height: 0px;">
+            <img src="../static/img/screw.png" class="">
+        </div>
+
+        <div class="gear g parallaxed-mouse" style="width: 0px;height: 0px;">
+            <img src="../static/img/screw.png" class="">
+        </div>
+
+        <div class="gear h parallaxed-mouse" style="width: 0px;height: 0px;">
+            <img src="../static/img/g.png">
+        </div>
+        <div class="gear i parallaxed-mouse" style="width: 0px;height: 0px;">
+            <img src="../static/img/g.png" class="">
+        </div>
+        <div class="gear k parallaxed-mouse" style="width: 0px;height: 0px;">
+            <img src="../static/img/screw.png" class="">
+        </div>
+        <div class="gear m parallaxed-mouse" style="width: 0px;height: 0px;">
+            <img src="../static/img/g.png" class="">
+        </div>
+
+        <div class="gear j parallaxed-mouse" style="width: 0px;height: 0px;">
+            <img src="../static/img/screw.png" class="">
+        </div>
+        <div class="gear l parallaxed-mouse" style="width: 0px;height: 0px;">
+            <img src="../static/img/g.png" class="">
+        </div>
+
+        <div class="info-table appearence-on-scroll" style="
+            margin-left: 16vw;
+        ">
+            <span class="info-table-header">[ ВИДЫ ПРОДУКЦИИ ]</span>
+            <div class="info-table-data">
+                <span>[1] стеллажи</span>
+                <span>[2] шкафы</span>
+                <span>[3] сейфы</span>
+                <span>[4] гардеробные</span>
+                <span>[5] верстаки</span>
+            </div>
+        </div>
+        <div class="info-table colorized appearence-on-scroll" style="
+            margin-left: auto;
+            margin-top: 8em;
+        ">
+            <span class="info-table-header">[ ГОРОДА ]</span>
+            <div class="info-table-data">
+                <span>[1] Белгород</span>
+                <span>[2] Луганск</span>
+                <span>[3] Краснодар</span>
+                <span>[4] Ростов-На-Дону</span>
+            </div>
+        </div>
+        <h2 class="products-header">
+            <span style="transition: all .25s .25s ease;" class="appearence-on-scroll">В НАЛИЧИИ <span style="color: #E6A96C">РАЗНЫЕ ТИПЫ</span></span> <br>
+            <span style="color: #E6A96C;transition: all .25s .5s ease;" class="appearence-on-scroll">&nbsp;&nbsp;&nbsp;&nbsp;МЕТАЛЛИЧЕСКОЙ МЕДЕЛИ</span>.<br>
+            <span style="transition: all .25s .75s ease;" class="appearence-on-scroll">ПИШИТЕ И ПОДБЕРЕМ</span><br>
+            <span style="transition: all .25s 1s ease;" class="appearence-on-scroll">&nbsp;&nbsp;&nbsp;&nbsp;ВАРИАНТ ПОД ВАС.</span>
+        </h2>
+        <div>
+            <div class="products-slider appearence-on-scroll">
+                <button class="slider-btn" id="arrowRight" style="opacity: 0.25;">←</button>
+                <button class="slider-btn" id="arrowLeft">→</button>
+            </div>
+            <ul class="products appearence-on-scroll" id="products">
+                <li class="product">
+                    <h3 class="product-header">Стеллажи <span class="product-arrow">→</span></h3>
+                    <span class="product-desc">
+                        Разные виды стеллажей, от декоративных до промышленных<br>
+                        <br>
+                        Держат от 500кг до 4000кг<br>
+                        Высота от 160см до 350см
+                    </span>
+                    <div style="z-index: 1001;">
+                        <img src="../static/img/stellazh.png" style="max-width: 40vw;">
+                    </div>
+                    <button class="product-order" onclick="setPicked(document.getElementById('shelf'));document.getElementById('order').scrollIntoView();">Подобрать</button>
+                    <span style="font-size: 15px;padding-top: 15px;opacity: .5;">STANDART / SB / SBL / HARD / STRONG</span>
+                </li>
+                <li style="margin-top: 25px;" class="product">
+                    <h3 class="product-header">Шкафы  <span class="product-arrow">→</span></h3>
+                    <span class="product-desc">
+                        Для больниц, разведалок и других целей. Гибкая компоновка.
+                    </span>
+                    <div style="z-index: 1001;">
+                        <img src="../static/img/stellazh.png" style="max-width: 40vw;">
+                    </div>
+                    <button class="product-order" onclick="setPicked(document.getElementById('wardrobe'));document.getElementById('order').scrollIntoView();">Подобрать</button>
+                </li>
+                <li style="margin-top: 50px;" class="product">
+                    <h3 class="product-header">Сейфы  <span class="product-arrow">→</span></h3>
+                    <span class="product-desc">
+                        Разные виды стеллажей, от декоративных до промышленных<br>
+                        <br>
+                        Держат от 500кг до 4000кг<br>
+                        Высота от 160см до 350см
+                    </span>
+                    <div style="z-index: 1001;">
+                        <img src="../static/img/safe-img.png" style="max-width: 40vw;">
+                    </div>
+                    <button class="product-order" onclick="setPicked(document.getElementById('safe'));document.getElementById('order').scrollIntoView();">Подобрать</button>
+                    <span style="font-size: 15px;padding-top: 15px;opacity: .5;">STANDART / SB / SBL / HARD / STRONG</span>
+                </li>
+                <li style="margin-top: 75px;" class="product">
+                    <h3 class="product-header">Гардеробные  <span class="product-arrow">→</span></h3>
+                    <span class="product-desc">
+                        Разные виды стеллажей, от декоративных до промышленных<br>
+                        <br>
+                        Держат от 500кг до 4000кг<br>
+                        Высота от 160см до 350см
+                    </span>
+                    <div style="z-index: 1001;">
+                        <img src="../static/img/stellazh.png" style="max-width: 40vw;">
+                    </div>
+                    <button class="product-order" onclick="setPicked(document.getElementById('dressing'));document.getElementById('order').scrollIntoView();">Подобрать</button>
+                    <span style="font-size: 15px;padding-top: 15px;opacity: .5;">STANDART / SB / SBL / HARD / STRONG</span>
+                </li>
+                <li style="margin-top: 100px;" class="product">
+                    <h3 class="product-header">Верстаки  <span class="product-arrow">→</span></h3>
+                    <span class="product-desc">
+                        Разные виды стеллажей, от декоративных до промышленных<br>
+                        <br>
+                        Держат от 500кг до 4000кг<br>
+                        Высота от 160см до 350см
+                    </span>
+                    <div style="z-index: 1001;">
+                        <img src="../static/img/stellazh.png" style="max-width: 40vw;">
+                    </div>
+                    <button class="product-order" onclick="setPicked(document.getElementById('workbench'));document.getElementById('order').scrollIntoView();">Подобрать</button>
+                    <span style="font-size: 15px;padding-top: 15px;opacity: .5;">STANDART / SB / SBL / HARD / STRONG</span>
+                </li>
+            </ul>
+        </div>
+        <section class="about" id="about">
+            <img src="../static/img/stell.png" class="about-img appearence-on-scroll">
+            <h2 class="about-h appearence-on-scroll">О НАС <span class="about-dates">2023 - 2026</span></h2>
+            <ul class="about-facts">
+                <li class="appearence-on-scroll from-down" style="display: flex;gap: 1ch;"><span style="opacity: .5">(1)</span> Более 200 отзывов на Авито</li>
+                <li class="appearence-on-scroll from-down" style="display: flex;gap: 1ch;"><span style="opacity: .5">(2)</span> Поставляем как в гос. учереждения так и частным лицам</li>
+                <li class="appearence-on-scroll from-down" style="display: flex;gap: 1ch;"><span style="opacity: .5">(3)</span> Поставляем и собираем любые обьемы</li>
+                <li class="appearence-on-scroll from-down" style="display: flex;gap: 1ch;"><span style="opacity: .5">(4)</span> Работаем в 4-х городах России</li>
+            </ul>
+        <div class="about-links">
+            <a class="circle-link appearence-on-scroll from-down">Мы на картах <img src="../static/img/yandex-maps-logo.svg"></a>
+            <a class="circle-link appearence-on-scroll from-down">Отзывы на авито (65) <img src="../static/img/avito-logo.png"></a>
+        </div>
+        </section>
+        <section class="contacts" id="order">
+            <div class="contacts-image-wrapper">
+                <iframe src="https://yandex.ru/map-widget/v1/?ll=36.629611%2C50.591120&amp;mode=search&amp;ol=biz&amp;oid=133965224684&amp;z=17" width="100%" height="100%" frameborder="0" allowfullscreen="" class="w-full h-full min-h-[400px] grayscale hover:grayscale-0 transition-all duration-500" title="Карта расположения зала Режим"></iframe>
+            </div>
+            <div class="contact-content">
+<!--                <h2 class="about-h contacts-h">-->
+<!--                    <span class="appearence-on-scroll from-down" style="display: block;transition: all 1s ease;">МЫ НАЙДЕМ</span>-->
+<!--                    <span class="appearence-on-scroll from-down" style="display: block;transition: all 1s .25s ease;">РЕШЕНИЕ</span>-->
+<!--                    <span class="appearence-on-scroll from-down h-colorized" style="display: block;transition: all 1s .5s ease;">ДЛЯ ВАС!</span>-->
+<!--                </h2>-->
+                <h2 class="about-h contacts-h">
+                    <span class="appearence-on-scroll from-down" style="transition: all 1s ease;display: flex;align-items: center;justify-content: center;gap: 25px;"><span class="" style="display: block;transition: all 1s ease;min-width: fit-content;">МЫ НАЙДЕМ</span><span style="height: 5px;background: #ffffff10;width: -webkit-fill-available;"></span></span>
+                    <span class="appearence-on-scroll from-down" style="transition: all 1s ease;display: flex;align-items: center;flex-direction: row-reverse;gap: 25px;"><span style="height: 5px;background: #ffffff10;width: -webkit-fill-available;"></span><span class="" style="display: block;transition: all 1s .25s ease;">РЕШЕНИЕ</span></span>
+                    <span class="appearence-on-scroll from-down" style="transition: all 1s ease;display: flex;align-items: center;gap: 25px;"><span style="height: 5px;background: #ffffff10;width: -webkit-fill-available;"></span><span class="h-colorized" style="display: block;transition: all 1s .5s ease;min-width: fit-content;">ДЛЯ ВАС!</span></span>
+                </h2>
+
+                <form class="appearence-on-scroll from-down">
+                    <div class="contact-type-switch" style="margin-bottom: 19px;">
+                        <div>
+                            <button type="button" class="contect-type-switch-btn active" id="shelf">Стеллажи</button>
+                            <button type="button" class="contect-type-switch-btn" id="wardrobe">Шкафы</button>
+                            <button type="button" class="contect-type-switch-btn" id="safe">Сейфы</button>
+                            <button type="button" class="contect-type-switch-btn" id="dressing">Гардеробные</button>
+                            <button type="button" class="contect-type-switch-btn" id="workbench">Верстаки</button>
+                        </div>
+                    </div>
+
+                    <div class="contact-type-switch">
+                        <div>
+                            <button type="button" class="contect-type-switch-btn active" id="switchPH" onclick="if (!this.classList.contains('active')) {document.getElementById('contactDataWrapper').innerHTML = `<input type='tel' maxlength='12' placeholder='+7 999 123 45 67' required>`;}">Телефон</button>
+                            <button type="button" class="contect-type-switch-btn" id="switchTG" onclick="if (!this.classList.contains('active')) {document.getElementById('contactDataWrapper').innerHTML = `<input type='username' placeholder='@UserName' required></input>`;}">Телеграм</button>
+                        </div>
+                    </div>
+
+                    <div class="contacts-field-set">
+                        <div id="contactDataWrapper">
+                            <input type="tel" maxlength="12" placeholder="+7 999 123 45 67" required>
+                        </div>
+                        <input type="text" maxlength="30" placeholder="Как вас зовут?" required>
+                    </div>
+
+                    <label class="contacts-disclaimer">Нажимая кнопку "Перезвонить мне!" вы соглашаетесь с политикой обработки данных</label>
+                    <button type="button" class="product-order" onclick="showNotification('Спасибо, мы перезвоним в течении 24 часов!')" style="width: max-content;width: auto;">Перезвоните мне!</button>
+                    <label class="contacts-disclaimer" style="margin-inline: auto;">+7 995 248 17 51 · bogdanloginov31@gmail.com</label>
+                    <!--                    <button type="submit" class="product-order" style="width: auto;background: transparent;color: #c68a51 !important;-webkit-text-fill-color: #c68a51 !important;">-->
+<!--                        +7 995 248 17 51-->
+<!--                    </button>-->
+                </form>
+            </div>
+        </section>
+        <aside id="contacts">
+            <h2>
+                <span class="about-h comment-h appearence-on-scroll from-down">В ОБЩЕМ, </span>
+                <span class="about-h comment-h appearence-on-scroll from-down h-colorized" style="display: block;margin-left: 0px;transition-delay: .5s;">ПОДБЕРЕМ, ДОСТАВИМ, СОБЕРЕМ</span>
+                <span class="about-h comment-h appearence-on-scroll from-down" style="transition-delay: 1s;">МЕБЕЛЬ КОТОРАЯ ВАМ НУЖНА.</span>
+            </h2>
+            <div style="display: flex;flex-wrap: wrap;">
+                <div class="contacts-link-list appearence-on-scroll from-down">
+                    <a class="circle-link" href="tel:+79952481751" style="width: 7vw;flex-direction: column;gap: 5px;">Telegram<img src="../static/img/tg.png" style="width: 4ch;padding: 0px;opacity: .5;"></a>
+                    <a class="circle-link" href="tel:+79952481751"  style="width: 7vw;flex-direction: column;gap: 5px;">VK<img src="../static/img/vk.png" style="width: 4ch;padding: 0px;opacity: .5;"></a>
+                    <a class="circle-link" href="tel:+79952481751" style="width: 7vw;flex-direction: column;gap: 5px;">+7 995 248 17 51<img src="../static/img/phone.png" style="width: 3ch;padding: 0px;opacity: .5;"></a>
+                </div>
+                <ul style="margin-top: 10vh;display: flex;flex-direction: column;padding: 0px;" class="about-facts">
+                    <li class="appearence-on-scroll from-down"><a href="https://yandex.ry" style="text-decoration: none;gap: 2ch;display: flex;align-items: center;"><span style="opacity: .25;">(1)</span> г. Белгород, ул. Карачанская, 132А, корпус 5 <img src="../static/img/expand-arrow.png" style="width: 1ch;filter: invert(1);"></a></li>
+                    <li class="appearence-on-scroll from-down"><a href="https://yandex.ry" style="text-decoration: none;gap: 2ch;display: flex;align-items: center;"><span style="opacity: .25;">(2)</span> г. Белгород, ул. Карачанская, 132А, корпус 5 <img src="../static/img/expand-arrow.png" style="width: 1ch;filter: invert(1);"></a></li>
+                    <li class="appearence-on-scroll from-down"><a href="https://yandex.ry" style="text-decoration: none;gap: 2ch;display: flex;align-items: center;"><span style="opacity: .25;">(3)</span> г. Белгород, ул. Карачанская, 132А, корпус 5 <img src="../static/img/expand-arrow.png" style="width: 1ch;filter: invert(1);"></a></li>
+                    <li class="appearence-on-scroll from-down"><a href="https://yandex.ry" style="text-decoration: none;gap: 2ch;display: flex;align-items: center;"><span style="opacity: .25;">(4)</span> г. Белгород, ул. Карачанская, 132А, корпус 5 <img src="../static/img/expand-arrow.png" style="width: 1ch;filter: invert(1);"></a></li>
+                </ul>
+            </div>
+        </aside>
+        <footer class="appearence-on-scroll">
+            <div style="height: 0px;display: flex;align-items: flex-start;justify-content: center;">
+                <img class="footer-img appearence-on-scroll from-down" src="../static/img/safe.png">
+            </div>
+            <div class="footer-glow-wrapper">
+                <img src="../static/img/white-glow.png">
+            </div>
+            <div style="margin-bottom: 5px;"><a>Политика конфиденциальности</a></div>
+    <!--        <img src="../static/img/big-logo.png">-->
+            <div style="margin-bottom: 5px;">ОГРНИП: 323310000063180</div>
+            <div style="margin-bottom: 5px;">юр. адрес | г. Белгород, ул Губкина, д 2, кв 74</div>
+
+            <span class="footer-big-text">ЖЕЛЕЗНЫЙ<br>АРГУМЕНТ</span>
+            <span style="margin-bottom: 5px;">Сайт не является публичной офертой!</span>
+            <span style="z-index: 100;width: 40ch;">Хотите такой же красивый сайт? Обращайтесь: @VictorMerinov</span>
+        </footer>
+    </section>
+    <script src="../static/js/utils.js"></script>
+    <script src="../static/js/cookies.js"></script>
+    <script src="../static/js/notification.js"></script>
+
+    <script src="../static/js/cursor.js"></script>
+    <script src="../static/js/contactForm.js"></script>
+</body>
+</html>
