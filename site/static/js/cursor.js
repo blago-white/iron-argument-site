@@ -15,6 +15,6 @@ document.addEventListener('mousemove', function(ev){
     if (ev.target.tagName.toLowerCase() === 'button' || ev.target.tagName.toLowerCase() === 'a') {
         cursor.style.opacity = 0;
     } else {
-        cursor.style.opacity = .3;
+        cursor.style.opacity = .5;
     }
 },false);

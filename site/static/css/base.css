@@ -84,8 +84,13 @@ a {
     color: rgb(255, 255, 255, .75);
 }
 
+a:hover {
+    text-decoration: underline!important;
+}
+
 body::selection {
-    background: black;
+    background: #E6A96C50;
+    color: #121212;
 }
 
 header {
@@ -227,6 +232,8 @@ header {
     margin-bottom: 0px;
     mix-blend-mode: hard-light;
 
+    text-shadow: 0px 0px 44px black;
+
     animation: 1s ease 0s 1 appearance;
 }
 
@@ -240,7 +247,7 @@ main {
 
 .gear {
     position: absolute;
-
+    z-index: 10000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -389,11 +396,13 @@ main {
     padding: 21.5px;
     padding-inline: 35px;
     background: rgb(10, 10, 10, .75);
-    color: #e0e0e0;
+    color: #E6A96C;
+
+    text-shadow: 0px 0px 20px #E6A96C50;
 }
 
 .order-btn:hover img {
-    filter: invert(1);
+    filter: invert(0.6) sepia(1) saturate(1.5);
 }
 
 .main-desc {
@@ -536,7 +545,7 @@ main {
     }
 
     .h-nav {
-        font-size: 15px;
+        font-size: 16px;
         text-align: center;
     }
 
@@ -552,11 +561,15 @@ main {
     }
 
     .safe, .safe-s {
-        display: none;
+        z-index: -1;
+        left: 0vw;
+        height: 83vh;
+        top: 19vh;
+        width: auto;
     }
 
     .target-action-desc {
-        font-size: 20px;
+        font-size: 16px;
         line-height: 1.1;
         font-weight: 500;
         opacity: .9;

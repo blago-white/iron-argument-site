@@ -12,7 +12,7 @@ if (ratio < 1) {
     defaultProductsListShift = '2em';
     sliderStep = 10;
     sliderBorderLeft = 0;
-    sliderBorderRight = 50;
+    sliderBorderRight = 65;
 }
 
 document.addEventListener('DOMContentLoaded', function() {
