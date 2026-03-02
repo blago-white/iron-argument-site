@@ -24,11 +24,12 @@
     display: flex;
     flex-direction: column;
 
-    background: #34333390;
+    background: #12121290;
     border-radius: 40px;
     width: max-content;
-    font-size: 25px;
-    outline: 3px solid #fff5;
+    font-size: 20px;
+    outline: 2px solid #96969650;
+    /*outline: 3px solid #fff5;*/
     min-width: 25ch;
 
     animation: 1s ease 0s 1 appearance;
@@ -47,10 +48,10 @@
     display: flex;
     flex-direction: column;
     padding: 25px;
-    outline: 3px solid #fff9;
+    outline: 2px solid #96969650;
     border-radius: 40px;
     color: rgb(256, 256, 256, .8);
-    background: #343333;
+    background: #121212;
 
     transition: all .2s ease;
 }
@@ -231,7 +232,10 @@ h2 {
     font-size: 25px;
 
     background: #121212;
-    height: fit-content;
+
+    height: 70vh;
+    min-height: fit-content;
+
     box-shadow: inset 3px 3px 20px #84848425;
     transition: all .2s ease;
 }
@@ -263,6 +267,8 @@ h2 {
     -webkit-text-fill-color: transparent;
 
     width: max-content;
+
+    letter-spacing: -2px;
 }
 
 .product-desc {
@@ -913,6 +919,7 @@ footer.appearence-on-scroll {
 
     .footer-info-row {
         flex-direction: column;
+        align-items: flex-start;
     }
 
     .contacts-link-list {
@@ -1023,13 +1030,14 @@ footer.appearence-on-scroll {
 
     .about {
         gap: 5vh;
-        margin-top: 0px;
+        margin-top: 10vh;
     }
 
     .about-h {
         font-size: 30px;
         margin-left: 0px;
         line-height: normal;
+        padding-inline: 0px;
     }
 
     .about-facts {
@@ -1042,16 +1050,16 @@ footer.appearence-on-scroll {
     }
 
     .about-img {
-        height: 27vh;
-        width: auto;
-        left: var(--w-col);
-        top: 218vh;
+        height: 78vh;
+        left: 0px;
+        top: 90.5rem;
         z-index: -1;
-        opacity: .5;
+        opacity: .2;
+        filter: grayscale(1) brightness(0.25);
     }
 
     .info-table {
-        font-size: 18px;
+        font-size: 15px;
         margin-left: 0px!important;
     }
 
@@ -1073,14 +1081,20 @@ footer.appearence-on-scroll {
 
 
     .products {
-        margin-left: 2em;
         gap: 30px;
         padding-top: 0px;
         margin-top: 0px;
+
+        overflow-x: scroll;
+        width: 100vw;
+        margin-left: 0px !important;
+        position: relative;
+        left: calc(-1 * var(--w-col));
+        padding-left: calc(2 * var(--w-col));
     }
 
     .products-slider {
-        padding-left: var(--w-col);
+        display: none
     }
 
    .slider-btn {
@@ -1100,6 +1114,11 @@ footer.appearence-on-scroll {
         padding: 15px;
         border-radius: 25px;
         min-width: 50vw;
+        height: 50vh;
+    }
+
+    .product img {
+        max-height: 25vh!important;
     }
 
     .product-order {
@@ -1133,7 +1152,7 @@ footer.appearence-on-scroll {
 
     .contacts-image-wrapper {
         width: auto;
-        height: 50vh;
+        height: 25vh;
         filter: grayscale(100%);
         border-radius: 25px 25px 0px 0px;
     }
@@ -1151,6 +1170,7 @@ footer.appearence-on-scroll {
         margin-top: 5vh;
         width: auto;
         padding: 0px;
+        background: transparent;
     }
 
     .contacts-glow img {
@@ -1161,7 +1181,15 @@ footer.appearence-on-scroll {
 
     .about-links {
         padding-left: 8.66vw;
-        flex-direction: column;
         margin-left: auto;
+    }
+
+    .info-table-data, .info-table {
+        border-radius: 25px;
+    }
+
+    .site-dev-btn {
+        font-size: 13px;
+        width: -webkit-fill-available;
     }
 }
