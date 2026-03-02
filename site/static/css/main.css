@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Unbounded';
-  src: url('fonts/Unbounded-Light.ttf') format('truetype');
+  src: url('../fonts/Unbounded-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'Unbounded';
-  src: url('fonts/Unbounded-Regular.ttf') format('truetype');
+  src: url('../fonts/Unbounded-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'Unbounded';
-  src: url('fonts/Unbounded-Medium.ttf') format('truetype');
+  src: url('../fonts/Unbounded-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: 'Unbounded';
-  src: url('fonts/Unbounded-SemiBold.ttf') format('truetype');
+  src: url('../fonts/Unbounded-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
   font-family: 'Unbounded';
-  src: url('fonts/Unbounded-Bold.ttf') format('truetype');
+  src: url('../fonts/Unbounded-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -40,7 +40,7 @@
 
 @font-face {
   font-family: 'Unbounded';
-  src: url('fonts/Unbounded-Black.ttf') format('truetype');
+  src: url('../fonts/Unbounded-Black.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -49,7 +49,7 @@
 /* Шрифт Helvetica */
 @font-face {
   font-family: 'Helvetica';
-  src: url('fonts/helvetica_regular.ttf') format('truetype');
+  src: url('../fonts/helvetica_regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -57,7 +57,7 @@
 
 @font-face {
   font-family: 'Helvetica';
-  src: url('fonts/helvetica_oblique.ttf') format('truetype');
+  src: url('../fonts/helvetica_oblique.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -65,7 +65,7 @@
 
 @font-face {
   font-family: 'Helvetica';
-  src: url('fonts/helvetica_light.ttf') format('truetype');
+  src: url('../fonts/helvetica_light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -73,7 +73,7 @@
 
 @font-face {
   font-family: 'Helvetica';
-  src: url('fonts/helvetica_lightoblique.ttf') format('truetype');
+  src: url('../fonts/helvetica_lightoblique.ttf') format('truetype');
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -81,7 +81,7 @@
 
 @font-face {
   font-family: 'Helvetica';
-  src: url('fonts/helvetica_bold.ttf') format('truetype');
+  src: url('../fonts/helvetica_bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -89,7 +89,7 @@
 
 @font-face {
   font-family: 'Helvetica';
-  src: url('fonts/helvetica_boldoblique.ttf') format('truetype');
+  src: url('../fonts/helvetica_boldoblique.ttf') format('truetype');
   font-weight: 700;
   font-style: italic;
   font-display: swap;
@@ -97,7 +97,7 @@
 
 @font-face {
   font-family: 'Helvetica';
-  src: url('fonts/helvetica_cyr_boldoblique.ttf') format('truetype');
+  src: url('../fonts/helvetica_cyr_boldoblique.ttf') format('truetype');
   font-weight: 700;
   font-style: italic;
   font-display: swap;
