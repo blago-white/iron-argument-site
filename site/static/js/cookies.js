@@ -1,11 +1,11 @@
-function getCookie(name) {
+export function getCookie(name) {
     let matches = document.cookie.match(new RegExp(
       "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
     ));
     return matches ? decodeURIComponent(matches[1]) : undefined;
 };
 
-function setCookie(name, value, options = {}) {
+export function setCookie(name, value, options = {}) {
     options = {
         path: '/',
         ...options
@@ -34,3 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('cookiesAgr').remove();
     }
 })
+
+
+window.setCookie = setCookie;
+window.getCookie = getCookie;

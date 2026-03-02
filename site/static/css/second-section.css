@@ -391,6 +391,14 @@ h2 {
     transition: all 1s .75s ease;
 }
 
+.about-facts li:nth-child(5) {
+    transition: all 1s 1s ease;
+}
+
+.about-facts li:nth-child(6) {
+    transition: all 1s 1.25s ease;
+}
+
 .small-link {
     background: rgb(255, 255, 255, .1);
     color: rgb(255, 255, 255, .75);
@@ -435,7 +443,6 @@ h2 {
 .contacts {
     margin-inline: auto;
     position: relative;
-    overflow: hidden;
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -588,7 +595,7 @@ h2 {
 
 .contacts-image-wrapper {
     width: 50vw;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -653,19 +660,19 @@ h2 {
 footer {
     display: flex;
     flex-direction: column;
-    background: #000;
+    background: #121212;
     color: rgb(255, 255, 255, .5);
     position: relative;
     z-index: 1000;
     overflow: hidden;
     padding: 25px;
     padding-inline: var(--w-col);
-    height: 75vh;
+    height: 65vh;
     border-radius: 100px 100px;
     margin-inline: auto;
     width: 69vw;
     margin-top: 30vh;
-    box-shadow: 0px 0px 280px #ffffff40;
+    box-shadow: 0px 0px 280px #ffffff20;
     max-width: -webkit-fill-available;
     transition: all 1s 1s ease;
 }
@@ -692,6 +699,7 @@ footer.appearence-on-scroll {
     margin-block: auto;
     text-align: center;
     line-height: 1;
+    mix-blend-mode: difference;
 }
 
 .footer-glow-wrapper {
@@ -762,12 +770,12 @@ footer.appearence-on-scroll {
 }
 
 .contacts-glow img {
-    position: absolute;
-    top: 430vh;
-    left: 0%;
-    width: 100vw;
+    position: relative;
+    left: 10vw;
+    top: -32vh;
+    width: 68vw;
     z-index: -1;
-    opacity: .5;
+    opacity: .3;
 }
 
 .doc-wrapper {
@@ -878,10 +886,27 @@ footer.appearence-on-scroll {
     display: flex;
     justify-content: space-between;
     gap: 5px;
+    align-items: flex-end;
+    z-index: 10;
+    mix-blend-mode: plus-lighter;
 }
 
+.rays.a {
+    position: absolute;
+    top: -4%;
+    z-index: -1;
+    height: 238vh;
+    rotate: 180deg;
+    left: 25vw;
+}
 
 @media (aspect-ratio < 1/1) {
+    .rays.a {
+        top: 0%;
+        height: 121vh;
+        left: -48vw;
+    }
+
     .contacts {
         margin-top: 20vh;
     }
@@ -917,7 +942,10 @@ footer.appearence-on-scroll {
     }
 
     .footer-glow-wrapper img {
-        height: 100vh;
+        top: 4vh !important;
+        height: 75vh;
+        width: auto !important;
+        opacity: .5 !important;
     }
 
     footer {
@@ -1126,9 +1154,9 @@ footer.appearence-on-scroll {
     }
 
     .contacts-glow img {
-        width: 200vw;
-        left: -100vw;
-        top: 403vh;
+        width: 240vw;
+        left: -75vw;
+        top: -22vh;
     }
 
     .about-links {
