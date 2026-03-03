@@ -560,7 +560,7 @@ h2 {
 .contact-content {
     display: flex;
     flex-direction: column;
-    background: rgb(0, 0, 0, .5);
+    background: #12121290;
     justify-content: space-between;
     padding-bottom: 5vw;
     min-width: 45em;
@@ -971,9 +971,8 @@ footer.appearence-on-scroll {
         height: 0px;
         position: sticky;
         top: 10px;
-        left: 26vw;
+        left: 1px;
         z-index: 10;
-        width: 0px;
     }
 
     #aboutGlow img {
@@ -1033,7 +1032,7 @@ footer.appearence-on-scroll {
 
     footer {
         border-radius: 25px;
-        margin-bottom: 25vh;
+        margin-bottom: 10vh;
         padding-inline: 25px;
         width: -webkit-fill-available;
         font-size: 15px;
@@ -1132,8 +1131,6 @@ footer.appearence-on-scroll {
         z-index: 1;
         opacity: 1;
         filter: none;
-        padding-block: 38px;
-        border-radius: 30px;
     }
 
     .about-img:nth-child(1) {
@@ -1217,6 +1214,7 @@ footer.appearence-on-scroll {
         grid-template-columns: 1fr;
         height: max-content;
         border-radius: 25px;
+        box-shadow: 0px 0px 40px #ffffff50;
     }
 
     .contect-type-switch-btn {
@@ -1290,13 +1288,18 @@ footer.appearence-on-scroll {
     }
 
     .about-galery {
-        flex-direction: row;
+        flex-direction: column;
         grid-row: 4;
-        overflow-y: hidden;
+        overflow-y: scroll;
         overflow-x: scroll;
         position: relative;
-        width: 100vw;
+        width: 60vw;
+        height: 55vh;
         max-width: 84vw;
+        border-radius: 40px;
         background: #121212;
+        margin-inline: auto;
+        rotate: -5deg;
+        box-shadow: 0px 0px 40px #ffffff50;
     }
 }
