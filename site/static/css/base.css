@@ -368,7 +368,7 @@ main {
 }
 
 .order-btn {
-    background: #E6A96C;
+    background: radial-gradient(circle, rgba(230, 169, 108, 1) 0%, rgb(132 91 52) 100%);
     border-radius: 30px;
     padding: 20px;
     display: flex;
@@ -383,7 +383,7 @@ main {
     width: 100%;
     cursor: pointer;
 
-    box-shadow: inset 5px 5px 13px #00000050;
+    box-shadow: inset 5px 5px 13px #00000050, 0px -10px 50px #e6a96c90;
 
     transition: all .2s ease;
     /* border-top-left-radius: 0px; */
@@ -397,7 +397,7 @@ main {
     padding-inline: 35px;
     background: rgb(10, 10, 10, .75);
     color: #E6A96C;
-
+    box-shadow: inset 5px 5px 13px #00000050;
     text-shadow: 0px 0px 20px #E6A96C50;
 }
 

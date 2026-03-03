@@ -289,7 +289,7 @@
 <!--<div id="cursor" style="position: fixed;top: 0vw;left: 0vw;width: 20vw;opacity: 0.5;z-index: 1000;/* filter: blur(50px); *//* transition: opacity 1s; */transform: translateY(362px) translateX(938px);background: #fd9f40;width: 50px;height: 50px;border-radius: 50%;z-index: 1999999;"></div>-->
         <img src="../static/img/yellow-glow.png" id="cursor" style="position: fixed;top: -9vw;left: -10vw;width: 20vw;opacity: 0;z-index: 1000;filter: blur(50px);transition: opacity 1s ease;">
     </div>
-    <header style="position: sticky;top: 7.5vh;z-index: 1000;">
+    <header style="position: sticky;top: 5vh;z-index: 1000;">
         <div class="h-logo">
             <a href="/" style="display: flex;align-items: flex-start;grid-row: 1;grid-column: 1;justify-content: flex-start;height: fit-content;">
                 <img class="h-logo-img" src="../static/img/logo.png">
@@ -368,7 +368,7 @@
             <img src="../static/img/yellow-glow.png" style="position: absolute;top: 285vh;left: 30%;z-index: -1;">
         </div>
         <div style="height: 0px;">
-            <img src="../static/img/white-glow.png" style="position: absolute;top: 15%;left: -75%;z-index: -1;opacity: .5;">
+            <img src="../static/img/white-glow.png" style="    position: absolute;top: 15%;left: -166%;height: 131vh;z-index: -1;opacity: .5;">
         </div>
         <div style="height: 0px;">
             <img src="../static/img/h-beam.png" class="h-beam a">
@@ -413,11 +413,11 @@
         ">
             <span class="info-table-header">[ ВИДЫ ПРОДУКЦИИ ]</span>
             <div class="info-table-data">
-                <span>[1] стеллажи</span>
-                <span>[2] шкафы</span>
-                <span>[3] сейфы</span>
-                <span>[4] гардеробные</span>
-                <span>[5] верстаки</span>
+                <a href="#products">[1] стеллажи</a>
+                <a href="#products">[2] шкафы</a>
+                <a href="#products">[3] сейфы</a>
+                <a href="#products">[4] гардеробные</a>
+                <a href="#products">[5] верстаки</a>
             </div>
         </div>
         <div class="info-table colorized appearence-on-scroll" style="
@@ -426,12 +426,12 @@
         ">
             <span class="info-table-header">[ ГОРОДА ]</span>
             <div class="info-table-data">
-                <span>[1] Белгород</span>
-                <span>[2] Донецк</span>
-                <span>[3] Екатеринбург</span>
-                <span>[4] Краснодар</span>
-                <span>[5] Луганск</span>
-                <span>[6] Ростов-На-Дону</span>
+                <a href="#contacts">[1] Белгород</a>
+                <a href="#contacts">[2] Донецк</a>
+                <a href="#contacts">[3] Екатеринбург</a>
+                <a href="#contacts">[4] Краснодар</a>
+                <a href="#contacts">[5] Луганск</a>
+                <a href="#contacts">[6] Ростов-На-Дону</a>
             </div>
         </div>
         <h2 class="products-header" id="productsH">
@@ -504,8 +504,17 @@
                 </li>
             </ul>
         </div>
+        <div style="height: 0px;" id="aboutGlow">
+            <img src="../static/img/white-rays.png">
+        </div>
         <section class="about" id="about">
-            <img src="https://s10.iimage.su/s/28/gcIc6pAxj2S8P7KkeoBYhpmTIa3DQ5GWNc8EE0ASO.png" class="about-img appearence-on-scroll">
+            <div class="about-galery">
+                <div style="position: sticky;top: 0px;left: 0px;rotate: -90deg;display: flex;align-items: center;justify-content: center;height: fit-content;margin-block: auto;background: #121212;padding: 5px;">ГАЛЕРЕЯ</div>
+                <img src="https://s10.iimage.su/s/28/gcIc6pAxj2S8P7KkeoBYhpmTIa3DQ5GWNc8EE0ASO.png" class="about-img">
+                <img src="../static/img/example1.webp" class="about-img">
+                <img src="../static/img/example2.webp" class="about-img">
+                <img src="https://s10.iimage.su/s/28/gcIc6pAxj2S8P7KkeoBYhpmTIa3DQ5GWNc8EE0ASO.png" class="about-img">
+            </div>
             <h2 class="about-h appearence-on-scroll"  id="aboutH">О НАС <span class="about-dates">2023 - 2026</span></h2>
             <ul class="about-facts">
                 <li class="appearence-on-scroll from-down" style="display: flex;gap: 1ch;"><span style="opacity: .5">(1)</span> Более 200 отзывов на Авито</li>
@@ -587,7 +596,7 @@
                     <a class="circle-link" href="tel:+79066002377"  style="width: 7vw;flex-direction: column;gap: 5px;">VK<img src="../static/img/vk.png" style="width: 4ch;padding: 0px;opacity: .5;"></a>
                     <a class="circle-link" href="tel:+79066002377" style="width: 7vw;flex-direction: column;gap: 5px;">+7 906 600 23 77<img src="../static/img/phone.png" style="width: 3ch;padding: 0px;opacity: .5;"></a>
                 </div>
-                <ul style="margin-top: 10vh;display: flex;flex-direction: column;padding: 0px;" class="about-facts">
+                <ul style="margin-top: 10vh;display: flex;flex-direction: column;padding: 0px;" class="about-facts" id="adresses">
                     <li class="appearence-on-scroll from-down"><a target="_blank" href="https://yandex.com/maps/org/zhelezny_argument/133965224684/" style="text-decoration: none;gap: 2ch;display: flex;align-items: center;"><span style="opacity: .25;">(1)</span> г. Белгород, ул. Корочанская, 132А, корпус 3<img src="../static/img/expand-arrow.png" style="width: 1ch;filter: invert(1);"></a></li>
                     <li class="appearence-on-scroll from-down"><a target="_blank" href="https://yandex.com/maps/-/CPqVfVOO" style="text-decoration: none;gap: 2ch;display: flex;align-items: center;"><span style="opacity: .25;">(2)</span> г. Краснодар, ул. Калинина 58/13 <img src="../static/img/expand-arrow.png" style="width: 1ch;filter: invert(1);"></a></li>
                     <li class="appearence-on-scroll from-down"><a target="_blank" href="https://yandex.com/maps/-/CPqVfRZg" style="text-decoration: none;gap: 2ch;display: flex;align-items: center;"><span style="opacity: .25;">(3)</span> г. Луганск, Молодёжный квартал, 2А <img src="../static/img/expand-arrow.png" style="width: 1ch;filter: invert(1);"></a></li>
@@ -619,7 +628,11 @@
                 <a onclick="showAgreement();" style="cursor: pointer;">
                     Согласие на обработку данных
                 </a>
-                <div>юр. адрес | г. Белгород, ул Губкина, д 2, кв 74</div>
+                <div>г. Белгород, ул Губкина, д 22, кв 74</div>
+            </div>
+            <div class="footer-info-row">
+                <div></div>
+                <div>ИНН: 312348585325</div>
             </div>
     <!--        <img src="../static/img/big-logo.png">-->
 
