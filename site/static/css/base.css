@@ -179,6 +179,14 @@ header {
 .h-bl {
     width: 50vw;
     max-height: 10vh;
+    pointer-events: all!important;
+
+    transition: all .2s ease;
+}
+
+.h-bl:hover {
+    opacity: 0!important;
+    pointer-events: none!important;
 }
 
 .bucket {
