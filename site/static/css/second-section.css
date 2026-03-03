@@ -230,7 +230,7 @@ h2 {
     border: 2px solid #96969650;
     border-radius: 40px;
     width: 17vw;
-    min-width: 17vw;
+    min-width: max(17vw, 13em);
     padding: 25px;
 
     font-size: 25px;
@@ -271,7 +271,7 @@ h2 {
     -webkit-text-fill-color: transparent;
 
     width: max-content;
-
+    text-shadow: 1px 1px 40px #e6a96c50;
     letter-spacing: -2px;
 }
 
@@ -435,14 +435,44 @@ h2 {
 }
 
 .about-img {
-    filter: grayscale(1);
+    /*filter: grayscale(1);*/
     bottom: 38vh;
     width: auto;
     left: 1vw;
     top: 250vh;
     opacity: .5;
+    margin-bottom: 10px;
 
-    transition: transform 2s .5s ease-in-out, opacity 2s 1s ease;
+    transition: all 1s .5s ease;
+}
+
+.about-img:nth-last-child(1) {
+    margin-bottom: 0px;
+}
+
+.galery-header-text {
+    background: #121212;
+    min-height: 25px;
+    min-width: 100px;
+    display: flex;
+    margin-inline: auto;
+    /* margin-top: 10px; */
+    border-radius: 50px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    font-size: 25px;
+    padding-inline: 20px;
+    color: rgb(255, 255, 255, .75);
+}
+
+.about-galery.appearence-on-scroll {
+    transform: translateY(50%) translateX(-50%) rotate(-20deg);
+}
+
+.about-galery.appearence-on-scroll .about-img {
+    opacity: .1!important;
 }
 
 .about-galery {
@@ -455,11 +485,16 @@ h2 {
     /*scrollbar-width: thin;*/
     grid-row-end: -1;
     max-height: 100vh;
-    gap: 10px;
+    gap: 0px!important;
     rotate: -5deg;
 
     border-radius: 50px;
     outline: 10px solid #121212;
+    background: #121212;
+
+    box-shadow: 0px 0px 80px #ffffff50;
+
+    transition: transform 2s .5s ease-in-out, opacity 2s 1s ease;
 }
 
 .about-galery::-webkit-scrollbar {
@@ -531,6 +566,8 @@ h2 {
     text-decoration: none;
 
     gap: 5px;
+
+    background: #121212;
 
     font-size: 15px;
     height: max-content;
@@ -944,7 +981,7 @@ footer.appearence-on-scroll {
     left: 25vw;
 }
 
-.gallery-header {
+.galery-header {
     height: 0px;
     position: sticky;
     top: 10px;
@@ -968,7 +1005,7 @@ footer.appearence-on-scroll {
         left: -48vw;
     }
 
-    .gallery-header {
+    .galery-header {
         height: 0px;
         position: sticky;
         top: 10px;
@@ -1126,7 +1163,6 @@ footer.appearence-on-scroll {
     }
 
     .about-img {
-        height: 25vh;
         /* left: 0px; */
         /* top: 90.5rem; */
         z-index: 1;
@@ -1294,13 +1330,18 @@ footer.appearence-on-scroll {
         overflow-y: scroll;
         overflow-x: scroll;
         position: relative;
-        width: 60vw;
-        height: 55vh;
+        width: 70vw;
+        height: 65vh;
         max-width: 84vw;
-        border-radius: 40px;
+        border-radius: 25px;
         background: #121212;
         margin-inline: auto;
         rotate: -5deg;
         box-shadow: 0px 0px 40px #ffffff50;
+    }
+
+    .galery-header-text {
+        font-size: 20px;
+        padding-inline: 10px;
     }
 }
