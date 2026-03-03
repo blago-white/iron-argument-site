@@ -456,6 +456,7 @@ h2 {
     grid-row-end: -1;
     max-height: 100vh;
     gap: 10px;
+    rotate: -5deg;
 
     border-radius: 50px;
     outline: 10px solid #121212;
