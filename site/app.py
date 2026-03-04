@@ -1,3 +1,7 @@
+from dotenv import load_dotenv
+
+load_dotenv()
+
 import asyncio
 import os
 import threading
@@ -6,6 +10,7 @@ from string import ascii_uppercase
 import aiohttp
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
+from fastapi.responses import Response
 from fastapi.staticfiles import StaticFiles
 
 from pydantic import BaseModel
@@ -61,9 +66,15 @@ async def create_new_order(order: Order):
             if response.status == 200:
                 print("SENDED")
 
-                return {"OK": True, "message": "Увидели вас, мы вам перезвоним в течении дня!"}
+                return Response(
+                    content={"OK": True, "message": "Увидели вас, мы вам перезвоним в течении дня!"},
+                    status_code=201
+                )
             else:
                 print(await response.json())
                 print(f"ERROR: {response.status}")
 
-                return {"OK": False, "message": None}
+                return Response(
+                    content={"OK": False, "message": ""},
+                    status_code=400
+                )

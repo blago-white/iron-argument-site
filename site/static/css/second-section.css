@@ -203,6 +203,7 @@ h2 {
     font-weight: bold;
     line-height: min(65px, 4.5vw);
     color: rgb(255, 255, 255, .5);
+    letter-spacing: -2px;
 }
 
 .products {
@@ -395,6 +396,10 @@ h2 {
     display: flex;
     flex-direction: column;
     grid-row: 2;
+}
+
+#adresses {
+    max-width: calc(5 * var(--w-col));
 }
 
 .about-facts li {
@@ -873,7 +878,7 @@ footer.appearence-on-scroll {
     top: 96px;
     margin-top: 10vh;
     max-width: 25vw;
-    margin-inline: auto;
+    margin-right: auto;
     transition: all 1s ease;
 }
 
@@ -1072,9 +1077,20 @@ footer.appearence-on-scroll {
     }
 
     .footer-info-row {
-        flex-direction: column;
         mix-blend-mode: normal;
         align-items: flex-start;
+        text-align: left;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        background: #12121260;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    .footer-info-row:nth-last-child(1) {
+        grid-template-columns: 1fr;
+        background: transparent;
+        justify-items: center;
     }
 
     .contacts-link-list {
@@ -1177,6 +1193,10 @@ footer.appearence-on-scroll {
         padding-top: 100px;
         border-top-right-radius: 40px;
         border-top-left-radius: 40px;
+    }
+
+    #adresses {
+        max-width: fit-content;
     }
 
     .circle-link {
@@ -1393,13 +1413,14 @@ footer.appearence-on-scroll {
         overflow-x: scroll;
         position: relative;
         width: 19em;
-        height: 41em;
+        height: 37em;
         max-width: 84vw;
-        border-radius: 25px;
+        border-radius: 35px;
         background: #121212;
         margin-inline: auto;
         rotate: -5deg;
-        box-shadow: 0px 0px 40px #ffffff50;
+        margin-top: 10vh;
+        box-shadow: 0px 0px 80px #ffffff50;
     }
 
     .galery-header-text {
