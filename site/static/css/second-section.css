@@ -244,8 +244,13 @@ h2 {
     transition: all .2s ease;
 }
 
+.product img {
+    transition: all .2s ease;
+}
+
 .product:hover img {
     filter: none!important;
+    transform: scale(1.05);
 }
 
 .product:hover {
@@ -358,11 +363,17 @@ h2 {
     transition: opacity 1s ease;
 }
 
+#aboutH {
+    background: radial-gradient(circle, rgba(230, 169, 108, 1) 0%, rgba(189, 129, 74, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 40px #e6a96c50;
+}
+
 .about-h {
     width: fit-content;
     font-size: 65px;
     color: rgb(255, 255, 255, .75);
-    color: #E6A96C;
 
     margin-block: 0px;
 
@@ -370,7 +381,10 @@ h2 {
 }
 
 .about-dates {
-    color: rgb(255, 255, 255, .5);
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+    text-shadow: none;
+    opacity: .5;
 }
 
 .about-facts {
@@ -703,7 +717,11 @@ h2 {
 }
 
 .h-colorized {
-    color: #E6A96C;
+    background: radial-gradient(circle, rgba(230, 169, 108, 1) 0%, rgba(189, 129, 74, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 40px #e6a96c50;
+
     width: fit-content;
     margin-left: auto;
     transition: all .2s .5s ease;
@@ -719,7 +737,10 @@ h2 {
 }
 
 .comment-h.h-colorized {
-    color: #E6A96C;
+    background: radial-gradient(circle, rgba(230, 169, 108, 1) 0%, rgba(189, 129, 74, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 40px #e6a96c50;
 }
 
 .adresses {
@@ -1149,7 +1170,7 @@ footer.appearence-on-scroll {
     .about-h {
         font-size: 45px;
         margin-left: 0px;
-        line-height: normal;
+        line-height: 1;
         padding-inline: 0px;
     }
 
@@ -1161,6 +1182,15 @@ footer.appearence-on-scroll {
     .short-link {
         height: fit-content;
     }
+
+    .comment-h:nth-child(2) {
+        text-align: left;
+    }
+
+    .comment-h:nth-child(2) {
+        text-align: right;
+    }
+
 
     .about-img {
         /* left: 0px; */
