@@ -1133,7 +1133,7 @@ footer.appearence-on-scroll {
         padding-inline: 25px;
         width: -webkit-fill-available;
         font-size: 12px;
-        height: 50vh;
+        height: 65vh;
         width: calc(calc(100vw - var(--w-col)) - 50px);
         max-width: 100vw;
         position: relative;
@@ -1270,10 +1270,9 @@ footer.appearence-on-scroll {
     .products-header {
         margin-top: 10vh;
         margin-bottom: 5vh;
-        font-size: 5.4vw;
+        font-size: 6.7vw;
         line-height: 1;
     }
-
 
     .products {
         gap: 30px;

@@ -1,3 +1,5 @@
+import json
+
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -67,8 +69,7 @@ async def create_new_order(order: Order):
                 print("SENDED")
 
                 return Response(
-                    content={"OK": True, "message": "Увидели вас, мы вам перезвоним в течении дня!"},
-                    status_code=201
+                    content=json.dumps({"OK": True, "message": "Увидели вас, мы вам перезвоним в течении дня!"}),
                 )
             else:
                 print(await response.json())
