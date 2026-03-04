@@ -495,6 +495,11 @@ main {
         filter: brightness(0.75)!important;
     }
 
+    #loaderScreenBg img {
+        width: 86vw;
+        margin-block: auto;
+    }
+
     .dealer-content {
         width: -webkit-fill-available;
         max-width: max-content;
@@ -543,8 +548,8 @@ main {
     }
 
     .main-screen-content h1 {
-        font-size: 10.4vw;
-        /*letter-spacing: -2;*/
+        font-size: 10.8vw;
+        letter-spacing: -2;
         line-height: 9.9vw;
     }
 
