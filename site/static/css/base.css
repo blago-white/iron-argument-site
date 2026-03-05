@@ -344,6 +344,7 @@ main {
 .dealer-text {
     opacity: .8;
     cursor: default;
+    letter-spacing: normal;
 }
 
 .dealer-text:hover {

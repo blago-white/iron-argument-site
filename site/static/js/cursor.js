@@ -19,7 +19,6 @@ document.addEventListener('mousemove', function(ev){
 
         visible = true;
     }
-    console.log(ev.target.id);
 
     // console.log(ev.target.tagName === 'button', ev.target.classList.has('contect-type-switch-btn'), ev.target.classList)
     // if (ev.target.classList.contains("contect-type-switch-btn") &&) {
