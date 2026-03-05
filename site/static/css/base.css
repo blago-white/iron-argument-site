@@ -369,7 +369,7 @@ main {
 }
 
 .target-action-desc {
-    font-weight: 300;
+    font-weight: 500;
     font-size: 20px;
     line-height: 19.5px;
     color: #e0e0e0;
@@ -392,11 +392,15 @@ main {
     width: 100%;
     cursor: pointer;
 
-    box-shadow: inset 5px 5px 13px #00000050, 0px -10px 50px #e6a96c90;
+    /*box-shadow: inset 5px 5px 13px #00000050, 0px -10px 50px #e6a96c90;*/
 
     transition: all .2s ease;
     /* border-top-left-radius: 0px; */
     /* border-top-right-radius: 0px; */
+}
+
+.order-btn:hover + .order-glow {
+    opacity: 0;
 }
 
 .order-btn:hover {
@@ -404,7 +408,7 @@ main {
     font-size: 27.5px;
     padding: 21.5px;
     padding-inline: 35px;
-    background: rgb(10, 10, 10, .75);
+    background: #121212;
     color: #E6A96C;
     box-shadow: inset 5px 5px 13px #00000050;
     text-shadow: 0px 0px 20px #E6A96C50;
@@ -416,13 +420,11 @@ main {
 
 .main-desc {
     display: flex;
-    align-items: flex-start;
     gap: 2ch;
     background: rgb(10, 10, 10, .75);
-
     border-radius: 25px;
     backdrop-filter: blur(10px);
-
+    align-items: center;
     width: 86%;
     padding: 1vw;
     border-bottom-left-radius: 0px;
@@ -484,6 +486,19 @@ main {
         display: none;
     }
 
+    .gear.a, .gear.b, .gear.c, .gear.d {
+        display: initial;
+    }
+
+    .gear.c {
+        top: 0vh;
+    }
+
+    .gear.d {
+        top: -4vh;
+        left: 71vw;
+    }
+
     .dealer-text {
         font-size: 20px;
         line-height: 1;
@@ -520,6 +535,10 @@ main {
         flex-direction: column;
         justify-content: flex-end;
         text-shadow: 0px 0px 42px black;
+    }
+
+    .order-glow img {
+        width: 92vw!important;
     }
 
     .dealer-content {
@@ -591,7 +610,7 @@ main {
 
     .order-btn {
         font-size: 25px;
-        box-shadow: 0px 0px 50px #E6A96C50, inset 5px 5px 13px #00000050;
+        box-shadow: 0px 0px 50px #E6A96C50;
     }
 
     .main-desc {

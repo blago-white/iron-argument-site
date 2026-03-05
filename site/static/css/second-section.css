@@ -832,7 +832,7 @@ footer.appearence-on-scroll {
     opacity: 0;
     align-items: center;
 
-    animation: 1s ease 1s 1 appearance-rev;
+    animation: 1s ease 1s 1 forwards appearance-rev;
     transition: all .2s ease;
 }
 

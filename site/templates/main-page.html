@@ -336,14 +336,16 @@
         </h2>
 
         <div class="target-action-form">
-            <aside class="main-desc">
+            <aside class="main-desc" style="z-index: -1;">
                 <img src="../static/img/Frame 78.png">
                 <p class="target-action-desc">
-                    У нас — Широчайший ассортимент металлической мебели.<br>От сейфов до гардеробных.<br>Лучшие цены, полный цикл услуг.
+                    У нас — Широчайший ассортимент металлической мебели.<br><br>От сейфов до гардеробных.<br>Мы подберем, поставим, и соберем.
                 </p>
             </aside>
-
-            <button class="order-btn" onclick="document.getElementById('products').scrollIntoView();">
+            <div style="height: 0px;z-index: 1;" class="order-glow">
+                <img src="../static/img/yellow-glow.png" style="position: relative;width: 25vw;z-index: 1000;transform: translateY(-51%);height: 11em;">
+            </div>
+            <button class="order-btn" style="z-index: 2;" onclick="document.getElementById('products').scrollIntoView();">
                 Подобрать <img src="../static/img/arrow.png" style="width: 3ch;margin-left: auto;">
             </button>
         </div>
