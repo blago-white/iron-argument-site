@@ -380,7 +380,7 @@ main {
 }
 
 .order-btn {
-    background: radial-gradient(circle, rgba(230, 169, 108, 1) 0%, rgb(132 91 52) 100%);
+    background: radial-gradient(circle, rgba(230, 169, 108, 1) 0%, rgb(236 181 130) 100%);
     border-radius: 30px;
     padding: 20px;
     display: flex;
