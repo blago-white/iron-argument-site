@@ -22,6 +22,7 @@ class Order(BaseModel):
     contact: str
     name: str
     product: str
+    promocode: str
 
 
 app = FastAPI()
@@ -29,7 +30,7 @@ app = FastAPI()
 
 message = """
 *Поступил новый заказ на {product}*%0A%0A
-Контакт: {contact}%0AИмя клиента: {name}
+Контакт: {contact}%0AИмя клиента: {name}%0A{promo}
 """
 translate_product_name = {
     "shelf": "Стеллажи",
@@ -58,7 +59,8 @@ async def main_page():
 async def create_new_order(order: Order):
     text = message.format(contact=order.contact,
                           name=order.name,
-                          product=translate_product_name[order.product])
+                          product=translate_product_name[order.product],
+                          promo=f"Промокод: {order.promocode}" if order.promocode else "")
 
     async with aiohttp.ClientSession() as session:
         async with session.get(

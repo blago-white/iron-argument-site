@@ -31,12 +31,12 @@
 @keyframes appearance-right {
     0% {
         opacity: 0;
-        transform: translateX(30%) rotate(30deg);
+        transform: translateX(5%) translateY(50%) rotate(30deg);
     }
 
     100% {
         opacity: .75;
-        transform: translateX(0%) rotate(0deg);
+        transform: translateX(0%) translateY(0%) rotate(0deg);
     }
 }
 
@@ -104,7 +104,7 @@ header {
 
     opacity: 0;
 
-    animation: 1s ease .5s 1 forwards appearance;
+    animation: 1s ease 1s 1 forwards appearance;
 }
 
 .h-logo {
@@ -156,7 +156,7 @@ header {
 .h-nav {
     display: flex;
     flex-direction: column;
-    font-weight: 700;
+    font-weight: 500;
     color: rgb(256, 256, 256, .75);
     font-size: 1vw;
     cursor: pointer;
@@ -219,7 +219,7 @@ header {
 }
 
 .main-screen-content {
-    padding-left: var(--w-col);
+    padding-inline: var(--w-col);
     padding-top: 0px;
     display: flex;
     flex-direction: column;
@@ -312,15 +312,16 @@ main {
     left: 45vw;
     width: max(60%, 100vh);
 
-    transition: all 1s ease!important;
+    transition: opacity .2s ease!important;
 
-    animation: 1.5s ease-in-out 0s 1 forwards appearance-right;
+    animation: 1.5s ease-in-out 0s 1 appearance-right;
 }
 
 .safe-s {
     top: 20vh;
     left: 44vw;
     width: max(70%, 110vh);
+    opacity: 0;
 }
 
 .dealer-content {
@@ -433,11 +434,13 @@ main {
     margin-inline: 1.5vw;
 
     animation: 1s ease-in-out 0s 1 forwards appearance-opacity;
+
+    transition: all .5s ease;
 }
 
 .hero-bg {
     opacity: 0;
-    animation: 2s ease-in-out .5s 1 forwards appearance-opacity;
+    animation: 2s ease-in-out 1s 1 forwards appearance-opacity;
 }
 
 .target-action-form {
@@ -446,8 +449,23 @@ main {
     align-items: center;
 
     opacity: 0;
+    overflow: hidden;
 
-    animation: 1.5s ease .5s 1 forwards appearance-rev;
+    animation: 1.5s ease 1s 1 forwards appearance-rev;
+}
+
+.target-action-form:hover .main-desc {
+    padding-bottom: 30px;
+}
+
+.order-glow img {
+    transition: all 1s ease;
+}
+
+.target-action-form:hover .order-glow img {
+    scale: 1.25;
+    transform: translateY(-43%)!important;
+    opacity: .25;
 }
 
 .hero-info-islands {
@@ -473,6 +491,23 @@ main {
 
 .second-word-shifter {
     display: contents!important;
+}
+
+.product-switch-btn {
+    height: 60px;
+    aspect-ratio: 1/1;
+    width: unset;
+    background: transparent;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 255, 255, .5);
+    font-size: 25px;
+    color: rgb(255,255,255,.75);
+    cursor: pointer;
+}
+
+.product-switch-btn:hover {
+    border: 2px solid #E6A96C;
+    color: #E6A96C;
 }
 
 @media (aspect-ratio < 1/1) {
@@ -637,6 +672,7 @@ main {
 
     .target-action-form {
         width: -webkit-fill-available;
+        overflow: visible;
     }
 
     .h-logo {

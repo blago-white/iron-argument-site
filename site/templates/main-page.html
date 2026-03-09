@@ -105,7 +105,7 @@
                             <span class="h-colorized" style="">ПЕРСОНАЛЬНЫХ ДАННЫХ</span>
                             КЛИЕНТОВ И ПОСЕТИТЕЛЕЙ САЙТА
                         </span>
-                        <button class="cookie-btn doc-close-btn" onclick="this.parentElement.parentElement.parentElement.style = 'transform: scale(0.75) translateY(-100vh);max-height: 0vh;visibility: hidden;transition: transform 1s cubic-bezier(0, 0, 0.22, 0.96), visibility 0s 1s ease, max-height 1.25s cubic-bezier(0, 0, 0.22, 0.96);';">ЗАКРЫТЬ</button>
+                        <button class="cookie-btn doc-close-btn" onclick="this.parentElement.parentElement.parentElement.style = 'transform: scale(0.75) translateY(-100vh);max-height: 0vh;visibility: hidden;transition: transform 1s ease, visibility 0s 1s ease, max-height 1.25s ease;';">ЗАКРЫТЬ</button>
                     </h3>
                         <p>
                             1. Общие <br>
@@ -248,7 +248,7 @@
                             <br>
                             <span class="h-colorized" style="">ПОЛЬЗОВАТЕЛЕЙ САЙТА</span>
                         </span>
-                        <button class="cookie-btn doc-close-btn" onclick="this.parentElement.parentElement.parentElement.style = 'transform: scale(0.75) translateY(-100vh);max-height: 0vh;visibility: hidden;transition: transform 1s cubic-bezier(0, 0, 0.22, 0.96), visibility 0s 1s ease, max-height 1.25s cubic-bezier(0, 0, 0.22, 0.96);';">ЗАКРЫТЬ</button>
+                        <button class="cookie-btn doc-close-btn" onclick="this.parentElement.parentElement.parentElement.style = 'transform: scale(0.75) translateY(-100vh);max-height: 0vh;visibility: hidden;transition: transform 1s ease, visibility 0s 1s ease, max-height 1.25s ease;';">ЗАКРЫТЬ</button>
                     </h3>
                     <p>
                         Я Пользовaтель сaйтa железный-аргумент.рф (дaлее — Веб-сaйт) нaстоящим дaю соглaсие ИП Логинову Богдану Николаевичу (ОГPНИП 323370000039970) дaлее — Опеpaтоp нa обpaботку моиx пеpсонaльныx дaнныx нa следующиx условияx a тaкже нa условияx укaзaнныx в Политике обpaботки пеpсонaльныx дaнныx Опеpaтоpa paзмещенной по aдpесу https://железный-аргумент.рф/#privacy:<br>
@@ -316,6 +316,29 @@
     <div style="height: 0px;">
         <img src="../static/img/yellow-glow.png" style="position: absolute;top: 0vh;left: 31%;z-index: 1;">
     </div>
+
+    <div id="promoWrapper">
+        <aside class="main-desc product-switch">
+            <button onclick="setCookie('promo-viewed', 1);this.parentElement.style = 'transform: translateY(150%)!important;rotate: 15deg;';" class="close-promo-btn"><span>[</span> <span>СКРЫТЬ</span> <span>]</span></button>
+            <img src="../static/img/promo-img.png" style="width: -webkit-fill-available;margin-block: auto;">
+            <div class="target-action-desc promo-desc">
+                <div class="promo-title">
+                    <h2 class="promo-header">
+                        Промокод "ВЕСНА"
+                    </h2>
+                <span style="color: rgb(255, 255, 255, .75);text-align: center;font-weight: 500;">-5% На все позиции!<br>При заказе от 30к рублей!</span>
+                <div style="" class="order-glow promo-glow">
+                    <div id="productSwitchGlow1"></div>
+                    <div id="productSwitchGlow2"></div></div>
+                </div>
+            </div>
+            <button class="use-promo-btn"
+                    onclick="document.getElementById('formPromo').value = 'ВЕСНА';document.getElementById('formPromo').active = false;document.getElementById('orderH').scrollIntoView();setCookie('promo-viewed', 1);">
+                Применить
+            </button>
+        </aside>
+    </div>
+
     <main class="main-screen-content" id="hero" style="position: sticky;top: 18.7vh;z-index: 1;">
         <div class="hero-info-islands">
             <span class="hero-info-island">г. Белгород</span>
@@ -335,19 +358,21 @@
             </span>
         </h2>
 
-        <div class="target-action-form">
-            <aside class="main-desc" style="z-index: -1;">
-                <img src="../static/img/Frame 78.png">
-                <p class="target-action-desc">
-                    У нас — Широчайший ассортимент металлической мебели.<br><br>От сейфов до гардеробных.<br>Мы подберем, поставим, и соберем.
-                </p>
-            </aside>
-            <div style="height: 0px;z-index: 1;" class="order-glow">
-                <img src="../static/img/yellow-glow.png" style="position: relative;width: 25vw;z-index: 1000;transform: translateY(-51%);height: 11em;">
+        <div style="display: flex;justify-content: space-between;width: -webkit-fill-available;z-index: 10;">
+            <div class="target-action-form">
+                <aside class="main-desc" style="z-index: -1;">
+                    <img src="../static/img/Frame 78.png">
+                    <p class="target-action-desc">
+                        У нас — Широчайший ассортимент металлической мебели.<br><br>Мы подберем, поставим, и соберем.
+                    </p>
+                </aside>
+                <div style="height: 0px;z-index: 1;" class="order-glow">
+                    <img src="../static/img/yellow-glow.png" style="position: relative;width: 25vw;z-index: 1000;transform: translateY(-51%);height: 11em;">
+                </div>
+                <button class="order-btn" style="z-index: 2;" onclick="document.getElementById('products').scrollIntoView();">
+                    Подобрать <img src="../static/img/arrow.png" style="width: 3ch;margin-left: auto;">
+                </button>
             </div>
-            <button class="order-btn" style="z-index: 2;" onclick="document.getElementById('products').scrollIntoView();">
-                Подобрать <img src="../static/img/arrow.png" style="width: 3ch;margin-left: auto;">
-            </button>
         </div>
 
         <img src="../static/img/ellp.png" class="ellp a">
@@ -368,7 +393,7 @@
         </div>
 
         <img src="../static/img/safe-s.png" class="safe s">
-        <img src="../static/img/safe.png" class="safe parallaxed-mouse">
+        <img src="../static/img/safe.png" id="productHeroImg" class="safe parallaxed-mouse">
     </main>
     <section class="second-section">
         <div style="height: 0px;">
@@ -457,6 +482,9 @@
             </div>
             <ul class="products appearence-on-scroll" id="products">
                 <li class="product">
+                    <div style="height: 0px;">
+                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(50%);filter: blur(50px);">
+                    </div>
                     <h3 class="product-header">Стеллажи <span class="product-arrow">→</span></h3>
                     <span class="product-desc">
                         Разные виды стеллажей, от декоративных до промышленных<br>
@@ -467,10 +495,24 @@
                     <div style="z-index: 1001;margin-block: auto;">
                         <img src="../static/img/stellazh.png" style="filter: grayscale(1);max-height: 41vh;width: 100%;margin-block: auto;">
                     </div>
+                    <button class="product-price">
+                        <span class="old-product-price">От 5.990 ₽</span>
+                        <span class="act-product-price"> От 3.990 ₽</span>
+                        <div style="" class="order-glow promo-glow">
+                            <div class="product-price-glow a"></div>
+                            <div class="product-price-glow b"></div>
+                        </div>
+                    </button>
                     <button class="product-order" onclick="setPicked(document.getElementById('shelf'));document.getElementById('order').scrollIntoView();">Подобрать</button>
                     <span style="font-size: 15px;padding-top: 15px;opacity: .5;">STANDART / SB / SBL / HARD / STRONG</span>
+                    <div style="height: 0px;">
+                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
+                    </div>
                 </li>
                 <li style="margin-top: 25px;" class="product">
+                    <div style="height: 0px;">
+                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(50%);filter: blur(50px);">
+                    </div>
                     <h3 class="product-header">Шкафы  <span class="product-arrow">→</span></h3>
                     <span class="product-desc">
                         Для больниц, разведалок и других целей. Гибкая компоновка.
@@ -478,10 +520,24 @@
                     <div style="z-index: 1001;margin-block: auto;">
                         <img src="../static/img/shelf.png" style="filter: grayscale(1);max-height: 41vh;width: 100%;margin-block: auto;">
                     </div>
+                    <button class="product-price">
+                        <span class="old-product-price">От 5.990 ₽</span>
+                        <span class="act-product-price"> От 3.990 ₽</span>
+                        <div style="" class="order-glow promo-glow">
+                            <div class="product-price-glow a"></div>
+                            <div class="product-price-glow b"></div>
+                        </div>
+                    </button>
                     <button class="product-order" onclick="setPicked(document.getElementById('wardrobe'));document.getElementById('order').scrollIntoView();">Подобрать</button>
                     <span style="font-size: 15px;padding-top: 15px;opacity: .5;">HILFE / ПРАКТИК</span>
+                    <div style="height: 0px;">
+                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
+                    </div>
                 </li>
                 <li style="margin-top: 0px;" class="product">
+                    <div style="height: 0px;">
+                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(50%);filter: blur(50px);">
+                    </div>
                     <h3 class="product-header">Сейфы  <span class="product-arrow">→</span></h3>
                     <span class="product-desc">
                         Полный спектр мебели для защищенного хранения. Взломостойкие, огнеупорные, для хранения оружия, и другие.
@@ -489,9 +545,23 @@
                     <div style="z-index: 1001;margin-block: auto;">
                         <img src="../static/img/safe-img.png" style="filter: grayscale(1);max-height: 41vh;width: 100%;margin-block: auto;">
                     </div>
+                    <button class="product-price">
+                        <span class="old-product-price">От 5.990 ₽</span>
+                        <span class="act-product-price"> От 3.990 ₽</span>
+                        <div style="" class="order-glow promo-glow">
+                            <div class="product-price-glow a"></div>
+                            <div class="product-price-glow b"></div>
+                        </div>
+                    </button>
                     <button class="product-order" onclick="setPicked(document.getElementById('safe'));document.getElementById('order').scrollIntoView();">Подобрать</button>
+                    <div style="height: 0px;">
+                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
+                    </div>
                 </li>
                 <li style="margin-top: 25px;" class="product">
+                    <div style="height: 0px;">
+                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(50%);filter: blur(50px);">
+                    </div>
                     <h3 class="product-header">Гардеробные  <span class="product-arrow">→</span></h3>
                     <span class="product-desc">
                         Модульная система, широчайший ряд модулей, для хранения разнообразной одежды.<br>Подойдет для любого интерьера.
@@ -499,9 +569,23 @@
                     <div style="z-index: 1001;margin-block: auto;">
                         <img src="../static/img/garderob-sys.jpg" style="filter: grayscale(1);max-height: 41vh;width: 100%;margin-block: auto;border-radius: 25px;">
                     </div>
+                    <button class="product-price">
+                        <span class="old-product-price">От 5.990 ₽</span>
+                        <span class="act-product-price"> От 3.990 ₽</span>
+                        <div style="" class="order-glow promo-glow">
+                            <div class="product-price-glow a"></div>
+                            <div class="product-price-glow b"></div>
+                        </div>
+                    </button>
                     <button class="product-order" onclick="setPicked(document.getElementById('dressing'));document.getElementById('order').scrollIntoView();">Подобрать</button>
+                    <div style="height: 0px;">
+                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
+                    </div>
                 </li>
                 <li style="margin-top: 0px;" class="product">
+                    <div style="height: 0px;">
+                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(50%);filter: blur(50px);">
+                    </div>
                     <h3 class="product-header">Верстаки  <span class="product-arrow">→</span></h3>
                     <span class="product-desc">
                         Подойдет для гаражей, мастерских, в составе экраны для хранения инструментов, освещение, и другое
@@ -509,8 +593,19 @@
                     <div style="z-index: 1001;margin-block: auto;">
                         <img src="../static/img/workbench.png" style="filter: grayscale(1);max-height: 41vh;width: 100%;margin-block: auto;">
                     </div>
+                    <button class="product-price">
+                        <span class="old-product-price">От 5.990 ₽</span>
+                        <span class="act-product-price"> От 3.990 ₽</span>
+                        <div style="" class="order-glow promo-glow">
+                            <div class="product-price-glow a"></div>
+                            <div class="product-price-glow b"></div>
+                        </div>
+                    </button>
                     <button class="product-order" onclick="setPicked(document.getElementById('workbench'));document.getElementById('order').scrollIntoView();">Подобрать</button>
                     <span style="font-size: 15px;padding-top: 15px;opacity: .5;">PROFI W / EXPERT T / EXPERT WS / GARAGE</span>
+                    <div style="height: 0px;">
+                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
+                    </div>
                 </li>
             </ul>
         </div>
@@ -535,10 +630,10 @@
             </div>
             <h2 class="about-h appearence-on-scroll"  id="aboutH">О НАС <span class="about-dates">2023 - 2026</span></h2>
             <ul class="about-facts">
-                <li class="appearence-on-scroll from-down" style="display: flex;gap: 1ch;"><span style="opacity: .5">(1)</span> Более 200 довольных клиентов</li>
-                <li class="appearence-on-scroll from-down" style="display: flex;gap: 1ch;"><span style="opacity: .5">(2)</span> Поставляем как в гос. учереждения так и частным лицам</li>
-                <li class="appearence-on-scroll from-down" style="display: flex;gap: 1ch;"><span style="opacity: .5">(3)</span> Поставляем и собираем любые обьемы</li>
-                <li class="appearence-on-scroll from-down" style="display: flex;gap: 1ch;"><span style="opacity: .5">(4)</span> Работаем в 6-ти городах России</li>
+                <li class="appearence-on-scroll from-down" style=""><span style="opacity: .5;margin-right: 1ch;">(1)</span> Более <span class="about-highlighted">200</span> довольных клиентов</li>
+                <li class="appearence-on-scroll from-down" style=""><span style="opacity: .5;margin-right: 1ch;">(2)</span> Поставляем как в <span class="about-highlighted">гос. учереждения</span> так и <span class="about-highlighted">частным лицам</span></li>
+                <li class="appearence-on-scroll from-down" style=""><span style="opacity: .5;margin-right: 1ch;">(3)</span> Подбираем, поставляем и собираем <span class="about-highlighted">любые обьемы</span></li>
+                <li class="appearence-on-scroll from-down" style=""><span style="opacity: .5;margin-right: 1ch;">(4)</span> Работаем в <span class="about-highlighted">6-ти городах</span> России</li>
             </ul>
         <div class="about-links">
             <a href="https://yandex.com/maps/org/zhelezny_argument/133965224684/" class="circle-link appearence-on-scroll from-down">Мы на картах <img src="../static/img/yandex-maps-logo.svg"></a>
@@ -587,6 +682,7 @@
                             <input type="tel" maxlength="12" placeholder="+7 999 123 45 67" id="formContact" required>
                         </div>
                         <input type="text" maxlength="30" placeholder="Как вас зовут?" id="formName" required>
+                        <input type="text" maxlength="30" style="display: block;" placeholder="Может, есть промокод?" id="formPromo">
                     </div>
 
                     <label class="contacts-disclaimer">Нажимая кнопку "Перезвонить мне!" вы соглашаетесь с <a style="cursor:pointer;" onclick="showPrivacy()">политикой обработки данных</a></label>
@@ -662,6 +758,15 @@
             </div>
         </footer>
     </section>
+
+    <script src="../static/js/utils.js"></script>
+    <script src="../static/js/cookies.js" type="module"></script>
+    <script src="../static/js/notification.js"></script>
+    <script src="../static/js/galery.js"></script>
+
+    <script src="../static/js/cursor.js"></script>
+    <script src="../static/js/contactForm.js" type="module"></script>
+
     <script>
         function showPrivacy() {
             document.getElementById('privacyDoc').style = 'visibility: visible;transform: none;max-height: 67vh;';
@@ -679,13 +784,12 @@
             showAgreement()
         }
     </script>
+    <script type="module">
+        import { getCookie } from "/static/js/cookies.js";
 
-    <script src="../static/js/utils.js"></script>
-    <script src="../static/js/cookies.js" type="module"></script>
-    <script src="../static/js/notification.js"></script>
-    <script src="../static/js/galery.js"></script>
-
-    <script src="../static/js/cursor.js"></script>
-    <script src="../static/js/contactForm.js" type="module"></script>
+        if (getCookie('promo-viewed')) {
+            document.getElementById('promoWrapper').remove();
+        }
+    </script>
 </body>
 </html>

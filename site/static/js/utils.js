@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('loaderScreenBg').style.opacity = '0';
+    // document.getElementById('loaderScreenBg').style.opacity = '0';
     document.getElementById('loaderScreenBg').style.transform = 'translateY(-100%)';
 });
 
@@ -82,7 +82,22 @@ const windowInnerWidth = document.documentElement.clientWidth
 const windowInnerHeight = document.documentElement.clientHeight
 
 let followers = document.querySelectorAll(".gear");
-let objFollowers = document.querySelectorAll(".safe");
+// let objFollowers = document.querySelectorAll(".safe");
+let mainBg = document.querySelectorAll(".hero-bg");
+
+let bgParallax = (e) => {
+    if (window.pageYOffset > 0) {
+        return
+    }
+
+    // let x = (e.clientX - (windowInnerHeight / 2))/200;
+    let y = (e.clientY - (windowInnerWidth / 2))/100;
+
+    mainBg.forEach((f) => {
+        f.style.transform = `translateY(${y}px)`;
+        f.style.transition = `all .2s ease`;
+    })
+}
 
 let gearsParallax = (e) => {
     let x = (e.clientX - (windowInnerHeight / 2))/20+200;
@@ -94,18 +109,19 @@ let gearsParallax = (e) => {
     })
 }
 
-let objParallax = (e) => {
-    let x = (e.clientX - (windowInnerHeight / 2))/50;
-    let y = (e.clientY - (windowInnerWidth / 2))/50;
-
-    objFollowers.forEach((f) => {
-        f.style = `transform: translateY(${y}px) translateX(${x}px)!important;transition: all 1s ease;`;
-    })
-}
+// let objParallax = (e) => {
+//     let x = (e.clientX - (windowInnerHeight / 2))/50;
+//     let y = (e.clientY - (windowInnerWidth / 2))/50;
+//
+//     objFollowers.forEach((f) => {
+//         f.style = `transform: translateY(${y}px) translateX(${x}px)!important;transition: all 1s ease;`;
+//     })
+// }
 
 document.addEventListener("mousemove", (e) => {
     gearsParallax(e);
-    objParallax(e);
+    // objParallax(e);
+    bgParallax(e);
 })
 
 
