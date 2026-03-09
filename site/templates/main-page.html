@@ -318,7 +318,7 @@
     </div>
 
     <div id="promoWrapper">
-        <aside class="main-desc product-switch">
+        <aside class="main-desc product-switch" onmouseover="document.getElementById('hero').style.transition = 'all .5s ease';document.getElementById('hero').style.opacity = .5;" onmouseleave="document.getElementById('hero').style.opacity = 1;">
             <button onclick="setCookie('promo-viewed', 1);this.parentElement.style = 'transform: translateY(150%)!important;rotate: 15deg;';" class="close-promo-btn"><span>[</span> <span>СКРЫТЬ</span> <span>]</span></button>
             <img src="../static/img/promo-img.png" style="width: -webkit-fill-available;margin-block: auto;">
             <div class="target-action-desc promo-desc">
@@ -497,7 +497,7 @@
                     </div>
                     <button class="product-price">
                         <span class="old-product-price">От 5.990 ₽</span>
-                        <span class="act-product-price"> От 3.990 ₽</span>
+                        <span class="act-product-price"> От 2.700 ₽</span>
                         <div style="" class="order-glow promo-glow">
                             <div class="product-price-glow a"></div>
                             <div class="product-price-glow b"></div>
@@ -521,8 +521,8 @@
                         <img src="../static/img/shelf.png" style="filter: grayscale(1);max-height: 41vh;width: 100%;margin-block: auto;">
                     </div>
                     <button class="product-price">
-                        <span class="old-product-price">От 5.990 ₽</span>
-                        <span class="act-product-price"> От 3.990 ₽</span>
+                        <span class="old-product-price">От 15.990 ₽</span>
+                        <span class="act-product-price"> От 9.900 ₽</span>
                         <div style="" class="order-glow promo-glow">
                             <div class="product-price-glow a"></div>
                             <div class="product-price-glow b"></div>
@@ -570,8 +570,8 @@
                         <img src="../static/img/garderob-sys.jpg" style="filter: grayscale(1);max-height: 41vh;width: 100%;margin-block: auto;border-radius: 25px;">
                     </div>
                     <button class="product-price">
-                        <span class="old-product-price">От 5.990 ₽</span>
-                        <span class="act-product-price"> От 3.990 ₽</span>
+                        <span class="old-product-price">От 12.990 ₽</span>
+                        <span class="act-product-price"> От 7.990 ₽</span>
                         <div style="" class="order-glow promo-glow">
                             <div class="product-price-glow a"></div>
                             <div class="product-price-glow b"></div>
@@ -594,8 +594,8 @@
                         <img src="../static/img/workbench.png" style="filter: grayscale(1);max-height: 41vh;width: 100%;margin-block: auto;">
                     </div>
                     <button class="product-price">
-                        <span class="old-product-price">От 5.990 ₽</span>
-                        <span class="act-product-price"> От 3.990 ₽</span>
+                        <span class="old-product-price">От 7.000 ₽</span>
+                        <span class="act-product-price"> От 6.490 ₽</span>
                         <div style="" class="order-glow promo-glow">
                             <div class="product-price-glow a"></div>
                             <div class="product-price-glow b"></div>
@@ -679,7 +679,7 @@
 
                     <div class="contacts-field-set">
                         <div id="contactDataWrapper">
-                            <input type="tel" maxlength="12" placeholder="+7 999 123 45 67" id="formContact" required>
+                            <input type="tel" maxlength="16" placeholder="+7 999 123 45 67" id="formContact" required>
                         </div>
                         <input type="text" maxlength="30" placeholder="Как вас зовут?" id="formName" required>
                         <input type="text" maxlength="30" style="display: block;" placeholder="Может, есть промокод?" id="formPromo">
@@ -701,7 +701,7 @@
         <aside id="contacts">
             <h2 id="contactsH">
                 <span class="about-h comment-h appearence-on-scroll from-down">МЫ</span>
-                <span class="about-h comment-h appearence-on-scroll from-down h-colorized" style="display: block;margin-left: 0px;transition-delay: .5s;">ПОДБЕРЕМ, ДОСТАВИМ, СОБЕРЕМ</span>
+                <span class="about-h comment-h appearence-on-scroll from-down h-colorized" style="display: block;margin-left: 0px;transition-delay: .5s;">ПОДБЕРЕМ → ДОСТАВИМ → СОБЕРЕМ</span>
                 <span class="about-h comment-h appearence-on-scroll from-down" style="transition-delay: 1s;">МЕБЕЛЬ КОТОРАЯ ВАМ НУЖНА.</span>
             </h2>
             <div style="display: flex;flex-wrap: wrap;">

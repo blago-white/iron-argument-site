@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    // document.getElementById('loaderScreenBg').style.opacity = '0';
+    document.getElementById('loaderScreenBg').style.opacity = '0';
     document.getElementById('loaderScreenBg').style.transform = 'translateY(-100%)';
 });
 

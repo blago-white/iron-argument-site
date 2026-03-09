@@ -36,6 +36,7 @@ async function sendForm() {
 
     const name = document.getElementById("formName").value;
     const contact = document.getElementById("formContact").value;
+    const promo = document.getElementById("formPromo").value;
 
     if (!name || name.length > 60 || name.length == 1) {
         showError("Вы не указали имя, либо его длинна более 60 символов, или меньше 2-х.")
@@ -51,7 +52,8 @@ async function sendForm() {
     let order = {
         "contact": contact,
         "name": name,
-        "product": pickedProduct
+        "product": pickedProduct,
+        "promocode": promo,
     };
 
     const response = await fetch("/order/", {
@@ -67,6 +69,7 @@ async function sendForm() {
         showSuccess((await response.json()).message);
 
         document.getElementById('orderForm').style = "opacity: .3;pointer-events: none;";
+        document.getElementById('orderH').innerHTML = `СПАСИБО, В ТЕЧЕНИ ЧАСА С <span class="h-colorized">ВАМИ СВЯЖЕМСЯ!</span>`;
     } else {
         showError("Где-то заело! Но мы уже чиним. Свяжитесь с нами в мессенджерах/по телефону/по почте, пожалуйста!");
     }

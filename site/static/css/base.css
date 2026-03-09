@@ -73,6 +73,8 @@ html {
 body {
     margin: 0px;
     overflow-x: clip;
+    position: absolute;
+    width: 100vw;
     font-family: 'Helvetica', sans-serif;
 }
 
