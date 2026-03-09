@@ -2,13 +2,15 @@ import { getCookie, setCookie } from "./cookies.js";
 
 let pickedProduct = 'shelf';
 
+let notificationCloseBtn = document.querySelector("#notification .cookie-btn");
+
 function showError(text) {
     document.getElementById('notificationTextContent').innerHTML = text;
-    document.getElementsByClassName('cookie-btn')[1].style.background = '#992626';
+    notificationCloseBtn.style.background = '#992626';
 
-    document.getElementsByClassName('cookie-btn')[1].onclick = () => {
-        document.getElementsByClassName('cookie-btn')[1].parentElement.parentElement.style.visibility = 'hidden';
-        document.getElementsByClassName('cookie-btn')[1].style.background = '#004aa9';
+    notificationCloseBtn.onclick = () => {
+        notificationCloseBtn.parentElement.parentElement.style.visibility = 'hidden';
+        notificationCloseBtn.style.background = '#004aa9';
     };
 
     document.getElementById('notification').style.visibility = 'visible';
@@ -16,13 +18,13 @@ function showError(text) {
 
 function showSuccess(text) {
     document.getElementById('notificationTextContent').innerHTML = text;
-    document.getElementsByClassName('cookie-btn')[1].style.background = '#27a93d';
-    document.getElementsByClassName('cookie-btn')[1].style.borderRadius = "15px!important";
+    notificationCloseBtn.style.background = '#27a93d';
+    notificationCloseBtn.style.borderRadius = "15px!important";
 
-    document.getElementsByClassName('cookie-btn')[1].onclick = () => {
-        document.getElementsByClassName('cookie-btn')[1].parentElement.parentElement.style.visibility = 'hidden';
-        document.getElementsByClassName('cookie-btn')[1].style.background = '#004aa9';
-        document.getElementsByClassName('cookie-btn')[1].style.borderRadius = "";
+    notificationCloseBtn.onclick = () => {
+        notificationCloseBtn.parentElement.parentElement.style.visibility = 'hidden';
+        notificationCloseBtn.style.background = '#004aa9';
+        notificationCloseBtn.style.borderRadius = "";
     };
 
     document.getElementById('notification').style.visibility = 'visible';
