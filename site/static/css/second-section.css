@@ -1357,6 +1357,18 @@ footer.appearence-on-scroll {
         height: 19vh;
     }
 
+    .promo-desc {
+        max-width: none;
+    }
+
+    .about-facts li {
+        font-size: 20px;
+    }
+
+    .product-switch {
+                padding-bottom: 2ch;
+    }
+
     .act-product-price {
         font-size: 20px;
     }
@@ -1635,7 +1647,7 @@ footer.appearence-on-scroll {
         grid-template-columns: 1fr;
         height: max-content;
         border-radius: 25px;
-        box-shadow: 0px 0px 40px #ffffff50;
+        box-shadow: none;
         margin-bottom: 10vh;
     }
 

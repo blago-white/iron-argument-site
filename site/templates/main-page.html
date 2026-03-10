@@ -363,19 +363,21 @@
                 <aside class="main-desc" style="z-index: -1;">
                     <img src="../static/img/Frame 78.png">
                     <p class="target-action-desc">
-                        У нас — Широчайший ассортимент металлической мебели.<br><br>Мы подберем, поставим, и соберем.
+                        У нас — <span class="h-colorized">Широчайший ассортимент</span> металлической мебели.<br><br>Мы <span class="h-colorized">подберем, поставим, и соберем</span>.
                     </p>
                 </aside>
                 <div style="height: 0px;z-index: 1;" class="order-glow">
                     <img src="../static/img/yellow-glow.png" style="position: relative;width: 25vw;z-index: 1000;transform: translateY(-51%);height: 11em;">
                 </div>
-                <button class="order-btn" style="z-index: 2;border-radius: 74px;padding: 5px;height: 90px;padding-right: 10px;/* padding-left: 50px; */" onclick="document.getElementById('products').scrollIntoView();">
+                <button class="order-btn" style="z-index: 2;border-radius: 74px;padding: 5px;height: 90px;padding-inline: 10px;/* padding-left: 50px; */" onclick="document.getElementById('products').scrollIntoView();">
                                     <span style="
                     margin-inline: auto;
-                ">Подобрать</span> <span style="
+                    grid-row: 1;
+                    grid-column: 1;
+                ">Подобрать</span> <span class="order-btn-arrow" style="
                     background: #121212;
                     color: #cc945e;
-                    aspect-ratio: 1/1;
+                    aspect-ratio: 1 / 1;
                     width: auto;
                     height: auto;
                     width: 70px;
@@ -383,6 +385,12 @@
                     align-items: center;
                     justify-content: center;
                     border-radius: 48px;
+
+                    grid-row: 1;
+                    grid-column: 1;
+                    margin-left: auto;
+
+                    transition: all .5s ease;
                 ">→</span>
                 </button>
             </div>

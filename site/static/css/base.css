@@ -52,6 +52,20 @@
     }
 }
 
+@keyframes main-desc-anim {
+    0% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(5%);
+    }
+
+    1000% {
+        transform: translateY(0%);
+    }
+}
+
 @keyframes appearance-opacity {
     0% {
         opacity: 0;
@@ -383,8 +397,11 @@ main {
     background: radial-gradient(circle, rgba(230, 169, 108, 1) 0%, rgb(236 181 130) 100%);
     border-radius: 30px;
     padding: 20px;
-    display: flex;
-    align-items: center;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
     gap: 10px;
     font-size: 30px;
     font-family: "Unbounded", sans-serif;
@@ -396,6 +413,9 @@ main {
     cursor: pointer;
 
     /*box-shadow: inset 5px 5px 13px #00000050, 0px -10px 50px #e6a96c90;*/
+
+    justify-items: center;
+    align-items: center;
 
     transition: all .2s ease;
     /* border-top-left-radius: 0px; */
@@ -415,6 +435,10 @@ main {
     color: #E6A96C;
     box-shadow: inset 5px 5px 13px #00000050;
     text-shadow: 0px 0px 20px #E6A96C50;
+}
+
+.order-btn:hover .order-btn-arrow {
+    transform: translateX(-13.5em) rotate(90deg);
 }
 
 .order-btn:hover img {
@@ -639,29 +663,26 @@ main {
     }
 
     .target-action-desc {
-        font-size: 16px;
+        font-size: 20px;
         line-height: 1.1;
         font-weight: 500;
         opacity: .9;
+        max-width: 22ch;
     }
 
     .order-btn {
         font-size: 25px;
         box-shadow: 0px 0px 50px #E6A96C50;
+        display: flex;
     }
 
     .main-desc {
-        width: 100%;
         padding: 2ch;
-        margin: 0px;
-        margin-bottom: 15px;
-        border-bottom-left-radius: 25px;
-        border-bottom-right-radius: 25px;
-        font-weight: 500;
-        align-items: center;
-
-        width: -webkit-fill-available;
-        max-width: -webkit-fill-available;
+        grid-row: 1;
+        grid-column: 1;
+        margin-bottom: 45px;
+        padding-bottom: 75px;
+        animation: 1s ease-in-out 0s 1 forwards appearance-opacity, 3s ease-in-out 1s infinite forwards main-desc-anim;
     }
 
     .ellp {
@@ -675,6 +696,16 @@ main {
     .target-action-form {
         width: -webkit-fill-available;
         overflow: visible;
+
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        align-items: end;
+    }
+
+    .order-btn, .main-desc {
+        grid-row: 1;
+        grid-column: 1;
     }
 
     .h-logo {
@@ -684,5 +715,9 @@ main {
 
     .h-logo-img {
         height: 6.3vh;
+    }
+
+    .order-glow {
+        width: 0px;
     }
 }

@@ -119,9 +119,11 @@ let gearsParallax = (e) => {
 // }
 
 document.addEventListener("mousemove", (e) => {
-    gearsParallax(e);
-    // objParallax(e);
-    bgParallax(e);
+    if (ratio > 1) {
+        gearsParallax(e);
+        // objParallax(e);
+        bgParallax(e);
+    }
 })
 
 
