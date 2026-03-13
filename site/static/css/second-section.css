@@ -438,9 +438,12 @@ h2 {
 }
 
 .products-slider {
-    padding-left: 28em;
     /*animation: 1s ease 0s 1 forwards appearance-rev;*/
     transition: opacity 1s ease;
+
+    top: 20vh;
+    z-index: 10;
+    position: sticky;
 }
 
 #aboutH {
@@ -759,6 +762,10 @@ h2 {
     max-width: 20ch;
 }
 
+#promoGlow {
+    animation: 1.1s linear 0s 1 transparentAnim, 4s ease-in-out 1s 1 appearance-opacity;
+}
+
 .contact-content input:focus-visible {
     outline: none;
 }
@@ -993,20 +1000,19 @@ footer.appearence-on-scroll {
 
 .product-switch {
     cursor: pointer;
-
     min-width: 0px;
     flex-direction: column;
     border-radius: 30px;
     height: calc(calc(83vh - 7.5vh) - 2vw);
     z-index: -1;
     border-radius: 40px;
-    max-width: 25vw;
+    max-width: 43ch;
     border: 2px solid #96969650;
     margin: 0px;
     width: fit-content;
-    /*box-shadow: 0px 0px 150px #ffffff, inset 3px 3px 20px #84848425;*/
+    /* box-shadow: 0px 0px 150px #ffffff, inset 3px 3px 20px #84848425; */
     overflow-y: scroll;
-    animation: 1.1s linear 0s 1 transparentAnim, 1.5s ease 1s 1 appearance-rev-rotated, 4s ease 2s 1 forwards appearanceShadow;
+    animation: .6s linear 0s 1 transparentAnim, 1.5s ease .5s 1 appearance-rev-rotated;
 }
 
 .product-switch::-webkit-scrollbar {
@@ -1125,6 +1131,7 @@ footer.appearence-on-scroll {
     gap: 10px;
     overflow: visible;
     justify-content: flex-end;
+    width: -webkit-fill-available;
 }
 
 .about-highlighted {
@@ -1281,9 +1288,9 @@ footer.appearence-on-scroll {
 
 #aboutGlow img {
     position: relative;
-    top: 0px;
-    left: -65%;
-    height: 160vh;
+    top: -50vh;
+    left: -50%;
+    height: 200vh;
     z-index: -1;
     opacity: .5;
     rotate: -90deg;

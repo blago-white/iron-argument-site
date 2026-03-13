@@ -37,7 +37,7 @@
     <div style="
         position: sticky;
         top: 0px;
-    "><img class="hero-bg" style="position: absolute;z-index: -1;filter: brightness(0.5) saturate(0.5);width: -webkit-fill-available;top: 0px;" src="../static/img/bg.png"></div>
+    "><img class="hero-bg" style="position: absolute;z-index: -1;filter: brightness(0.3) saturate(0.5);width: -webkit-fill-available;top: 0px;" src="../static/img/bg.png"></div>
     <div style="
     position: sticky;
     height: 0px;
@@ -54,6 +54,25 @@
             pointer-events: none;
         "></div>
     </div>
+    <div style="
+        position: sticky;
+        height: 0px;
+        top: 0px;
+        z-index: 10;
+        visibility: hidden;
+    " id="promoGlow">
+            <div style="
+                position: sticky;
+                height: 100vh;
+                width: 50vw;
+                background: linear-gradient(270deg, rgb(230 230 230 / 25%) 10%, rgb(230 230 230 / 0%) 82%);
+                /*background: url('/static/img/white-rays.svg');*/
+                top: 0px;
+                z-index: 998;
+                pointer-events: none;
+                left: 50vw;
+            "></div>
+        </div>
     <div class="legacy-static-info-wrapper" style="
         height: 0px;
         position: sticky;
@@ -302,11 +321,11 @@
             <img class="h-logo-shadow b" src="../static/img/logo-shadow-2.png">
         </div>
         <nav class="h-nav">
-            <a href="#productsH">Каталог</a>
-            <a href="#aboutH">О нас</a>
-            <a href="#galery">Галерея</a>
-            <a href="#orderH">Заказать</a>
-            <a href="#contactsH">Контакты</a>
+            <a href="#productsH"><span style="opacity: .25">(1)</span> Каталог</a>
+            <a href="#aboutH"><span style="opacity: .25">(2)</span> О нас</a>
+            <a href="#galery"><span style="opacity: .25">(3)</span> Галерея</a>
+            <a href="#orderH"><span style="opacity: .25">(4)</span> Заказать</a>
+            <a href="#contactsH"><span style="opacity: .25">(5)</span> Контакты</a>
         </nav>
         <img class="h-bl" src="../static/img/bl.png" style="opacity: .25;">
         <a class="bucket" style="font-family: monospace;">0
@@ -319,13 +338,13 @@
 
     <div id="promoWrapper">
         <aside class="main-desc product-switch" onmouseover="document.getElementById('hero').style.transition = 'all .5s ease';document.getElementById('hero').style.opacity = .5;" onmouseleave="document.getElementById('hero').style.opacity = 1;">
-            <button onclick="setCookie('promo-viewed', 1);this.parentElement.style = 'transform: translateY(150%)!important;rotate: 15deg;';" class="close-promo-btn"><span>[</span> <span>СКРЫТЬ</span> <span>]</span></button>
-            <img src="../static/img/promo-img.png" style="width: -webkit-fill-available;margin-block: auto;">
+            <button onclick="setCookie('promo-viewed', 1);this.parentElement.style = 'transform: translateY(150%)!important;rotate: 15deg;';document.getElementById('promoGlow').style.opacity = 0;" class="close-promo-btn"><span>[</span> <span>СКРЫТЬ</span> <span>]</span></button>
+            <img src="../static/img/promo-img-2.png" style="width: auto;margin-block: auto;width: -webkit-fill-available;border-radius: 25px;">
             <div class="target-action-desc promo-desc">
                 <div class="promo-title">
-                    <h2 class="promo-header">
-                        Промокод "ВЕСНА"
-                    </h2>
+<!--                    <h2 class="promo-header">-->
+<!--                        Промокод "ВЕСНА"-->
+<!--                    </h2>-->
                 <span style="color: rgb(255, 255, 255, .75);text-align: center;font-weight: 500;">-5% На все позиции!<br>При заказе от 30к рублей!</span>
                 <div style="" class="order-glow promo-glow">
                     <div id="productSwitchGlow1"></div>
@@ -396,8 +415,8 @@
             </div>
         </div>
 
-        <img src="../static/img/ellp.png" class="ellp a">
-        <img src="../static/img/ellp-2.png" class="ellp b">
+<!--        <img src="../static/img/ellp.png" class="ellp a">-->
+<!--        <img src="../static/img/ellp-2.png" class="ellp b">-->
 
         <div class="gear b parallaxed-mouse" style="width: 0px;height: 0px;">
             <img src="../static/img/g.png">
@@ -804,12 +823,26 @@
         if (location.href.includes('#agreement')) {
             showAgreement()
         }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                document.getElementById('hero').style.transition = 'all .5s ease';
+                document.getElementById('hero').style.opacity = .5;
+            }, 500);
+
+            setTimeout(() => {
+                document.getElementById('hero').style.opacity = 1;
+            }, 2000);
+        });
     </script>
     <script type="module">
         import { getCookie } from "/static/js/cookies.js";
 
         if (getCookie('promo-viewed')) {
             document.getElementById('promoWrapper').remove();
+
+        } else {
+            document.getElementById("promoGlow").style.visibility = 'visible';
         }
     </script>
 </body>

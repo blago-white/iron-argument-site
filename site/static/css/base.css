@@ -176,6 +176,8 @@ header {
     color: rgb(256, 256, 256, .75);
     font-size: 1vw;
     cursor: pointer;
+    align-items: center;
+
 
     transition: all .2s ease;
 }
@@ -247,18 +249,16 @@ header {
 }
 
 .main-screen-content h1 {
-    font-size: min(110px, 8vw);
+    font-size: min(min(110px, 8vw), 11vh);
     font-family: "Unbounded", sans-serif;
     text-transform: uppercase;
     font-weight: 800;
     color: #ebebeb;
-    line-height: min(95px, 7vw);
+    line-height: min(min(95px, 7vw), 10vh);
     margin-bottom: 0px;
     mix-blend-mode: hard-light;
-
     text-shadow: 0px 0px 44px black;
-
-    animation: 1s ease 0s 1 appearance;
+    animation: 1.5s ease 0s 1 appearance;
 }
 
 .main-screen-content h1 span {
@@ -353,7 +353,7 @@ main {
     max-width: 40vw;
     line-height: 35px;
 
-    animation: 1s ease 0s 1 appearance-rev;
+    animation: 1.5s ease 0s 1 appearance-rev;
 
     transition: all 1s ease;
 }
@@ -438,7 +438,9 @@ main {
 }
 
 .order-btn:hover .order-btn-arrow {
-    transform: translateX(-13.5em) rotate(90deg);
+    transform: translateX(-15.5em) rotate(90deg);
+    background: #E6A96C!important;
+    color: #121212!important;
 }
 
 .order-btn:hover img {
@@ -466,7 +468,7 @@ main {
 
 .hero-bg {
     opacity: 0;
-    animation: 2s ease-in-out 1s 1 forwards appearance-opacity;
+    animation: 4s ease-in-out 1s 1 forwards appearance-opacity;
 }
 
 .target-action-form {
