@@ -1008,6 +1008,7 @@ footer.appearence-on-scroll {
     border-radius: 40px;
     max-width: 43ch;
     border: 2px solid #96969650;
+    background: rgb(18, 18, 18, 1);
     margin: 0px;
     width: fit-content;
     /* box-shadow: 0px 0px 150px #ffffff, inset 3px 3px 20px #84848425; */

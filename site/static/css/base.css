@@ -450,7 +450,8 @@ main {
 .main-desc {
     display: flex;
     gap: 2ch;
-    background: rgb(10, 10, 10, .75);
+    background: rgb(18, 18, 18, 1);
+    padding-block: 25px;
     border-radius: 25px;
     backdrop-filter: blur(10px);
     align-items: center;
