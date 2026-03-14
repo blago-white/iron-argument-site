@@ -40,7 +40,9 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', shiftHeroBg);
 
     checkElements();
-    shiftHeroBg();
+    if (ratio >= 1) {
+        shiftHeroBg();
+    }
 });
 
 document.addEventListener('DOMContentLoaded', function() {
