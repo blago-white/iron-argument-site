@@ -81,14 +81,16 @@
         align-items: flex-end;
         z-index: 10000;
     ">
-        <span style="
-        padding: 25px;
-        padding-inline: var(--w-col);
-        color: rgb(255, 255, 255, .5);
-        width: 100vw;
-        pointer-events: none;
-        text-align: right;
-    ">ИП "Логинов Богдан Николаевич"</span>
+        <span id="staticLegacyInfo" style="
+            padding: 25px;
+            padding-inline: var(--w-col);
+            color: rgb(255, 255, 255, .5);
+            width: 100vw;
+            pointer-events: none;
+            text-align: right;
+            display: flex;
+            justify-content: space-between;
+        "><span>ИНН 312348585325</span><span>↓</span><span>ИП "Логинов Богдан Николаевич"</span></span>
     </div>
 
     <div class="cookie-agr-wrapper" id="cookiesAgr">
@@ -337,7 +339,7 @@
     </div>
 
     <div id="promoWrapper">
-        <aside class="main-desc product-switch" onmouseover="document.getElementById('hero').style.transition = 'all .5s ease';document.getElementById('hero').style.opacity = .5;" onmouseleave="document.getElementById('hero').style.opacity = 1;">
+        <aside class="main-desc product-switch" onmouseover="if (ratio >= 1) {document.getElementById('hero').style.transition = 'all .5s ease';document.getElementById('hero').style.opacity = .5;}" onmouseleave="document.getElementById('hero').style.opacity = 1;">
             <button onclick="setCookie('promo-viewed', 1);this.parentElement.style = 'transform: translateY(150%)!important;rotate: 15deg;';document.getElementById('promoGlow').style.opacity = 0;" class="close-promo-btn"><span>[</span> <span>СКРЫТЬ</span> <span>]</span></button>
             <img src="../static/img/promo-img-2.png" style="width: auto;margin-block: auto;width: -webkit-fill-available;border-radius: 25px;">
             <div class="target-action-desc promo-desc">
@@ -544,7 +546,7 @@
                         </div>
                     </button>
                     <button class="product-order" onclick="setPicked(document.getElementById('shelf'));document.getElementById('order').scrollIntoView();">Подобрать</button>
-                    <span style="font-size: 15px;padding-top: 15px;opacity: .5;">STANDART / SB / SBL / HARD / STRONG</span>
+                    <span style="font-size: 15px;padding-top: 15px;opacity: .5;" id="productModels">STANDART / SB / SBL / HARD / STRONG</span>
                     <div style="height: 0px;">
                         <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
                     </div>
@@ -727,7 +729,28 @@
 
                     <label class="contacts-disclaimer">Нажимая кнопку "Перезвонить мне!" вы соглашаетесь с <a style="cursor:pointer;" onclick="showPrivacy()">политикой обработки данных</a></label>
                     <label class="contacts-disclaimer">А так же соглашаетесь с <a style="cursor:pointer;" onclick="showAgreement()">соглашением о обработке персональных данных</a></label>
-                    <button type="button" id="submitOrderButton" class="product-order" style="width: max-content;width: auto;">Заказать!</button>
+                    <button type="button" id="submitOrderButton" class="order-btn" style="width: auto;margin-top: 40px;padding: 10px;border-radius: 50px;">
+                        <span style="grid-row: 1;grid-column: 1;">Заказать!</span>
+                        <span class="order-btn-arrow" style="
+                            background: #121212;
+                            color: #cc945e;
+                            aspect-ratio: 1 / 1;
+                            width: auto;
+                            height: auto;
+                            width: 70px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 48px;
+
+                            grid-row: 1;
+                            grid-column: 1;
+                            margin-left: auto;
+                            transform: none;
+
+                            transition: all .5s ease;
+                        ">→</span>
+                    </button>
                     <label class="contacts-disclaimer" style="margin-inline: auto;"><a href="tel:+79066002377">+7 906 600 23 77</a> · <a href="mailto:nick-login-off@yandex.ru">nick-login-off@yandex.ru</a></label>
                     <!--                    <button type="submit" class="product-order" style="width: auto;background: transparent;color: #c68a51 !important;-webkit-text-fill-color: #c68a51 !important;">-->
 <!--                        +7 906 600 23 77-->

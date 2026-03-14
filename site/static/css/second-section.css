@@ -478,6 +478,7 @@ h2 {
     display: flex;
     flex-direction: column;
     grid-row: 2;
+    padding-left: 0px;
 }
 
 #adresses {
@@ -656,7 +657,9 @@ h2 {
 }
 
 .circle-link {
-    outline: 2px solid #96969650;
+    box-shadow: inset 3px 3px 20px #84848425;
+    border: 2px solid #96969650;
+
     color: #969696;
     padding: 1vw;
     border-radius: 50%;
@@ -743,6 +746,10 @@ h2 {
     border-radius: 30px;
     font-size: 20px;
     margin-inline: auto;
+
+    border: 2px solid #96969650;
+    box-shadow: inset 3px 3px 20px #84848425;
+    background: #12121290;
 
     transition: all 1s ease;
 }
@@ -917,6 +924,9 @@ footer.appearence-on-scroll {
     border-radius: 25px;
     opacity: 0;
     align-items: center;
+
+    border: 2px solid #96969650;
+    box-shadow: inset 3px 3px 20px #84848425;
 
     animation: 1s ease 1s 1 forwards appearance-rev;
     transition: all .2s ease;
@@ -1344,7 +1354,7 @@ footer.appearence-on-scroll {
     #aboutGlow img {
         position: relative;
         top: 0px;
-        left: -145%;
+        left: -92%;
         height: 82vh;
         z-index: -1;
         opacity: .5;
@@ -1370,11 +1380,21 @@ footer.appearence-on-scroll {
     }
 
     .about-facts li {
-        font-size: 20px;
+        font-size: 16px;
+    }
+
+    #staticLegacyInfo {
+        font-size: 3.1vw;
+        padding-bottom: 5vh!important;
     }
 
     .product-switch {
-                padding-bottom: 2ch;
+        padding-bottom: 2ch;
+        height: 68vh;
+    }
+
+    .use-promo-btn {
+        font-size: 20px;
     }
 
     .act-product-price {
@@ -1543,14 +1563,13 @@ footer.appearence-on-scroll {
     }
 
     .about-h {
-        font-size: 45px;
+        font-size: 35px;
         margin-left: 0px;
         line-height: 1;
         padding-inline: 0px;
     }
 
     .about-facts {
-        padding-left: 8.66vw;
         font-size: 16px;
     }
 
@@ -1648,6 +1667,7 @@ footer.appearence-on-scroll {
     }
 
     .product-order {
+        margin-top: 10px;
         font-size: 15px;
     }
 
@@ -1699,6 +1719,8 @@ footer.appearence-on-scroll {
         width: auto;
         padding: 0px;
         background: transparent;
+        border: none;
+        box-shadow: none;
     }
 
     .contacts-glow img {
@@ -1751,5 +1773,17 @@ footer.appearence-on-scroll {
     .galery-header-text {
         font-size: 20px;
         padding-inline: 10px;
+    }
+
+    .product span {
+        font-size: 13px;
+    }
+
+    #productModels {
+        font-size: 13px!important;
+    }
+
+    .act-product-price {
+        font-size: 20px!important;
     }
 }
