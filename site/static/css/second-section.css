@@ -62,7 +62,7 @@
     padding: 8vw;
     border-top-right-radius: 100px;
     border-top-left-radius: 100px;
-;
+    padding-bottom: 20vh;
 }
 
 .info-table {
@@ -976,6 +976,7 @@ footer.appearence-on-scroll {
     max-width: 25vw;
     margin-right: auto;
     transition: all 1s ease;
+    height: min-content;
 }
 
 .contacts-glow img {

@@ -343,7 +343,7 @@
     <div id="promoWrapper">
         <aside class="main-desc product-switch" onmouseover="if (ratio >= 1) {document.getElementById('hero').style.transition = 'all .5s ease';document.getElementById('hero').style.opacity = .5;}" onmouseleave="document.getElementById('hero').style.opacity = 1;">
             <button onclick="setCookie('promo-viewed', 1);this.parentElement.style = 'transform: translateY(150%)!important;rotate: 15deg;';document.getElementById('promoGlow').style.opacity = 0;" class="close-promo-btn"><span>[</span> <span>СКРЫТЬ</span> <span>]</span></button>
-            <img src="../static/img/promo-img-2.png" style="width: auto;margin-block: auto;width: -webkit-fill-available;border-radius: 25px;">
+            <img src="../static/img/promo-img-2.png" class="promo-img">
             <div class="target-action-desc promo-desc">
                 <div class="promo-title">
 <!--                    <h2 class="promo-header">-->
@@ -393,28 +393,34 @@
                     <img src="../static/img/yellow-glow.png" style="position: relative;width: 25vw;z-index: 1000;transform: translateY(-51%);height: 11em;">
                 </div>
                 <button class="order-btn" style="z-index: 2;border-radius: 74px;padding: 5px;height: 90px;padding-inline: 10px;/* padding-left: 50px; */" onclick="document.getElementById('products').scrollIntoView();">
-                                    <span style="
+                <span style="
                     margin-inline: auto;
                     grid-row: 1;
                     grid-column: 1;
-                ">Подобрать</span> <span class="order-btn-arrow" style="
-                    background: #121212;
-                    color: #cc945e;
-                    aspect-ratio: 1 / 1;
-                    width: auto;
-                    height: auto;
-                    width: 70px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 48px;
-
-                    grid-row: 1;
-                    grid-column: 1;
-                    margin-left: auto;
-
-                    transition: all .5s ease;
-                ">→</span>
+                ">Подобрать</span>
+                    <div style="
+                        grid-row: 1;
+                        grid-column: 1;
+                        width: -webkit-fill-available;
+                        display: flex;
+                        justify-content: flex-end;
+                    ">
+                        <span class="order-btn-arrow" style="
+                            background: #121212;
+                            color: #cc945e;
+                            aspect-ratio: 1 / 1;
+                            width: auto;
+                            height: auto;
+                            width: 70px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 48px;
+                            grid-row: 1;
+                            grid-column: 1;
+                            transition: all .5s ease, margin 1s ease;
+                        ">→</span>
+                    </div>
                 </button>
             </div>
         </div>

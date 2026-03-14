@@ -388,6 +388,7 @@ main {
     opacity: .8;
     cursor: default;
     letter-spacing: normal;
+    max-width: 30ch;
 }
 
 .dealer-text:hover {
@@ -466,7 +467,8 @@ main {
 }
 
 .order-btn:hover .order-btn-arrow {
-    transform: translateX(-14.75em) rotate(90deg);
+    transform: rotate(90deg);
+    margin-right: 87%;
     background: #E6A96C!important;
     color: #121212!important;
     box-shadow: 0px 0px 80px #e6a96c;
@@ -577,9 +579,32 @@ main {
     color: #E6A96C;
 }
 
+.promo-img {
+    margin-block: auto;
+    width: max-content;
+    border-radius: 25px;
+    max-height: 40vh;
+    aspect-ratio: 1 / 1;
+}
+
+@media (max-height: 900px) {
+    .dealer-text {
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    #mainHeader {
+        margin-top: 5vh;
+    }
+}
+
 @media (aspect-ratio < 1/1) {
     .pm-dash {
         display: none;
+    }
+
+    .promo-img {
+        max-height: 33vh;
     }
 
     .gear {
