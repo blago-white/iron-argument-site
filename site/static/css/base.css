@@ -580,7 +580,7 @@ main {
 
 .promo-img {
     margin-block: auto;
-    width: max-content;
+    width: -webkit-fill-available;
     border-radius: 25px;
     max-height: 40vh;
     aspect-ratio: 1 / 1;
