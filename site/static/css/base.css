@@ -583,6 +583,9 @@ main {
     .hero-info-islands {
         padding-block: 1.3ch;
         display: flex;
+    }
+
+    .hero-info-island {
         box-shadow: inset 3px 3px 20px #84848425;
         border: 2px solid #96969650;
     }
