@@ -58,7 +58,7 @@ async function sendForm() {
         "promocode": promo,
     };
 
-    ym(107062159,'reachGoal','Order');
+    ym(107702826,'reachGoal','order');
 
     const response = await fetch("/order/", {
         method: "POST",
