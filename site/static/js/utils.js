@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function shiftHeroBg() {
         const top = document.body.scrollTop;
 
-        document.getElementsByClassName('hero-bg')[0].style.transform = `translateY(${top/10}px)`;
+        document.getElementsByClassName('main-screen-content')[0].style.transform = `translateY(${top/10}px)`;
     }
 
     window.addEventListener('scroll', checkElements);
@@ -164,3 +164,18 @@ document.getElementById("arrowRight").addEventListener("click", function (_) {
 
     document.getElementById('products').style.marginLeft = `${e + sliderStep}em`;
 })
+
+
+function headerDissapearance() {
+    const scrollTop = document.body.scrollTop;
+    const windowHeight = window.innerHeight;
+
+    const percent = (scrollTop / windowHeight) * 10;
+
+    if (scrollTop < windowHeight) {
+        document.getElementById("mainHeader").style.transform = `translateX(${percent}%)`;
+        document.getElementById("mainHeaderSecondWord").style.transform = `translateX(${-2 * percent}%)`;
+    }
+}
+
+window.addEventListener('scroll', headerDissapearance);

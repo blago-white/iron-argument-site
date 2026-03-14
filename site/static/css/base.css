@@ -23,7 +23,7 @@
     }
 
     100% {
-        opacity: .75;
+        opacity: .5;
         transform: translateX(0%) rotate(0deg);
     }
 }
@@ -35,10 +35,35 @@
     }
 
     100% {
-        opacity: .75;
+        opacity: .5;
         transform: translateX(0%) translateY(0%) rotate(0deg);
     }
 }
+
+@keyframes h1-appearance-right {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes h1-appearance-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
 
 @keyframes appearance-rev {
     0% {
@@ -258,11 +283,12 @@ header {
     margin-bottom: 0px;
     mix-blend-mode: hard-light;
     text-shadow: 0px 0px 44px black;
-    animation: 1.5s ease 0s 1 appearance;
+    animation: 1.5s ease 0s 1 h1-appearance-right;
 }
 
 .main-screen-content h1 span {
     display: block;
+    animation: 1.5s ease 0s 1 h1-appearance-left;
 }
 
 main {
@@ -288,7 +314,7 @@ main {
 
 .gear.a img {
     width: 19vw;
-    animation: 1s ease-in-out .2s 1 forwards appearance-left;
+    animation: 1s ease-in-out .5s 1 forwards appearance-left;
 }
 
 .gear.b {
@@ -298,7 +324,7 @@ main {
 
 .gear.b img {
     width: 10vw;
-    animation: 1s ease-in-out .5s 1 forwards appearance-right;
+    animation: 1s ease-in-out 1s 1 forwards appearance-right;
 }
 
 .gear.c {
@@ -308,7 +334,7 @@ main {
 
 .gear.c img {
     width: 7.5vw;
-    animation: 1.5s ease-in-out .75s 1 forwards appearance-right;
+    animation: 1.5s ease-in-out 1.25s 1 forwards appearance-right;
 }
 
 .gear.d {
@@ -319,7 +345,7 @@ main {
 
 .gear.d img {
     width: 10vw;
-    animation: .5s ease-in-out .65s 1 forwards appearance-right;
+    animation: 1.5s ease-in-out 1.65s 1 forwards appearance-right;
 }
 
 .safe {
