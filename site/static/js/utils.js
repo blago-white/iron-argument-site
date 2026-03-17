@@ -194,6 +194,8 @@ function headerDissapearance() {
         document.getElementById("mainHeader").style.transform = `translateX(${percent}%)`;
         document.getElementById("mainHeaderSecondWord").style.transform = `translateX(${-2 * percent}%)`;
     }
+
+    document.getElementById("pageScrollPercent").innerHTML = `${parseInt(document.body.scrollTop / (document.body.offsetHeight - screen.height) * 100)}%`;
 }
 
 window.addEventListener('scroll', headerDissapearance);

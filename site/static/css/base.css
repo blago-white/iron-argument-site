@@ -667,6 +667,8 @@ main {
         display: none;
     }
 
+    #pageScrollPercent {display: none}
+
     .heading-group {
         overflow: visible;
         margin-block: auto;
