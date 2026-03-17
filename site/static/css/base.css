@@ -656,7 +656,7 @@ main {
     }
 }
 
-@media (aspect-ratio < 1/1) and (max-height: 810px) {
+@media (aspect-ratio < 1/1) and (max-height: 710px) {
     .hero-info-islands {
         display: none!important;
     }
