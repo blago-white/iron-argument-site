@@ -40,6 +40,18 @@
     }
 }
 
+@keyframes appearance-safe {
+    0% {
+        opacity: 0;
+        transform: translateX(0%) translateY(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%) translateY(0%);
+    }
+}
+
 @keyframes h1-appearance-right {
     0% {
         opacity: 0;
@@ -101,6 +113,18 @@
     }
 }
 
+@keyframes transparentAnim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
 html {
     background: #121212;
     color: var(--c-wh);
@@ -145,7 +169,7 @@ header {
 
     opacity: 0;
 
-    animation: 1s ease 1s 1 forwards appearance;
+    animation: 2s ease 1.5s 1 forwards appearance;
 }
 
 .h-logo {
@@ -282,12 +306,12 @@ header {
     margin-bottom: 0px;
     mix-blend-mode: hard-light;
     text-shadow: 0px 0px 44px black;
-    animation: 1.5s ease 0s 1 h1-appearance-right;
+    animation: .6s linear 0s transparentAnim, 2s cubic-bezier(0.42, 0, 0.25, 0.95) .5s 1 h1-appearance-right;
 }
 
 .main-screen-content h1 span {
     display: block;
-    animation: 1.5s ease 0s 1 h1-appearance-left;
+    animation: .6s linear 0s transparentAnim, 2s cubic-bezier(0.42, 0, 0.25, 0.95) .5s 1 h1-appearance-left;
 }
 
 main {
@@ -355,7 +379,7 @@ main {
 
     transition: opacity .2s ease!important;
 
-    animation: 1.5s ease-in-out 0s 1 appearance-right;
+    animation: 1s linear 0s 1 forwards transparentAnim, 1.5s cubic-bezier(0.42, 0, 0.25, 0.95) 1s 1 forwards appearance-safe;
 }
 
 .safe-s {
@@ -363,6 +387,19 @@ main {
     left: 44vw;
     width: max(70%, 110vh);
     opacity: 0;
+    display: none!important;
+
+    transition: opacity .2s ease!important;
+
+    animation: 1s linear 0s 1 transparentAnim, 1.5s cubic-bezier(0.42, 0, 0.25, 0.95) 1s 1 appearance-safe;
+}
+
+#heroYellowGlow {
+    position: absolute;
+    top: 0vh;
+    left: 31%;
+    z-index: 1;
+    animation: 1.5s linear 0s 1 forwards transparentAnim, 1.5s cubic-bezier(0.42, 0, 0.25, 0.95) 1.5s 1 forwards appearance-safe;
 }
 
 .dealer-content {
@@ -378,7 +415,9 @@ main {
     max-width: 40vw;
     line-height: 35px;
 
-    animation: 1.5s ease 0s 1 appearance-rev;
+    margin-top: 5vh;
+
+    animation: .6s linear 0s forwards transparentAnim, 2s ease .6s 1 forwards appearance-rev;
 
     transition: all 1s ease;
 }
@@ -515,7 +554,7 @@ main {
     opacity: 0;
     overflow: hidden;
 
-    animation: 1.5s ease 1s 1 forwards appearance-rev;
+    animation: 2s ease 1.5s 1 forwards appearance-rev;
 }
 
 .target-action-form:hover .main-desc {
@@ -545,7 +584,7 @@ main {
     padding: 10px;
     background: rgb(10, 10, 10, .75);
     border-radius: 25px;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 500;
     border: 2px solid #555;
     opacity: 0;
@@ -581,6 +620,7 @@ main {
 .promo-img {
     margin-block: auto;
     width: -webkit-fill-available;
+    max-width: max-content;
     border-radius: 25px;
     max-height: 40vh;
     aspect-ratio: 1 / 1;
@@ -589,8 +629,16 @@ main {
 .target-action-form .main-desc {
     z-index: -1;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: min-content auto;
     grid-template-rows: auto auto;
+}
+
+.heading-group {
+    overflow: hidden;
+}
+
+.order-btn-arrow-wrapper {
+    width: -webkit-fill-available;
 }
 
 @media (max-height: 900px) {
@@ -600,13 +648,28 @@ main {
     }
 
     #mainHeader {
-        margin-top: 5vh;
+        margin-top: 0vh;
+    }
+}
+
+@media (aspect-ratio < 1/1) and (max-height: 810px) {
+    .hero-info-islands {
+        display: none!important;
     }
 }
 
 @media (aspect-ratio < 1/1) {
     .pm-dash {
         display: none;
+    }
+
+    .heading-group {
+        overflow: visible;
+        margin-block: auto;
+    }
+
+    .hero-info-islands {
+        margin-bottom: auto;
     }
 
     .promo-img {
@@ -656,13 +719,23 @@ main {
         margin-block: auto;
     }
 
+    .order-btn-arrow-wrapper {
+        width: min-content;
+        display: initial!important;
+    }
+
     .dealer-content {
         width: -webkit-fill-available;
         max-width: max-content;
         margin-bottom: 15px;
-        background: rgb(10, 10, 10, .75);
+        /*background: rgb(10, 10, 10, .75);*/
+        background: rgb(18, 18, 18, 1);
+
         border-radius: 25px;
         padding: 10px;
+
+        box-shadow: inset 3px 3px 20px #84848425;
+        border: 2px solid #96969650;
     }
 
     h1 {

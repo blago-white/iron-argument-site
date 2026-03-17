@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function shiftHeroBg() {
         const top = document.body.scrollTop;
 
-        document.getElementsByClassName('main-screen-content')[0].style.transform = `translateY(${top/10}px)`;
+        document.getElementsByClassName('main-screen-content')[0].style.transform = `translateY(${top/30}px)`;
     }
 
     window.addEventListener('scroll', checkElements);
@@ -75,6 +75,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('secondSection').style.visibility = 'visible';
+    document.getElementById('hero').style.visibility = 'visible';
+
     document.getElementById('loaderScreenBg').style.opacity = '0';
     document.getElementById('loaderScreenBg').style.transform = 'translateY(-100%)';
 });

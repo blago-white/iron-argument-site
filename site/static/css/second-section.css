@@ -11,17 +11,6 @@
 }
 
 
-@keyframes transparentAnim {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-
 @keyframes appearance-rev-rotated {
     0% {
         opacity: 0;
@@ -1092,7 +1081,7 @@ footer.appearence-on-scroll {
 
 .use-promo-btn {
     background: #eee8aa;
-    border-radius: 30px;
+    border-radius: 100px;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -1106,12 +1095,11 @@ footer.appearence-on-scroll {
     width: 100%;
     cursor: pointer;
     justify-content: center;
-
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
-
+    padding: 5px;
     box-shadow: inset 3px 3px 20px #84848425;
     border: 2px solid #96969650;
+    justify-content: space-between;
+
 
     transition: all .2s ease;
 }
@@ -1130,8 +1118,10 @@ footer.appearence-on-scroll {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0px;
+    text-align: left;
+
+    font-family: 'Unbounded', sans-serif;
+    color: #eee8aa;
 
     box-shadow: inset 3px 3px 20px #84848425;
     border: 2px solid #96969650;
