@@ -377,9 +377,9 @@ main {
     left: 45vw;
     width: max(60%, 100vh);
 
-    transition: opacity .2s ease!important;
+    transition: opacity .2s ease, transform .1s linear!important;
 
-    animation: 1s linear 0s 1 forwards transparentAnim, 1.5s cubic-bezier(0.42, 0, 0.25, 0.95) 1s 1 forwards appearance-safe;
+    animation: 1s linear 0s 1 transparentAnim, 1.5s cubic-bezier(0.42, 0, 0.25, 0.95) 1s 1 appearance-safe;
 }
 
 .safe-s {
@@ -415,7 +415,8 @@ main {
     max-width: 40vw;
     line-height: 35px;
 
-    margin-top: 5vh;
+    /*margin-top: 5vh;*/
+    margin-block: auto;
 
     animation: .6s linear 0s forwards transparentAnim, 2s ease .6s 1 forwards appearance-rev;
 
@@ -459,7 +460,7 @@ main {
 }
 
 .order-btn {
-    background: radial-gradient(circle, rgba(230, 169, 108, 1) 0%, rgb(236 181 130) 100%);
+    background: radial-gradient(circle, rgba(230, 169, 108, 1) 0%, rgb(143 98 55) 100%);
     border-radius: 30px;
     padding: 20px;
 
@@ -634,7 +635,9 @@ main {
 }
 
 .heading-group {
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: -webkit-fill-available;
 }
 
 .order-btn-arrow-wrapper {
@@ -649,6 +652,7 @@ main {
 
     #mainHeader {
         margin-top: 0vh;
+        height: max-content;
     }
 }
 
@@ -666,6 +670,8 @@ main {
     .heading-group {
         overflow: visible;
         margin-block: auto;
+        gap: 10px;
+        justify-content: center;
     }
 
     .hero-info-islands {
@@ -703,11 +709,20 @@ main {
     .hero-info-islands {
         padding-block: 1.3ch;
         display: flex;
+        color: #e0e0e0;
     }
 
     .hero-info-island {
         box-shadow: inset 3px 3px 20px #84848425;
         border: 2px solid #96969650;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: -webkit-fill-available;
+    }
+
+    .hero-info-island .h-colorized {
+        margin: 0px;
     }
 
     .hero-bg {
@@ -756,6 +771,7 @@ main {
 
     .dealer-content {
         margin-bottom: 5vh;
+        margin-block: 0px!important;
     }
 
     .main-screen-content {
@@ -784,6 +800,7 @@ main {
         font-size: 10.8vw;
         letter-spacing: -2;
         line-height: 9.9vw;
+        height: auto;
     }
 
     .second-word {

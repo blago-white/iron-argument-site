@@ -72,11 +72,11 @@ document.addEventListener('mousemove', function(ev){
         cursorHero.style.opacity = 1;
     }
 },false);
-
-document.querySelector('.second-section').addEventListener('mouseover', () => {
-    document.getElementById("cursor").style.opacity = 1;
-})
-
-document.querySelector('.second-section').addEventListener('mouseover', () => {
-    document.getElementById("cursor").style.opacity = 0;
-})
+//
+// document.querySelector('.second-section').addEventListener('mouseover', () => {
+//     document.getElementById("cursor").style.opacity = 1;
+// })
+//
+// document.querySelector('.second-section').addEventListener('mouseover', () => {
+//     document.getElementById("cursor").style.opacity = 0;
+// })

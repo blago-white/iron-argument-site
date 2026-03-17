@@ -75,11 +75,25 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('secondSection').style.visibility = 'visible';
-    document.getElementById('hero').style.visibility = 'visible';
+    document.getElementById('secondSection').style.display = 'none';
+    document.getElementById('hero').style.display = 'none';
+    document.querySelector('.hero-bg').style.display = 'none';
 
-    document.getElementById('loaderScreenBg').style.opacity = '0';
-    document.getElementById('loaderScreenBg').style.transform = 'translateY(-100%)';
+    setTimeout(() => {
+        document.getElementById('secondSection').style.display = 'block';
+        document.getElementById('hero').style.display = 'flex';
+        document.querySelector('.hero-bg').style.display = 'block';
+
+        setTimeout(() => {
+            document.addEventListener("mousemove", (e) => {
+                objParallax(e);
+            })
+        }, 3000)
+
+        document.getElementById('loaderScreenBg').style.opacity = '0';
+        document.getElementById('loaderScreenBg').style.transform = 'translateY(-100%)';
+    }, 50)
+
 });
 
 
@@ -87,7 +101,7 @@ const windowInnerWidth = document.documentElement.clientWidth
 const windowInnerHeight = document.documentElement.clientHeight
 
 let followers = document.querySelectorAll(".gear");
-// let objFollowers = document.querySelectorAll(".safe");
+let objFollowers = document.querySelectorAll(".safe");
 let mainBg = document.querySelectorAll(".hero-bg");
 
 let bgParallax = (e) => {
@@ -114,19 +128,18 @@ let gearsParallax = (e) => {
     })
 }
 
-// let objParallax = (e) => {
-//     let x = (e.clientX - (windowInnerHeight / 2))/50;
-//     let y = (e.clientY - (windowInnerWidth / 2))/50;
-//
-//     objFollowers.forEach((f) => {
-//         f.style = `transform: translateY(${y}px) translateX(${x}px)!important;transition: all 1s ease;`;
-//     })
-// }
+let objParallax = (e) => {
+    let x = (e.clientX - (windowInnerHeight / 2))/100;
+    let y = (e.clientY - (windowInnerWidth / 2))/100;
+
+    objFollowers.forEach((f) => {
+        f.style = `transform: translateY(${y}px) translateX(${x}px)!important;transition: all 1s ease;`;
+    })
+}
 
 document.addEventListener("mousemove", (e) => {
     if (ratio > 1) {
         gearsParallax(e);
-        // objParallax(e);
         bgParallax(e);
     }
 })
