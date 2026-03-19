@@ -46,7 +46,12 @@
     <div style="
         position: sticky;
         top: 0px;
-    "><img class="hero-bg" style="position: absolute;z-index: -1;filter: brightness(0.6) saturate(0.85);width: -webkit-fill-available;top: 0px;min-height: 100vh;" src="../static/img/bg.png"></div>
+    ">
+        <video class="hero-bg" style="position: absolute; z-index: -1; filter: brightness(0.5) saturate(0.5); top: 0px; min-height: 100vh; transform: translateY(0px); display: block; transition: 0.2s;" loop="" muted="" playsinline="" autoplay="" preload="auto" poster="">
+            <source src="https://praktikoffice.ru/upload/uf/e98/btrg2sg0blzx5gkqzln31fy4h8y50elq.mp4" type="video/mp4">
+        </video>
+<!--        <img class="hero-bg" style="position: absolute;z-index: -1;filter: brightness(0.6) saturate(0.85);width: -webkit-fill-available;top: 0px;min-height: 100vh;" src="../static/img/bg.png">-->
+    </div>
     <div style="
         position: sticky;
         height: 0px;
@@ -349,7 +354,15 @@
     <div style="height: 0px;">
         <img src="../static/img/yellow-glow.png" id="heroYellowGlow">
     </div>
+    <div style="height: 0px;">
+            <img src="../static/img/yellow-glow.png" id="heroYellowGlow" style="
+        left: -42%;
+        left: -42%;
+        top: 40vh;
+    ">
+        </div>
 
+    </div>
     <div id="promoWrapper">
         <aside class="main-desc product-switch" onmouseover="if (ratio >= 1) {document.getElementById('hero').style.transition = 'all .5s ease';document.getElementById('hero').style.opacity = .5;}" onmouseleave="document.getElementById('hero').style.opacity = 1;">
             <button onclick="setCookie('promo-viewed', 1);this.parentElement.style = 'transform: translateY(150%)!important;rotate: 15deg;';document.getElementById('promoGlow').style.opacity = 0;" class="close-promo-btn"><span>[</span> <span>СКРЫТЬ</span> <span>]</span></button>
@@ -401,8 +414,10 @@
             </h1>
 
             <h2 class="dealer-content">
+                <img class="h-logo-img" src="../static/img/logo.png" style="height: 87px;">
+                <img style="    opacity: .5;width: 25px;height: min-content;" src="../static/img/cross.png"></img>
                 <img src="../static/img/pmlogo.png" class="pm-logo">
-                <img src="../static/img/pmdash.png" class="pm-dash" style="opacity: .8;">
+<!--                <img src="../static/img/pmdash.png" class="pm-dash" style="opacity: .8;">-->
                 <span class="dealer-text">
                     Оффициальный диллер продукции “НПО Промет”.
                 </span>
@@ -416,6 +431,7 @@
                         У нас — <span class="h-colorized">Широчайший ассортимент</span> металлической мебели.
                     </p>
                     <p class="target-action-desc" style="grid-column-start: 1;grid-column-end: 3;">Мы <span class="h-colorized">подберем, поставим, и соберем</span>.</p>
+                    <p class="target-action-desc" style="grid-column-start: 1;grid-column-end: 3;"><a href="#contactsH">+7 995 24 17 51</a>  · <a href="#contactsH">Telegram</a> · <a href="#contactsH">VK</a></p>
                 </aside>
                 <div style="height: 0px;z-index: 1;" class="order-glow">
                     <img src="../static/img/yellow-glow.png" style="position: relative;width: 25vw;z-index: 1000;transform: translateY(-51%);height: 11em;">
@@ -819,7 +835,8 @@
                 </ul>
             </div>
         </aside>
-        <footer class="appearence-on-scroll">
+        <div id="footerHeightTrigger"></div>
+        <footer class="appearence-on-scroll" id="footer" style="position: sticky;top: 20vh;">
             <div style="height: 0px;display: flex;align-items: flex-start;justify-content: center;">
                 <img class="footer-img appearence-on-scroll from-down" src="../static/img/safe.png">
             </div>
@@ -855,6 +872,7 @@
                 <span>Сайт не является публичной офертой!</span>
             </div>
         </footer>
+        <div style="height: 100vh;"></div>
     </section>
 
     <script>

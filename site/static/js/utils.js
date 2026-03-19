@@ -7,6 +7,8 @@ var w = screen.width;
 var h = screen.height;
 var ratio = w / h;
 
+let footerAnimStartHeight = 0;
+
 
 if (ratio < 1) {
     defaultProductsListShift = '2em';
@@ -197,5 +199,28 @@ function headerDissapearance() {
 
     document.getElementById("pageScrollPercent").innerHTML = `${parseInt(document.body.scrollTop / (document.body.offsetHeight - screen.height) * 100)}%`;
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const element = document.querySelector('#secondSection');
+
+    function checkElements() {
+        const elementTop = (element.getBoundingClientRect().top);
+
+        console.log(`A - ${elementTop} ${element.getBoundingClientRect().top}`)
+        console.log(`B - ${document.body.scrollTop}`)
+
+        if (elementTop <= (window.innerHeight * .99)) {
+            let perc = document.getElementById('secondSection').getBoundingClientRect().top * -.0001;
+
+            console.log(perc)
+
+            element.style.transition = `all .2s ease`;
+            // element.style.transform = `scale(${1 + element.scrollTop / document.body.scrollTop})`;
+            element.style.transform = `scale(${Math.min(1.05 + perc, 1)})`;
+        }
+    }
+
+    window.addEventListener('scroll', checkElements);
+})
 
 window.addEventListener('scroll', headerDissapearance);

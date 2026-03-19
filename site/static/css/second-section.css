@@ -52,6 +52,8 @@
     border-top-right-radius: 100px;
     border-top-left-radius: 100px;
     padding-bottom: 20vh;
+
+    transform: scale(0.955837);
 }
 
 .info-table {
@@ -413,6 +415,7 @@ h2 {
     left: -16px;
     top: 0px;
     z-index: -1;
+    border-top-right-radius: 100px;
 }
 
 .h-beam.b {
