@@ -671,6 +671,10 @@ main {
         display: none;
     }
 
+    .order-btn:hover .order-btn-arrow {
+        margin: 0px;
+    }
+
     .dealer-content img {
         max-height: min(15vw, 50px);
     }

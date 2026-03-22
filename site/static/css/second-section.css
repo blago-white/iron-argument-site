@@ -1418,6 +1418,10 @@ footer.appearence-on-scroll {
         grid-template-columns: 1fr;
     }
 
+    #footerLegal {
+        min-height: max-content;
+    }
+
     .product-price-glow.b {
         background: radial-gradient(circle, #e0a66b24 0%, transparent 50%);
         transform: translate(-48%, -144%);
