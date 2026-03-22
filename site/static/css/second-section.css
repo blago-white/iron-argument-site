@@ -710,7 +710,7 @@ h2 {
 .contact-type-switch {
     padding: 5px;
     border-radius: 25px;
-    background: rgb(255, 255, 255, .1);
+    background: rgb(255, 255, 255, .05);
     height: fit-content;
     width: -webkit-fill-available;
     max-width: none;
@@ -720,12 +720,20 @@ h2 {
     background: rgb(255, 255, 255, 0);
     border: 0px;
     padding: 5px;
+    padding-right: 29px;
     padding-inline: 15px;
+    HEIGHT: 80PX;
     border-radius: 20px;
     color: rgb(255, 255, 255, .75);
     cursor: pointer;
-    font-size: 20px;
+    font-family: 'Helvetica';
+    font-size: 16px;
     transition: all .2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: -webkit-fill-available;
+    align-items: flex-start;
 }
 
 .contact-content form {
@@ -745,9 +753,30 @@ h2 {
     transition: all 1s ease;
 }
 
+.contect-type-switch-btn:hover {
+    background: rgb(255, 255, 255, .1);
+}
+
 .contect-type-switch-btn.active {
-    background: rgb(230 169 108);
+    box-shadow: inset 15px 15px 90px #dda166, inset 15px 15px 90px #dda166;
     color: #121212;
+}
+
+.contect-type-switch-btn img {
+    opacity: 0;
+    transform: translateY(-50%) translateX(-50%);
+    transition: all .2s ease;
+}
+
+.contect-type-switch-btn:hover img {
+    opacity: .5;
+    transform: none;
+}
+
+.contect-type-switch-btn.active img {
+    filter: invert(1);
+    opacity: 1;
+    transform: none;
 }
 
 .contact-content input {
@@ -756,8 +785,17 @@ h2 {
     border: none;
     border-bottom: 2px solid rgb(255, 255, 255, .5);
     color: #E6A96C;
-    margin-top: 2ch;
     max-width: 20ch;
+
+    background: rgb(255, 255, 255, .05);
+    padding: 10px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.contact-content input:nth-child(1), .contact-content input:nth-child(2) {
+    border-bottom: 2px solid #E6A96C;
+    box-shadow: inset 0px -7px 20px #E6A96C20;
 }
 
 #promoGlow {
@@ -799,10 +837,12 @@ h2 {
 }
 
 .contacts-field-set {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1ch;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     max-width: 32vw;
+    margin-top: 2ch;
 }
 
 .contacts-disclaimer {
@@ -1374,6 +1414,10 @@ footer.appearence-on-scroll {
         height: 19vh;
     }
 
+    .contacts-field-set {
+        grid-template-columns: 1fr;
+    }
+
     .product-price-glow.b {
         background: radial-gradient(circle, #e0a66b24 0%, transparent 50%);
         transform: translate(-48%, -144%);
@@ -1688,10 +1732,13 @@ footer.appearence-on-scroll {
     .contect-type-switch-btn {
         font-size: 15px;
         background: rgb(255, 255, 255, .1);
+        width: fit-content;
+        height: 50px;
+        border-radius: 15px;
     }
 
     .contact-content input {
-        margin-top: 15px;
+        margin-top: 0px;
         font-size: 20px;
         max-width: -webkit-fill-available;
         width: -webkit-fill-available;
@@ -1713,6 +1760,8 @@ footer.appearence-on-scroll {
 
     .contacts-field-set  {
         flex-direction: column;
+        width: -webkit-fill-available;
+        max-width: -webkit-fill-available;
     }
 
     .contacts-disclaimer {

@@ -24,7 +24,11 @@ document.addEventListener('mousemove', function(ev){
     }
 
     if (ev.target.tagName.toLowerCase() === 'button' || ev.target.tagName.toLowerCase() === 'a') {
-        cursor.style.opacity = 0;
+        if (['shelf', 'safe', 'wardrobe', 'dressing', 'workbench'].includes(ev.target.id)) {
+            cursor.style.opacity = 1;
+        } else {
+            cursor.style.opacity = 0;
+        }
     } else if (!cursorHidden) {
         cursor.style.opacity = .5;
     }
@@ -47,7 +51,7 @@ document.addEventListener('mousemove', function(ev){
     }
 },false);
 
-document.querySelector('.second-section').addEventListener('mouseover', () => {
+document.querySelector('.second-section').addEventListener('mouseover', (ev) => {
     document.getElementById("cursor").style.opacity = 1;
     cursorHidden = false;
 })
@@ -56,3 +60,47 @@ document.querySelector('.main-screen-content').addEventListener('mouseover', () 
     document.getElementById("cursor").style.opacity = 0;
     cursorHidden = true;
 })
+
+document.querySelectorAll('#shelf, #wardrobe, #safe, #dressing, #workbench').forEach((e) => {
+    let btnImg = imageById[e.id];
+
+    e.addEventListener('mouseover', (event) => {
+        document.getElementById("cursor").src = `../static/img/${btnImg}`;
+        document.getElementById("cursor").style.filter = 'none';
+        document.getElementById("cursor").style.opacity = '1';
+        document.getElementById("cursor").style.width = '20ch';
+        document.getElementById("cursor").style.top = '0ch';
+        document.getElementById("cursor").style.left = '0ch';
+    });
+
+    e.addEventListener('mouseleave', (event) => {
+        document.getElementById("cursor").src = '../static/img/yellow-glow.png';
+        document.getElementById("cursor").style.filter = 'blur(50px)';
+        document.getElementById("cursor").style.opacity = '.5';
+        document.getElementById("cursor").style.width = '20vw';
+        document.getElementById("cursor").style.top = '-9vw';
+        document.getElementById("cursor").style.left = ' -10vw';
+    });
+})
+
+// document.getElementById('shelf').addEventListener('mouseover', () => {
+//     document.getElementById("cursor").src = '../static/img/shelf.png';
+//     document.getElementById("cursor").style.filter = 'none';
+//     document.getElementById("cursor").style.opacity = '1';
+//     document.getElementById("cursor").style.width = '20ch';
+//     document.getElementById("cursor").style.top = '0ch';
+//     document.getElementById("cursor").style.left = '0ch';
+//     // document.getElementById("cursor").style.background = '#121212';
+//     // document.getElementById("cursor").style.padding = '1ch';
+// })
+//
+// document.getElementById('shelf').addEventListener('mouseleave', () => {
+//     document.getElementById("cursor").src = '../static/img/yellow-glow.png';
+//     document.getElementById("cursor").style.filter = 'blur(50px)';
+//     document.getElementById("cursor").style.opacity = '.5';
+//     document.getElementById("cursor").style.width = '20vw';
+//     document.getElementById("cursor").style.top = '-9vw';
+//     document.getElementById("cursor").style.left = ' -10vw';
+//     // document.getElementById("cursor").style.background = 'transparent';
+//     // document.getElementById("cursor").style.padding = '1ch';
+// })

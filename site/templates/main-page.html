@@ -431,7 +431,7 @@
                         У нас — <span class="h-colorized">Широчайший ассортимент</span> металлической мебели.
                     </p>
                     <p class="target-action-desc" style="grid-column-start: 1;grid-column-end: 3;">Мы <span class="h-colorized">подберем, поставим, и соберем</span>.</p>
-                    <p class="target-action-desc" style="grid-column-start: 1;grid-column-end: 3;"><a href="#contactsH">+7 995 24 17 51</a>  · <a href="#contactsH">Telegram</a> · <a href="#contactsH">VK</a></p>
+                    <p class="target-action-desc" style="grid-column-start: 1;grid-column-end: 3;"><a href="#contactsH">+7 906 600 23 77</a>  · <a href="#contactsH">Telegram</a> · <a href="#contactsH">VK</a></p>
                 </aside>
                 <div style="height: 0px;z-index: 1;" class="order-glow">
                     <img src="../static/img/yellow-glow.png" style="position: relative;width: 25vw;z-index: 1000;transform: translateY(-51%);height: 11em;">
@@ -754,19 +754,19 @@
 
                 <form class="appearence-on-scroll" id="orderForm">
                     <div class="contact-type-switch" style="margin-bottom: 10px;">
-                        <div>
-                            <button type="button" class="contect-type-switch-btn active" id="shelf">Стеллажи</button>
-                            <button type="button" class="contect-type-switch-btn" id="wardrobe">Шкафы</button>
-                            <button type="button" class="contect-type-switch-btn" id="safe">Сейфы</button>
-                            <button type="button" class="contect-type-switch-btn" id="dressing">Гардеробные</button>
-                            <button type="button" class="contect-type-switch-btn" id="workbench">Верстаки</button>
+                        <div style="display: flex;">
+                            <button type="button" class="contect-type-switch-btn active" id="shelf"><span>Стеллажи</span><span style="margin-top: auto;"><img src="../static/img/small-arrow.svg" style="width: 1.5ch;"></span></button>
+                            <button type="button" class="contect-type-switch-btn" id="wardrobe"><span>Шкафы</span><span style="margin-top: auto;"><img src="../static/img/small-arrow.svg" style="width: 1.5ch;"></span></button>
+                            <button type="button" class="contect-type-switch-btn" id="safe"><span>Сейфы</span><span style="margin-top: auto;"><img src="../static/img/small-arrow.svg" style="width: 1.5ch;"></span></button>
+                            <button type="button" class="contect-type-switch-btn" id="dressing"><span>Гардеробные</span><span style="margin-top: auto;"><img src="../static/img/small-arrow.svg" style="width: 1.5ch;"></span></button>
+                            <button type="button" class="contect-type-switch-btn" id="workbench"><span>Верстаки</span><span style="margin-top: auto;"><img src="../static/img/small-arrow.svg" style="width: 1.5ch;"></span></button>
                         </div>
                     </div>
 
                     <div class="contact-type-switch">
-                        <div>
-                            <button type="button" class="contect-type-switch-btn active" id="switchPH" onclick="if (!this.classList.contains('active')) {document.getElementById('contactDataWrapper').innerHTML = `<input type='tel' maxlength='12' placeholder='+7 999 123 45 67' id='formContact' required>`;}">Телефон</button>
-                            <button type="button" class="contect-type-switch-btn" id="switchTG" onclick="if (!this.classList.contains('active')) {document.getElementById('contactDataWrapper').innerHTML = `<input type='username' placeholder='@UserName' id='formContact' required></input>`;}">Телеграм</button>
+                        <div style="display: flex;">
+                            <button type="button" class="contect-type-switch-btn active" id="switchPH" onclick="if (!this.classList.contains('active')) {document.getElementById('contactDataWrapper').innerHTML = `<input type='tel' maxlength='16' placeholder='+7 999 123 45 67' id='formContact' required>`;}"><span>Телефон</span><span style="margin-top: auto;"><img src="../static/img/small-arrow.svg" style="width: 1.5ch;"></span></button>
+                            <button type="button" class="contect-type-switch-btn" id="switchTG" onclick="if (!this.classList.contains('active')) {document.getElementById('contactDataWrapper').innerHTML = `<input type='username' placeholder='@UserName' id='formContact' required></input>`;}"><span>Телеграм</span><span style="margin-top: auto;"><img src="../static/img/small-arrow.svg" style="width: 1.5ch;"></span></button>
                         </div>
                     </div>
 
@@ -780,7 +780,7 @@
 
                     <label class="contacts-disclaimer">Нажимая кнопку "Перезвонить мне!" вы соглашаетесь с <a style="cursor:pointer;" onclick="showPrivacy()">политикой обработки данных</a></label>
                     <label class="contacts-disclaimer">А так же соглашаетесь с <a style="cursor:pointer;" onclick="showAgreement()">соглашением о обработке персональных данных</a></label>
-                    <button type="button" id="submitOrderButton" class="order-btn" style="width: auto;margin-top: 40px;padding: 10px;border-radius: 50px;">
+                    <button type="button" id="submitOrderButton" class="order-btn" style="width: -webkit-fill-available;margin-top: 40px;padding: 10px;border-radius: 50px;">
                         <span style="grid-row: 1;grid-column: 1;">Заказать!</span>
                         <span class="order-btn-arrow" style="
                             background: #121212;
@@ -852,7 +852,8 @@
                 <a onclick="showPrivacy()" style="cursor: pointer;">
                     Политика конфиденциальности
                 </a>
-                <div>ОГРНИП: 323310000063180</div>
+                <span style="text-align: center;">© "ИП Логинов Богдан Николаевич" 2026 г.<br>Все права защищены</span>
+                <div style="grid-column: 2;">ОГРНИП: 323310000063180</div>
             </div>
             <div class="footer-info-row">
                 <a onclick="showAgreement();" style="cursor: pointer;">
@@ -872,7 +873,7 @@
                 <span>Сайт не является публичной офертой!</span>
             </div>
         </footer>
-        <div style="height: 100vh;"></div>
+<!--        <div style="height: 100vh;"></div>-->
     </section>
 
     <script>
@@ -926,12 +927,13 @@
     <script type="module">
         import { getCookie } from "/static/js/cookies.js";
 
-        if (getCookie('promo-viewed')) {
-            document.getElementById('promoWrapper').remove();
-
-        } else {
-            document.getElementById("promoGlow").style.visibility = 'visible';
-        }
+        try {
+            if (getCookie('promo-viewed')) {
+                document.getElementById('promoWrapper').remove();
+            } else {
+                document.getElementById("promoGlow").style.visibility = 'visible';
+            }
+        } catch {}
     </script>
 </body>
 </html>

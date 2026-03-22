@@ -660,7 +660,7 @@ main {
     }
 }
 
-@media (aspect-ratio < 1/1) and (max-height: 710px) {
+@media (aspect-ratio < 1/1) and (max-height: 810px) {
     .hero-info-islands {
         display: none!important;
     }
@@ -671,6 +671,10 @@ main {
         display: none;
     }
 
+    .dealer-content img {
+        max-height: min(15vw, 50px);
+    }
+
     #pageScrollPercent {display: none}
 
     .heading-group {
@@ -678,6 +682,10 @@ main {
         margin-block: auto;
         gap: 10px;
         justify-content: center;
+    }
+
+    .target-action-form .main-desc {
+        row-gap: 5px;
     }
 
     .hero-info-islands {
@@ -757,6 +765,8 @@ main {
 
         box-shadow: inset 3px 3px 20px #84848425;
         border: 2px solid #96969650;
+
+        gap: 10px;
     }
 
     h1 {
@@ -778,6 +788,7 @@ main {
     .dealer-content {
         margin-bottom: 5vh;
         margin-block: 0px!important;
+        padding: 15px;
     }
 
     .main-screen-content {
