@@ -52,8 +52,9 @@
     border-top-right-radius: 100px;
     border-top-left-radius: 100px;
     padding-bottom: 20vh;
+    overflow: hidden;
 
-    transform: scale(0.955837);
+    transform: scale(0.9);
 }
 
 .info-table {

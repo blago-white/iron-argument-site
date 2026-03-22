@@ -62,7 +62,7 @@
             position: sticky;
             height: 30vh;
             width: 100%;
-            background: linear-gradient(180deg, rgb(0 0 0 / 90%) 10%, rgba(0, 0, 0, 0) 82%);
+            background: linear-gradient(180deg, rgb(0 0 0 / 60%) 10%, rgba(0, 0, 0, 0) 82%);
             top: 0px;
             z-index: 998;
             pointer-events: none;
@@ -129,7 +129,7 @@
         </div>
     </div>
     <div class="doc-wrapper" id="docWrapper">
-            <div class="doc" id="privacyDoc" style="transform: scale(0.75) translateY(-100vh);max-height: 0vh;visibility: hidden;">
+            <div class="doc" id="privacyDoc" style="transform: scale(0.75) translateY(-10vh);max-height: 0vh;visibility: hidden;">
                 <div style="width: 100%;background: black;"></div>
                 <div class="doc-content" style="color: #fff9;">
                     <h3 class="doc-header">
@@ -140,7 +140,7 @@
                             <span class="h-colorized" style="">ПЕРСОНАЛЬНЫХ ДАННЫХ</span>
                             КЛИЕНТОВ И ПОСЕТИТЕЛЕЙ САЙТА
                         </span>
-                        <button class="cookie-btn doc-close-btn" onclick="this.parentElement.parentElement.parentElement.style = 'transform: scale(0.75) translateY(-100vh);max-height: 0vh;visibility: hidden;transition: transform 1s ease, visibility 0s 1s ease, max-height 1.25s ease;';">ЗАКРЫТЬ</button>
+                        <button class="cookie-btn doc-close-btn" onclick="this.parentElement.parentElement.parentElement.style = 'transform: scale(0.75) translateY(-10vh);max-height: 0vh;visibility: hidden;transition: transform 1s ease, visibility 0s 1s ease, max-height 1.25s ease;';">ЗАКРЫТЬ</button>
                     </h3>
                         <p>
                             1. Общие <br>
@@ -273,7 +273,7 @@
                         </p>
                 </div>
             </div>
-            <div class="doc" id="agreementDoc" style="transform: scale(0.75) translateY(-100vh);max-height: 20vh;visibility: hidden;">
+            <div class="doc" id="agreementDoc" style="transform: scale(0.75) translateY(-10vh);max-height: 20vh;visibility: hidden;">
                 <div style="width: 100%;background: black;"></div>
                 <div class="doc-content" style="color: #fff9;">
                     <h3 class="doc-header">
@@ -283,7 +283,7 @@
                             <br>
                             <span class="h-colorized" style="">ПОЛЬЗОВАТЕЛЕЙ САЙТА</span>
                         </span>
-                        <button class="cookie-btn doc-close-btn" onclick="this.parentElement.parentElement.parentElement.style = 'transform: scale(0.75) translateY(-100vh);max-height: 0vh;visibility: hidden;transition: transform 1s ease, visibility 0s 1s ease, max-height 1.25s ease;';">ЗАКРЫТЬ</button>
+                        <button class="cookie-btn doc-close-btn" onclick="this.parentElement.parentElement.parentElement.style = 'transform: scale(0.75) translateY(-10vh);max-height: 0vh;visibility: hidden;transition: transform 1s ease, visibility 0s 1s ease, max-height 1.25s ease;';">ЗАКРЫТЬ</button>
                     </h3>
                     <p>
                         Я Пользовaтель сaйтa железный-аргумент.рф (дaлее — Веб-сaйт) нaстоящим дaю соглaсие ИП Логинову Богдану Николаевичу (ОГPНИП 323370000039970) дaлее — Опеpaтоp нa обpaботку моиx пеpсонaльныx дaнныx нa следующиx условияx a тaкже нa условияx укaзaнныx в Политике обpaботки пеpсонaльныx дaнныx Опеpaтоpa paзмещенной по aдpесу https://железный-аргумент.рф/#privacy:<br>
@@ -436,7 +436,7 @@
                 <div style="height: 0px;z-index: 1;" class="order-glow">
                     <img src="../static/img/yellow-glow.png" style="position: relative;width: 25vw;z-index: 1000;transform: translateY(-51%);height: 11em;">
                 </div>
-                <button class="order-btn" style="z-index: 2;border-radius: 74px;padding: 5px;height: 90px;padding-inline: 10px;/* padding-left: 50px; */" onclick="document.getElementById('products').scrollIntoView();">
+                <button class="order-btn" style="z-index: 2;border-radius: 74px;padding: 5px;height: 90px;padding-inline: 10px;/* padding-left: 50px; */" onclick="lenis.scrollTo('#products')">
                 <span style="
                     margin-inline: auto;
                     grid-row: 1;
@@ -596,7 +596,7 @@
                             <div class="product-price-glow b"></div>
                         </div>
                     </button>
-                    <button class="product-order" onclick="setPicked(document.getElementById('shelf'));document.getElementById('order').scrollIntoView();">Подобрать</button>
+                    <button class="product-order" onclick="setPicked(document.getElementById('shelf'));document.getElementById('order').scrollIntoView();">Подобрать +</button>
                     <span style="font-size: 15px;padding-top: 15px;opacity: .5;" id="productModels">STANDART / SB / SBL / HARD / STRONG</span>
                     <div style="height: 0px;">
                         <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
@@ -621,7 +621,7 @@
                             <div class="product-price-glow b"></div>
                         </div>
                     </button>
-                    <button class="product-order" onclick="setPicked(document.getElementById('wardrobe'));document.getElementById('order').scrollIntoView();">Подобрать</button>
+                    <button class="product-order" onclick="setPicked(document.getElementById('wardrobe'));document.getElementById('order').scrollIntoView();">Подобрать +</button>
                     <span style="font-size: 15px;padding-top: 15px;opacity: .5;">HILFE / ПРАКТИК</span>
                     <div style="height: 0px;">
                         <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
@@ -646,7 +646,7 @@
                             <div class="product-price-glow b"></div>
                         </div>
                     </button>
-                    <button class="product-order" onclick="setPicked(document.getElementById('safe'));document.getElementById('order').scrollIntoView();">Подобрать</button>
+                    <button class="product-order" onclick="setPicked(document.getElementById('safe'));document.getElementById('order').scrollIntoView();">Подобрать +</button>
                     <div style="height: 0px;">
                         <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
                     </div>
@@ -670,7 +670,7 @@
                             <div class="product-price-glow b"></div>
                         </div>
                     </button>
-                    <button class="product-order" onclick="setPicked(document.getElementById('dressing'));document.getElementById('order').scrollIntoView();">Подобрать</button>
+                    <button class="product-order" onclick="setPicked(document.getElementById('dressing'));document.getElementById('order').scrollIntoView();">Подобрать +</button>
                     <div style="height: 0px;">
                         <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
                     </div>
@@ -694,7 +694,7 @@
                             <div class="product-price-glow b"></div>
                         </div>
                     </button>
-                    <button class="product-order" onclick="setPicked(document.getElementById('workbench'));document.getElementById('order').scrollIntoView();">Подобрать</button>
+                    <button class="product-order" onclick="setPicked(document.getElementById('workbench'));document.getElementById('order').scrollIntoView();">Подобрать +</button>
                     <span style="font-size: 15px;padding-top: 15px;opacity: .5;">PROFI W / EXPERT T / EXPERT WS / GARAGE</span>
                     <div style="height: 0px;">
                         <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
@@ -706,7 +706,7 @@
             <img src="../static/img/white-rays.svg">
         </div>
         <section class="about" id="about">
-            <div class="about-galery" id="galery" style="transition: all 1s ease;">
+            <div class="about-galery" id="galery" onmouseover="lenis.stop()" onmouseleave="lenis.start()" style="transition: all 1s ease;">
                 <div class="galery-header">
                     <div class="galery-header-text">9 фото</div>
                 </div>
@@ -934,6 +934,13 @@
                 document.getElementById("promoGlow").style.visibility = 'visible';
             }
         } catch {}
+    </script>
+    <script>
+        document.querySelectorAll("a").forEach((e) => {
+            if (e.href.includes("#")) {
+                e.onclick = () => {lenis.scrollTo(e.href)};
+            }
+        })
     </script>
 </body>
 </html>

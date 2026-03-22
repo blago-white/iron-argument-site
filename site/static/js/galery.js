@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function galeryTop() {
         const top = document.body.scrollTop;
         const top1 = document.getElementById("galery").offsetTop - 100;
-        console.log(top)
 
         if (top1 < top) {
             document.getElementById('galery').style.transition = 'transform 2s .5s ease-in-out, opacity 2s 1s ease, translate 0s 0s linear';

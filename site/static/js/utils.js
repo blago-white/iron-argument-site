@@ -35,7 +35,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function shiftHeroBg() {
         const top = document.body.scrollTop;
 
-        document.getElementsByClassName('main-screen-content')[0].style.transform = `translateY(${top/30}px)`;
+        // document.getElementsByClassName('second-section')[0].style.boxShadow = `0px 0px ${top}px #121212`;
+        // document.getElementsByClassName('main-screen-content')[0].style.transition = "all 0s linear";
+        // document.getElementsByClassName('main-screen-content')[0].style.transform = `translateY(-${top/10}px)`;
     }
 
     window.addEventListener('scroll', checkElements);
@@ -206,17 +208,21 @@ document.addEventListener('DOMContentLoaded', function() {
     function checkElements() {
         const elementTop = (element.getBoundingClientRect().top);
 
-        console.log(`A - ${elementTop} ${element.getBoundingClientRect().top}`)
-        console.log(`B - ${document.body.scrollTop}`)
-
         if (elementTop <= (window.innerHeight * .99)) {
-            let perc = document.getElementById('secondSection').getBoundingClientRect().top * -.0001;
-
+            let perc = document.getElementById('secondSection').getBoundingClientRect().top / -10000;
             console.log(perc)
+
+            element.style.borderRadius = `${(document.getElementById('secondSection').getBoundingClientRect().top / 10)*2}px`;
 
             element.style.transition = `all .2s ease`;
             // element.style.transform = `scale(${1 + element.scrollTop / document.body.scrollTop})`;
-            element.style.transform = `scale(${Math.min(1.05 + perc, 1)})`;
+            element.style.transform = `scale(${Math.min(1 + perc, 1)})`;
+
+            if (Math.min(1 + perc, 1) === 1) {
+                element.style.overflow = 'visible';
+            } else {
+                element.style.overflow = 'hidden';
+            }
         }
     }
 
