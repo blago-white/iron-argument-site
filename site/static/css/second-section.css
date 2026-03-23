@@ -754,6 +754,10 @@ h2 {
     transition: all 1s ease;
 }
 
+.contect-type-switch-btn span {
+    pointer-events: none;
+}
+
 .contect-type-switch-btn:hover {
     background: rgb(255, 255, 255, .1);
 }
@@ -937,8 +941,17 @@ footer.appearence-on-scroll {
     font-size: 8.6vw;
     margin-block: auto;
     text-align: center;
-    line-height: 1;
+    letter-spacing: -7px;
+    line-height: .85;
     mix-blend-mode: difference;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+    background: radial-gradient(circle, rgba(230, 169, 108, 1) 0%, rgb(143 98 55) 100%);
+    text-shadow: none;
+    background: url(/static/img/example5.webp);
+    background: url(/static/img/bg.png);
+    background-position: right;
+    filter: brightness(2);
 }
 
 .footer-glow-wrapper {

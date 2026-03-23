@@ -89,6 +89,18 @@
     }
 }
 
+@keyframes dealer-appearance-rev {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
 @keyframes main-desc-anim {
     0% {
         transform: translateY(0%);
@@ -418,7 +430,7 @@ main {
     /*margin-top: 5vh;*/
     margin-block: auto;
 
-    animation: .6s linear 0s forwards transparentAnim, 2s ease .6s 1 forwards appearance-rev;
+    animation: .6s linear 0s forwards transparentAnim, 2s ease .6s 1 forwards dealer-appearance-rev;
 
     transition: all 1s ease;
 }

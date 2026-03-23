@@ -208,11 +208,16 @@ document.addEventListener('DOMContentLoaded', function() {
     function checkElements() {
         const elementTop = (element.getBoundingClientRect().top);
 
+        // element.style.boxShadow = `0px 0px 0px ${document.body.scrollTop/1.5}px #121212`;
+
         if (elementTop <= (window.innerHeight * .99)) {
             let perc = document.getElementById('secondSection').getBoundingClientRect().top / -10000;
             console.log(perc)
 
             element.style.borderRadius = `${(document.getElementById('secondSection').getBoundingClientRect().top / 10)*2}px`;
+
+            // document.getElementById('hero').style.filter = `brightness(${1 - (1 / (document.getElementById('secondSection').getBoundingClientRect().top / 150))})`;
+            // document.querySelector('.hero-bg').style.filter = `${document.querySelector('.hero-bg').style.filter} brightness(${1 - (1 / (document.getElementById('secondSection').getBoundingClientRect().top / 150))})`;
 
             element.style.transition = `all .2s ease`;
             // element.style.transform = `scale(${1 + element.scrollTop / document.body.scrollTop})`;
