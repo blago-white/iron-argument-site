@@ -30,7 +30,7 @@ document.addEventListener('mousemove', function(ev){
             cursor.style.opacity = 0;
         }
     } else if (!cursorHidden) {
-        cursor.style.opacity = .5;
+        cursor.style.opacity = .3;
     }
 },false);
 

@@ -2,6 +2,9 @@
     --w-col: 8.33vw;
 
     --c-wh: #FFFFFF;
+
+    --accent-text-color: radial-gradient(circle, rgba(230, 169, 108, 1) 0%, rgba(189, 129, 74, 1) 100%);
+    /*--accent-text-color: linear-gradient(180deg, rgba(230, 169, 108, 1) 0%, rgb(143 98 55) 100%);*/
 }
 
 @keyframes appearance {

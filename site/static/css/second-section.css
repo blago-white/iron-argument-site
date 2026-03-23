@@ -296,7 +296,7 @@ h2 {
 }
 
 .act-product-price {
-    background: radial-gradient(circle, rgba(230, 169, 108, 1) 0%, rgba(189, 129, 74, 1) 100%);
+    background: var(--accent-text-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -346,7 +346,7 @@ h2 {
     font-family: 'Unbounded';
     margin: 0px;
     margin-bottom: 25px;
-    background: radial-gradient(circle, rgba(230, 169, 108, 1) 0%, rgba(189, 129, 74, 1) 100%);
+    background: var(--accent-text-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -442,7 +442,7 @@ h2 {
 }
 
 #aboutH {
-    background: radial-gradient(circle, rgba(230, 169, 108, 1) 0%, rgba(189, 129, 74, 1) 100%);
+    background: var(--accent-text-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 1px 1px 40px #e6a96c50;
@@ -762,10 +762,8 @@ h2 {
     font-size: 20px;
     margin-inline: auto;
 
-    border: 2px solid #96969650;
-    box-shadow: inset 3px 3px 20px #84848425;
-    background: #12121290;
-
+    /*background: #12121290;*/
+    /**/
     transition: all 1s ease;
 }
 
@@ -846,10 +844,10 @@ h2 {
     display: flex;
     justify-content: center;
     overflow: hidden;
-    filter: grayscale(1);
+    filter: grayscale(1) brightness(0.5);
     border-radius: 50px;
     width: auto;
-    transition: all 0s ease;
+    transition: all 1s ease;
 }
 
 .contacts-image-wrapper:hover {
@@ -873,7 +871,7 @@ h2 {
 }
 
 .h-colorized {
-    background: radial-gradient(circle, rgba(230, 169, 108, 1) 0%, rgba(189, 129, 74, 1) 100%);
+    background: var(--accent-text-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 1px 1px 40px #e6a96c50;
@@ -893,7 +891,7 @@ h2 {
 }
 
 .comment-h.h-colorized {
-    background: radial-gradient(circle, rgba(230, 169, 108, 1) 0%, rgba(189, 129, 74, 1) 100%);
+    background: var(--accent-text-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 1px 1px 40px #e6a96c50;
@@ -1221,7 +1219,7 @@ footer.appearence-on-scroll {
 }
 
 .about-highlighted {
-    background: radial-gradient(circle, rgba(230, 169, 108, 1) 0%, rgba(189, 129, 74, 1) 100%);
+    background: var(--accent-text-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 500;
