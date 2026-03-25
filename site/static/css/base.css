@@ -169,7 +169,7 @@ a:hover {
 }
 
 body::selection {
-    background: #E6A96C50;
+    background: #E6A96C;
     color: #121212;
 }
 
@@ -276,10 +276,11 @@ header {
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     font-weight: bolder;
-    outline: 2px solid #969696;
-    color: #969696;
-    padding: 1vw;
-
+    border: 2px solid #96969650;
+    color: rgb(256, 256, 256, .75);
+    padding: 2vw;
+    text-align: center;
+    font-family: 'Helvetica', sans-serif!important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -339,6 +340,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    transition: all 1s ease;
 }
 
 .gear.a {
@@ -361,7 +364,7 @@ main {
 }
 
 .gear.b img {
-    width: 10vw;
+    width: 20vw;
     animation: 1s ease-in-out 1s 1 forwards appearance-right;
 }
 
@@ -372,6 +375,7 @@ main {
 
 .gear.c img {
     width: 7.5vw;
+    scale: 1.5;
     animation: 1.5s ease-in-out 1.25s 1 forwards appearance-right;
 }
 
@@ -383,6 +387,7 @@ main {
 
 .gear.d img {
     width: 10vw;
+    scale: 1.5;
     animation: 1.5s ease-in-out 1.65s 1 forwards appearance-right;
 }
 
@@ -432,10 +437,21 @@ main {
 
     /*margin-top: 5vh;*/
     margin-block: auto;
-
-    animation: .6s linear 0s forwards transparentAnim, 2s ease .6s 1 forwards dealer-appearance-rev;
+    overflow: hidden;
 
     transition: all 1s ease;
+}
+
+.dealer-content img:nth-child(1) {
+    animation: .6s linear 0s forwards transparentAnim, 2s ease .6s 1 forwards dealer-appearance-rev;
+}
+
+.dealer-content img:nth-child(2) {
+    animation: .7s linear 0s forwards transparentAnim, 2s ease .7s 1 forwards dealer-appearance-rev;
+}
+
+.dealer-content img:nth-child(3) {
+    animation: .8s linear 0s forwards transparentAnim, 2s ease .8s 1 forwards dealer-appearance-rev;
 }
 
 .dealer-text {
@@ -443,6 +459,7 @@ main {
     cursor: default;
     letter-spacing: normal;
     max-width: 30ch;
+    animation: .8s linear 0s forwards transparentAnim, 2s ease .8s 1 forwards dealer-appearance-rev;
 }
 
 .dealer-text:hover {
@@ -484,7 +501,7 @@ main {
     grid-template-rows: 1fr;
 
     gap: 10px;
-    font-size: 30px;
+    font-size: 25px;
     font-family: "Unbounded", sans-serif;
     font-weight: 700;
     color: #121212;

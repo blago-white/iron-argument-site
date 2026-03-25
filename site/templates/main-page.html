@@ -104,7 +104,7 @@
             text-align: right;
             display: flex;
             justify-content: space-between;
-        "><span>ИНН 312348585325</span><span id="pageScrollPercent">↓</span><span>ИП "Логинов Богдан Николаевич"</span></span>
+        "><span>ИНН 312348585325</span><span id="pageScrollPercent">(Скроль вниз)</span><span>ИП "Логинов Богдан Николаевич"</span></span>
     </div>
 
     <div class="cookie-agr-wrapper" id="cookiesAgr">
@@ -347,8 +347,8 @@
         </nav>
 <!--        <img class="h-bl" src="../static/img/bl.png" style="opacity: .25;">-->
         <img class="h-bl" src="../static/img/h-beam-3.svg" style="opacity: .25;">
-        <a class="bucket" style="font-family: monospace;">0
-        <img src="https://cdn-icons-png.flaticon.com/512/2077/2077502.png" style="width: 2ch;filter: invert(1);opacity: .5;">
+        <a class="bucket" style="font-family: monospace;">Корзина<br>[ скоро ]
+<!--        <img src="https://cdn-icons-png.flaticon.com/512/2077/2077502.png" style="width: 2ch;filter: invert(1);opacity: .5;">-->
         </a>
     </header>
     <div style="height: 0px;">
@@ -379,7 +379,11 @@
                 </div>
             </div>
             <button class="use-promo-btn"
-                    onclick="document.getElementById('formPromo').value = 'ВЕСНА';document.getElementById('formPromo').active = false;document.getElementById('productsH').scrollIntoView();setCookie('promo-viewed', 1);">
+                    onclick="document.getElementById('formPromo').value = 'ВЕСНА';
+                    document.getElementById('formPromo').active = false;
+                    document.getElementById('productsH').scrollIntoView();
+                    setCookie('promo-viewed', 1);
+                    applyPromocode();">
                 <span style="margin-inline: auto;">Применить</span>
                 <span class="order-btn-arrow" style="
                             background: #121212;
@@ -425,7 +429,7 @@
         </div>
         <div style="display: flex;justify-content: space-between;width: -webkit-fill-available;z-index: 10;">
             <div class="target-action-form">
-                <aside class="main-desc" style="z-index: -1;">
+                <aside class="main-desc" style="z-index: -1;transition: all .5s ease;">
                     <img src="https://s10.iimage.su/s/14/gS1NjCGx6ZGhrNJPpEaJS6Zp5r0rHjvEDuFlcvBeW.png" style="width: 5ch;">
                     <p class="target-action-desc">
                         У нас — <span class="h-colorized">Широчайший ассортимент</span> металлической мебели.
@@ -489,6 +493,50 @@
         <img src="../static/img/safe.png" id="productHeroImg" class="safe parallaxed-mouse">
     </main>
     <section class="second-section" id="secondSection" style="">
+        <div style="height: 0px;">
+            <div style="
+                width: 2px;
+                background: #33333350;
+                height: -webkit-fill-available;
+                position: absolute;
+                top: -8vw;
+                left: calc(var(--w-col) - 50px);
+                z-index: -1;
+            "></div>
+        </div>
+        <div style="height: 0px;">
+            <div style="
+                width: 2px;
+                background: #33333350;
+                height: -webkit-fill-available;
+                position: absolute;
+                top: -8vw;
+                left: calc(calc(var(--w-col) * 3.3) - 50px);
+                z-index: -1;
+            "></div>
+        </div>
+        <div style="height: 0px;">
+            <div style="
+                width: 2px;
+                background: #33333350;
+                height: -webkit-fill-available;
+                position: absolute;
+                top: -8vw;
+                right: calc(calc(var(--w-col) * 5) - 50px);
+                z-index: -1;
+            "></div>
+        </div>
+        <div style="height: 0px;">
+            <div style="
+                width: 2px;
+                background: #33333350;
+                height: -webkit-fill-available;
+                position: absolute;
+                top: -8vw;
+                right: calc(var(--w-col) - 50px);
+                z-index: -1;
+            "></div>
+        </div>
         <div style="height: 0px;">
             <img src="../static/img/rays.svg" class="rays a">
         </div>
@@ -576,7 +624,7 @@
             <ul class="products appearence-on-scroll" id="products">
                 <li class="product">
                     <div style="height: 0px;">
-                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(50%);filter: blur(50px);">
+                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 40vw;transform: translateY(-15vw) translateX(12vw);filter: blur(50px);">
                     </div>
                     <h3 class="product-header">Стеллажи <span class="product-arrow">→</span></h3>
                     <span class="product-desc">
@@ -588,7 +636,7 @@
                     <div style="z-index: 1001;margin-block: auto;">
                         <img src="../static/img/stellazh.png" style="filter: grayscale(1);max-height: 41vh;width: 100%;margin-block: auto;">
                     </div>
-                    <button class="product-price">
+                    <button class="product-price" price="2700">
                         <span class="old-product-price">От 5.990 ₽</span>
                         <span class="act-product-price"> От 2.700 ₽</span>
                         <div style="" class="order-glow promo-glow">
@@ -596,7 +644,11 @@
                             <div class="product-price-glow b"></div>
                         </div>
                     </button>
-                    <button class="product-order" onclick="setPicked(document.getElementById('shelf'));document.getElementById('order').scrollIntoView();">Подобрать +</button>
+                    <button class="product-order"
+                            onclick="setPicked(document.getElementById('shelf'));document.getElementById('order').scrollIntoView();">
+                        Подобрать
+                        <span class="order-btn-arrow">→</span>
+                    </button>
                     <span style="font-size: 15px;padding-top: 15px;opacity: .5;" id="productModels">STANDART / SB / SBL / HARD / STRONG</span>
                     <div style="height: 0px;">
                         <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
@@ -604,7 +656,7 @@
                 </li>
                 <li style="margin-top: 25px;" class="product">
                     <div style="height: 0px;">
-                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(50%);filter: blur(50px);">
+                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 40vw;transform: translateY(-15vw) translateX(12vw);filter: blur(50px);">
                     </div>
                     <h3 class="product-header">Шкафы  <span class="product-arrow">→</span></h3>
                     <span class="product-desc">
@@ -613,7 +665,7 @@
                     <div style="z-index: 1001;margin-block: auto;">
                         <img src="../static/img/shelf.png" style="filter: grayscale(1);max-height: 41vh;width: 100%;margin-block: auto;">
                     </div>
-                    <button class="product-price">
+                    <button class="product-price" price="9900">
                         <span class="old-product-price">От 15.990 ₽</span>
                         <span class="act-product-price"> От 9.900 ₽</span>
                         <div style="" class="order-glow promo-glow">
@@ -621,7 +673,10 @@
                             <div class="product-price-glow b"></div>
                         </div>
                     </button>
-                    <button class="product-order" onclick="setPicked(document.getElementById('wardrobe'));document.getElementById('order').scrollIntoView();">Подобрать +</button>
+                    <button class="product-order" onclick="setPicked(document.getElementById('wardrobe'));document.getElementById('order').scrollIntoView();">
+                        Подобрать
+                        <span class="order-btn-arrow">→</span>
+                    </button>
                     <span style="font-size: 15px;padding-top: 15px;opacity: .5;">HILFE / ПРАКТИК</span>
                     <div style="height: 0px;">
                         <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
@@ -629,7 +684,7 @@
                 </li>
                 <li style="margin-top: 0px;" class="product">
                     <div style="height: 0px;">
-                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(50%);filter: blur(50px);">
+                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 40vw;transform: translateY(-15vw) translateX(12vw);filter: blur(50px);">
                     </div>
                     <h3 class="product-header">Сейфы  <span class="product-arrow">→</span></h3>
                     <span class="product-desc">
@@ -638,7 +693,7 @@
                     <div style="z-index: 1001;margin-block: auto;">
                         <img src="../static/img/safe-img.png" style="filter: grayscale(1);max-height: 41vh;width: 100%;margin-block: auto;">
                     </div>
-                    <button class="product-price">
+                    <button class="product-price"  price="3990">
                         <span class="old-product-price">От 5.990 ₽</span>
                         <span class="act-product-price"> От 3.990 ₽</span>
                         <div style="" class="order-glow promo-glow">
@@ -646,14 +701,17 @@
                             <div class="product-price-glow b"></div>
                         </div>
                     </button>
-                    <button class="product-order" onclick="setPicked(document.getElementById('safe'));document.getElementById('order').scrollIntoView();">Подобрать +</button>
+                    <button class="product-order" onclick="setPicked(document.getElementById('safe'));document.getElementById('order').scrollIntoView();">
+                        Подобрать
+                        <span class="order-btn-arrow">→</span>
+                    </button>
                     <div style="height: 0px;">
                         <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
                     </div>
                 </li>
                 <li style="margin-top: 25px;" class="product">
                     <div style="height: 0px;">
-                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(50%);filter: blur(50px);">
+                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 40vw;transform: translateY(-15vw) translateX(12vw);filter: blur(50px);">
                     </div>
                     <h3 class="product-header">Гардеробные  <span class="product-arrow">→</span></h3>
                     <span class="product-desc">
@@ -662,7 +720,7 @@
                     <div style="z-index: 1001;margin-block: auto;">
                         <img src="../static/img/garderob-sys.jpg" style="filter: grayscale(1);max-height: 41vh;width: 100%;margin-block: auto;border-radius: 25px;">
                     </div>
-                    <button class="product-price">
+                    <button class="product-price" price="7990">
                         <span class="old-product-price">От 12.990 ₽</span>
                         <span class="act-product-price"> От 7.990 ₽</span>
                         <div style="" class="order-glow promo-glow">
@@ -670,14 +728,17 @@
                             <div class="product-price-glow b"></div>
                         </div>
                     </button>
-                    <button class="product-order" onclick="setPicked(document.getElementById('dressing'));document.getElementById('order').scrollIntoView();">Подобрать +</button>
+                    <button class="product-order" onclick="setPicked(document.getElementById('dressing'));document.getElementById('order').scrollIntoView();">
+                        Подобрать
+                        <span class="order-btn-arrow">→</span>
+                    </button>
                     <div style="height: 0px;">
                         <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
                     </div>
                 </li>
                 <li style="margin-top: 0px;" class="product">
                     <div style="height: 0px;">
-                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(50%);filter: blur(50px);">
+                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 40vw;transform: translateY(-15vw) translateX(12vw);filter: blur(50px);">
                     </div>
                     <h3 class="product-header">Верстаки  <span class="product-arrow">→</span></h3>
                     <span class="product-desc">
@@ -686,7 +747,7 @@
                     <div style="z-index: 1001;margin-block: auto;">
                         <img src="../static/img/workbench.png" style="filter: grayscale(1);max-height: 41vh;width: 100%;margin-block: auto;">
                     </div>
-                    <button class="product-price">
+                    <button class="product-price" price="6490">
                         <span class="old-product-price">От 7.000 ₽</span>
                         <span class="act-product-price"> От 6.490 ₽</span>
                         <div style="" class="order-glow promo-glow">
@@ -694,7 +755,10 @@
                             <div class="product-price-glow b"></div>
                         </div>
                     </button>
-                    <button class="product-order" onclick="setPicked(document.getElementById('workbench'));document.getElementById('order').scrollIntoView();">Подобрать +</button>
+                    <button class="product-order" onclick="setPicked(document.getElementById('workbench'));document.getElementById('order').scrollIntoView();">
+                        Подобрать
+                        <span class="order-btn-arrow">→</span>
+                    </button>
                     <span style="font-size: 15px;padding-top: 15px;opacity: .5;">PROFI W / EXPERT T / EXPERT WS / GARAGE</span>
                     <div style="height: 0px;">
                         <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
@@ -706,7 +770,7 @@
             <img src="../static/img/white-rays.svg">
         </div>
         <section class="about" id="about">
-            <div class="about-galery" id="galery" onmouseover="lenis.stop()" onmouseleave="lenis.start()" style="transition: all 1s ease;">
+            <div class="about-galery" id="galery" style="transition: all 1s ease;">
                 <div class="galery-header">
                     <div class="galery-header-text">9 фото</div>
                 </div>
@@ -721,7 +785,7 @@
                 <img src="../static/img/example7.jpg" class="about-img">
                 <img src="../static/img/example8.jpg" class="about-img">
             </div>
-            <h2 class="about-h appearence-on-scroll"  id="aboutH">О НАС <span class="about-dates">2023 - 2026</span></h2>
+            <h2 class="about-h appearence-on-scroll"  id="aboutH">Почему мы?<span class="about-dates">2023 — 2026</span></h2>
             <ul class="about-facts">
                 <li class="appearence-on-scroll from-down" style=""><span style="opacity: .5;margin-right: 1ch;">(1)</span> Более <span class="about-highlighted">200</span> довольных клиентов</li>
                 <li class="appearence-on-scroll from-down" style=""><span style="opacity: .5;margin-right: 1ch;">(2)</span> Поставляем как в <span class="about-highlighted">гос. учереждения</span> так и <span class="about-highlighted">частным лицам</span></li>
@@ -826,12 +890,12 @@
                     <a class="circle-link" href="mailto:nick-login-off@yandex.ru" style="width: 7vw;flex-direction: column;gap: 5px;">nick-login-off@yandex.ru<img src="../static/img/email.png" style="width: 3ch;padding: 0px;opacity: .5;filter: invert(1);"></a>
                 </div>
                 <ul style="margin-top: 10vh;display: flex;flex-direction: column;padding: 0px;" class="about-facts" id="adresses">
-                    <li class="appearence-on-scroll from-down"><a target="_blank" href="https://yandex.com/maps/org/zhelezny_argument/133965224684/" style="text-decoration: none;gap: 2ch;display: flex;align-items: center;"><span style="opacity: .25;">(1)</span> г. Белгород, ул. Корочанская, 132А, корпус 3<img src="../static/img/expand-arrow.png" style="width: 1ch;filter: invert(1);"></a></li>
-                    <li class="appearence-on-scroll from-down"><a target="_blank" href="https://yandex.com/maps/-/CPqVfVOO" style="text-decoration: none;gap: 2ch;display: flex;align-items: center;"><span style="opacity: .25;">(2)</span> г. Краснодар, ул. Калинина 58/13 <img src="../static/img/expand-arrow.png" style="width: 1ch;filter: invert(1);"></a></li>
-                    <li class="appearence-on-scroll from-down"><a target="_blank" href="https://yandex.com/maps/-/CPqVfRZg" style="text-decoration: none;gap: 2ch;display: flex;align-items: center;"><span style="opacity: .25;">(3)</span> г. Луганск, Молодёжный квартал, 2А <img src="../static/img/expand-arrow.png" style="width: 1ch;filter: invert(1);"></a></li>
-                    <li class="appearence-on-scroll from-down"><a target="_blank" href="https://yandex.com/maps/-/CPqVfNya" style="text-decoration: none;gap: 2ch;display: flex;align-items: center;"><span style="opacity: .25;">(4)</span> г. Ростов-на-Дону, ул. Доватора 158А <img src="../static/img/expand-arrow.png" style="width: 1ch;filter: invert(1);"></a></li>
-                    <li class="appearence-on-scroll from-down"><a target="_blank" href="https://yandex.com/maps/-/CPqVfF08" style="text-decoration: none;gap: 2ch;display: flex;align-items: center;"><span style="opacity: .25;">(5)</span> г. Екатеринбург, ул. Эскадронная, д.43 <img src="../static/img/expand-arrow.png" style="width: 1ch;filter: invert(1);"></a></li>
-                    <li class="appearence-on-scroll from-down"><a target="_blank" href="https://yandex.com/maps/-/CPqVf4Ls" style="text-decoration: none;gap: 2ch;display: flex;align-items: center;"><span style="opacity: .25;">(6)</span> г. Донецк, ул. Складская, дом 5, База «Культоваров»,1 этаж, офис 114 <img src="../static/img/expand-arrow.png" style="width: 1ch;filter: invert(1);"></a></li>
+                    <li class="appearence-on-scroll from-down"><a target="_blank" href="https://yandex.com/maps/org/zhelezny_argument/133965224684/" style="text-decoration: none;gap: 2ch;display: flex;align-items: center;"><span style="opacity: .25;">(1)</span> г. Белгород, ул. Корочанская, 132А, корпус 3<img src="../static/img/expand-arrow.png" style="width: 1ch;filter: invert(1);margin-left: auto;"></a></li>
+                    <li class="appearence-on-scroll from-down"><a target="_blank" href="https://yandex.com/maps/-/CPqVfVOO" style="text-decoration: none;gap: 2ch;display: flex;align-items: center;"><span style="opacity: .25;">(2)</span> г. Краснодар, ул. Калинина 58/13 <img src="../static/img/expand-arrow.png" style="width: 1ch;filter: invert(1);margin-left: auto;"></a></li>
+                    <li class="appearence-on-scroll from-down"><a target="_blank" href="https://yandex.com/maps/-/CPqVfRZg" style="text-decoration: none;gap: 2ch;display: flex;align-items: center;"><span style="opacity: .25;">(3)</span> г. Луганск, Молодёжный квартал, 2А <img src="../static/img/expand-arrow.png" style="width: 1ch;filter: invert(1);margin-left: auto;"></a></li>
+                    <li class="appearence-on-scroll from-down"><a target="_blank" href="https://yandex.com/maps/-/CPqVfNya" style="text-decoration: none;gap: 2ch;display: flex;align-items: center;"><span style="opacity: .25;">(4)</span> г. Ростов-на-Дону, ул. Доватора 158А <img src="../static/img/expand-arrow.png" style="width: 1ch;filter: invert(1);margin-left: auto;"></a></li>
+                    <li class="appearence-on-scroll from-down"><a target="_blank" href="https://yandex.com/maps/-/CPqVfF08" style="text-decoration: none;gap: 2ch;display: flex;align-items: center;"><span style="opacity: .25;">(5)</span> г. Екатеринбург, ул. Эскадронная, д.43 <img src="../static/img/expand-arrow.png" style="width: 1ch;filter: invert(1);margin-left: auto;"></a></li>
+                    <li class="appearence-on-scroll from-down"><a target="_blank" href="https://yandex.com/maps/-/CPqVf4Ls" style="text-decoration: none;gap: 2ch;display: flex;align-items: center;"><span style="opacity: .25;">(6)</span> г. Донецк, ул. Складская, дом 5, База «Культоваров»,1 этаж, офис 114 <img src="../static/img/expand-arrow.png" style="width: 1ch;filter: invert(1);margin-left: auto;"></a></li>
                 </ul>
             </div>
         </aside>
@@ -877,7 +941,9 @@
     </section>
 
     <script>
-        const lenis = new Lenis();
+        const lenis = new Lenis({
+            allowNestedScroll: true
+        });
         lenis.on('scroll', ScrollTrigger.update);
 
         gsap.ticker.add((time) => {
@@ -892,6 +958,7 @@
     <script src="../static/js/cookies.js" type="module"></script>
     <script src="../static/js/notification.js"></script>
     <script src="../static/js/galery.js"></script>
+    <script src="../static/js/promo.js"></script>
 
     <script src="../static/js/cursor.js"></script>
     <script src="../static/js/contactForm.js" type="module"></script>

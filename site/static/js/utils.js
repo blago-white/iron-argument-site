@@ -128,7 +128,7 @@ let gearsParallax = (e) => {
 
     followers.forEach((f) => {
         f.style.transform = `translateY(${y}px) translateX(${x}px)`;
-        f.style.transition = `all .2s ease`;
+        f.style.transition = `opacity .2s ease`;
     })
 }
 
@@ -212,15 +212,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (elementTop <= (window.innerHeight * .99)) {
             let perc = document.getElementById('secondSection').getBoundingClientRect().top / -10000;
-            console.log(perc)
 
             element.style.borderRadius = `${(document.getElementById('secondSection').getBoundingClientRect().top / 10)*2}px`;
 
-            // document.getElementById('hero').style.filter = `brightness(${1 - (1 / (document.getElementById('secondSection').getBoundingClientRect().top / 150))})`;
-            // document.querySelector('.hero-bg').style.filter = `${document.querySelector('.hero-bg').style.filter} brightness(${1 - (1 / (document.getElementById('secondSection').getBoundingClientRect().top / 150))})`;
-
-            element.style.transition = `all .2s ease`;
-            // element.style.transform = `scale(${1 + element.scrollTop / document.body.scrollTop})`;
+            element.style.transition = `all 0s ease`;
             element.style.transform = `scale(${Math.min(1 + perc, 1)})`;
 
             if (Math.min(1 + perc, 1) === 1) {
