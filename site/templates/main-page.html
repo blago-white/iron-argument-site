@@ -37,12 +37,9 @@
     <link type="text/css" rel="stylesheet" href="../static/css/base.css">
     <link type="text/css" rel="stylesheet" href="../static/css/main.css">
     <link type="text/css" rel="stylesheet" href="../static/css/second-section.css">
+    <script src="../static/js/loader.js"></script>
 </head>
 <body>
-<!--    <div style="-->
-<!--        position: sticky;-->
-<!--        top: 0px;-->
-<!--    "><img class="hero-bg" style="position: absolute;z-index: -1;filter: brightness(0.65) saturate(0.5);width: -webkit-fill-available;top: 0px;" src="https://s10.iimage.su/s/15/gLAlYycxgfO6598zCWpOzDa71btjUXH4r5c2iLAuF.png"></div>-->
     <div style="
         position: sticky;
         top: 0px;
@@ -50,7 +47,6 @@
         <video class="hero-bg" style="position: absolute; z-index: -1; filter: brightness(0.4) saturate(0.5); top: 0px; min-height: 100vh; transform: translateY(0px); display: block; transition: 0.2s;" loop="" muted="" playsinline="" autoplay="" preload="auto" poster="">
             <source src="https://praktikoffice.ru/upload/uf/e98/btrg2sg0blzx5gkqzln31fy4h8y50elq.mp4" type="video/mp4">
         </video>
-<!--        <img class="hero-bg" style="position: absolute;z-index: -1;filter: brightness(0.6) saturate(0.85);width: -webkit-fill-available;top: 0px;min-height: 100vh;" src="../static/img/bg.png">-->
     </div>
     <div style="
         position: sticky;
@@ -68,25 +64,7 @@
             pointer-events: none;
         "></div>
     </div>
-<!--    <div style="-->
-<!--        position: sticky;-->
-<!--        height: 0px;-->
-<!--        top: 0px;-->
-<!--        z-index: 10;-->
-<!--        visibility: hidden;-->
-<!--    " id="promoGlow">-->
-<!--            <div style="-->
-<!--                position: sticky;-->
-<!--                height: 100vh;-->
-<!--                width: 50vw;-->
-<!--                background: linear-gradient(270deg, rgb(230 230 230 / 25%) 10%, rgb(230 230 230 / 0%) 82%);-->
-<!--                /*background: url('/static/img/white-rays.svg');*/-->
-<!--                top: 0px;-->
-<!--                z-index: 998;-->
-<!--                pointer-events: none;-->
-<!--                left: 50vw;-->
-<!--            "></div>-->
-<!--        </div>-->
+
     <div class="legacy-static-info-wrapper" style="
         height: 0px;
         position: sticky;
@@ -111,7 +89,7 @@
         <div class="cookie-agr"><span style="
             max-width: 30ch;
             color: rgb(255 255 255 / 75%);
-        ">Продолжая пользоваться сайтом, вы принимаете использование куки.</span>
+        ">Продолжая пользоваться сайтом, вы принимаете использование 🍪 куки.</span>
             <button class="cookie-btn" onclick="this.parentElement.classList.add('hidden');setCookie('agree-cookie', 1);">
                 OK
             </button>
@@ -319,21 +297,36 @@
                 </div>
             </div>
         </div>
-    <div id="loaderScreen" style="position: sticky;top: 0px;left: 0px;width: 100vw;height: 0px;z-index: 10000;opacity: 1;pointer-events: none;transition: all 2s ease;">
-        <div id="loaderScreenBg" style="height: 90vh;background: #121212;display: flex;align-items: self-end;padding: 5vh;padding-left: 8.33vw;transition: all 2s ease;">
-            <img src="../static/img/big-logo.png">
+    <div id="loaderScreen" style="position: fixed;top: 0px;left: 0px;width: 100vw;height: 100vh;z-index: 10000;opacity: 1;pointer-events: none;transition: all 2s ease;display: grid;background: #121212;justify-items: center;align-items: center;">
+        <span style="
+            grid-row: 1;
+            grid-column: 1;
+        ">
+            <img src="../static/img/big-logo.png" style="max-width: 80vw;">
+        </span>
+        <div id="loaderScreenBg" style="height: 90vh;display: flex;align-items: self-end;padding: 5vh;padding-left: 8.33vw;transition: all 2s ease;justify-content: space-between;grid-row: 1;grid-column: 1;">
+                <div class="loader-bg-gear a"><img style="rotate: 15deg;" src="../static/img/screw.png"></div>
+                <div class="loader-bg-gear b"><img style="rotate: -25deg;" src="../static/img/g.png"></div>
+                <div class="loader-bg-gear c"><img style="rotate: -31deg;" src="../static/img/screw.png"></div>
+                <div class="loader-bg-gear d"><img style="rotate: 40deg;" src="../static/img/g.png"></div>
+                <div class="loader-bg-gear e"><img style="rotate: 95deg;" src="../static/img/screw.png"></div>
+        </div>
+        <div id="loaderScreenBg2" style="height: 90vh;display: flex;align-items: self-end;padding: 5vh;padding-left: 8.33vw;transition: all 2s ease;justify-content: space-between;grid-row: 1;grid-column: 1;">
+                <div class="loader-bg-gear f"><img style="rotate: 22.5deg;" src="../static/img/screw.png"></div>
+                <div class="loader-bg-gear g"><img style="rotate: -10deg;" src="../static/img/g.png"></div>
+                <div class="loader-bg-gear h"><img style="rotate: -120deg;" src="../static/img/screw.png"></div>
+                <div class="loader-bg-gear i"><img style="rotate: -31deg;" src="../static/img/screw.png"></div>
         </div>
     </div>
     <div style="height: 0px;">
-<!--<div id="cursor" style="position: fixed;top: 0vw;left: 0vw;width: 20vw;opacity: 0.5;z-index: 1000;/* filter: blur(50px); *//* transition: opacity 1s; */transform: translateY(362px) translateX(938px);background: #fd9f40;width: 50px;height: 50px;border-radius: 50%;z-index: 1999999;"></div>-->
-        <img src="../static/img/yellow-glow.png" id="cursor" style="position: fixed;top: -9vw;left: -10vw;width: 20vw;opacity: 0;z-index: 1000;filter: blur(50px);transition: opacity 1s ease;">
+        <img onloadeddata="checkImagesLoaded();alert('yg-load');" src="../static/img/yellow-glow.svg" id="cursor" style="position: fixed;top: -9vw;left: -10vw;width: 20vw;opacity: 0;z-index: 1000;transition: opacity 1s ease;">
         <div id="cursorHero" style="position: fixed; left: -35vw; top: -35vw; width: 70vw; height: 70vw; transition: opacity 1s; transform: translateY(787px) translateX(667px); background: radial-gradient(circle, rgb(20, 20, 20) 20%, rgba(20, 20, 20, 0.9) 30%, rgba(20, 20, 20, 0) 50%); opacity: 0.5; z-index: 0; mix-blend-mode: color; bottom: 24vh;"></div>
 
     </div>
     <header style="position: sticky;top: 5vh;z-index: 1000;">
         <div class="h-logo">
             <a href="/" style="display: flex;align-items: flex-start;grid-row: 1;grid-column: 1;justify-content: flex-start;height: fit-content;">
-                <img class="h-logo-img" src="../static/img/logo.png">
+                <img onloadeddata="checkImagesLoaded();alert('logo-load');" class="h-logo-img" src="../static/img/logo.png">
             </a>
             <img class="h-logo-shadow a" src="../static/img/logo-shadow-1.png">
             <img class="h-logo-shadow b" src="../static/img/logo-shadow-2.png">
@@ -345,17 +338,16 @@
             <a href="#orderH"><span style="opacity: .25">(4)</span> Заказать</a>
             <a href="#contactsH"><span style="opacity: .25">(5)</span> Контакты</a>
         </nav>
-<!--        <img class="h-bl" src="../static/img/bl.png" style="opacity: .25;">-->
         <img class="h-bl" src="../static/img/h-beam-3.svg" style="opacity: .25;">
-        <a class="bucket" style="font-family: monospace;">Корзина<br>[ скоро ]
+        <a class="bucket" style="font-family: monospace;">Корзина<span style="opacity: .25">[ скоро ]</span>
 <!--        <img src="https://cdn-icons-png.flaticon.com/512/2077/2077502.png" style="width: 2ch;filter: invert(1);opacity: .5;">-->
         </a>
     </header>
     <div style="height: 0px;">
-        <img src="../static/img/yellow-glow.png" id="heroYellowGlow">
+        <img onloadeddata="checkImagesLoaded();alert('yg-load');" src="../static/img/yellow-glow.svg" id="heroYellowGlow">
     </div>
     <div style="height: 0px;">
-            <img src="../static/img/yellow-glow.png" id="heroYellowGlow" style="
+            <img src="../static/img/yellow-glow.svg" id="heroYellowGlow" style="
         left: -42%;
         left: -42%;
         top: 40vh;
@@ -364,22 +356,20 @@
 
     </div>
     <div id="promoWrapper">
-        <aside class="main-desc product-switch" onmouseover="if (ratio >= 1) {document.getElementById('hero').style.transition = 'all .5s ease';document.getElementById('hero').style.opacity = .5;}" onmouseleave="document.getElementById('hero').style.opacity = 1;">
-            <button onclick="setCookie('promo-viewed', 1);this.parentElement.style = 'transform: translateY(150%)!important;rotate: 15deg;';document.getElementById('promoGlow').style.opacity = 0;" class="close-promo-btn"><span>[</span> <span>СКРЫТЬ</span> <span>]</span></button>
-            <img src="../static/img/promo-img-2.png" class="promo-img">
+        <aside class="main-desc product-switch parallaxed-mouse" onmouseover="if (ratio >= 1) {document.getElementById('hero').style.transition = 'all .5s ease';document.getElementById('hero').style.opacity = .5;}" onmouseleave="document.getElementById('hero').style.opacity = 1;" style="
+            height: min-content;
+            rotate: -5deg;
+        ">
+            <button onclick="setCookie('promo-viewed', 1);setTimeout(() => {this.parentElement.style.display = 'none'}, 200);this.parentElement.style = 'transform: translateY(150vh)!important;rotate: 15deg;';document.getElementById('promoGlow').style.opacity = 0;" class="close-promo-btn" style="
+                margin-bottom: 25px;
+            "><span>[</span> <span>СКРЫТЬ</span> <span>]</span></button>
+
             <div class="target-action-desc promo-desc">
                 <div class="promo-title">
-<!--                    <h2 class="promo-header">-->
-<!--                        Промокод "ВЕСНА"-->
-<!--                    </h2>-->
-                <span style="text-align: center;font-weight: 500;">-5% На все позиции!<br>При заказе от 30к рублей!</span>
-                <div style="" class="order-glow promo-glow">
-                    <div id="productSwitchGlow1"></div>
-                    <div id="productSwitchGlow2"></div></div>
-                </div>
+
+                <span style="text-align: center;font-weight: 500;font-size: 25px;line-height: 25px;">-5% На все позиции!<br>При заказе от 30к рублей!</span>
             </div>
-            <button class="use-promo-btn"
-                    onclick="document.getElementById('formPromo').value = 'ВЕСНА';
+            <button class="use-promo-btn" onclick="document.getElementById('formPromo').value = 'ВЕСНА';
                     document.getElementById('formPromo').active = false;
                     document.getElementById('productsH').scrollIntoView();
                     setCookie('promo-viewed', 1);
@@ -421,7 +411,6 @@
                 <img class="h-logo-img" src="../static/img/logo.png" style="height: 87px;">
                 <img style="    opacity: .5;width: 25px;height: min-content;" src="../static/img/cross.png"></img>
                 <img src="../static/img/pmlogo.png" class="pm-logo">
-<!--                <img src="../static/img/pmdash.png" class="pm-dash" style="opacity: .8;">-->
                 <span class="dealer-text">
                     Оффициальный диллер продукции “НПО Промет”.
                 </span>
@@ -438,7 +427,7 @@
                     <p class="target-action-desc" style="grid-column-start: 1;grid-column-end: 3;"><a href="#contactsH">+7 906 600 23 77</a>  · <a href="#contactsH">Telegram</a> · <a href="#contactsH">VK</a></p>
                 </aside>
                 <div style="height: 0px;z-index: 1;" class="order-glow">
-                    <img src="../static/img/yellow-glow.png" style="position: relative;width: 25vw;z-index: 1000;transform: translateY(-51%);height: 11em;">
+                    <img src="../static/img/yellow-glow.svg" style="position: relative;width: 25vw;z-index: 1000;transform: translateY(-51%);height: 11em;">
                 </div>
                 <button class="order-btn" style="z-index: 2;border-radius: 74px;padding: 5px;height: 90px;padding-inline: 10px;/* padding-left: 50px; */" onclick="lenis.scrollTo('#products')">
                 <span style="
@@ -476,7 +465,7 @@
 <!--        <img src="../static/img/ellp-2.png" class="ellp b">-->
 
         <div class="gear b parallaxed-mouse" style="width: 0px;height: 0px;">
-            <img src="../static/img/g.png">
+            <img src="../static/img/screw.png">
         </div>
         <div class="gear a parallaxed-mouse" style="width: 0px;height: 0px;">
             <img src="../static/img/g.png" class="">
@@ -486,7 +475,7 @@
             <img src="../static/img/screw.png">
         </div>
         <div class="gear d parallaxed-mouse" style="width: 0px;height: 0px;">
-            <img src="../static/img/screw.png" class="">
+            <img src="../static/img/g.png" class="">
         </div>
 
 <!--        <img src="../static/img/safe-s.png" style="    width: max(100%, 130vh);top: -11vh;left: 30vw;" class="safe s">-->
@@ -541,7 +530,7 @@
             <img src="../static/img/rays.svg" class="rays a">
         </div>
         <div style="height: 0px;">
-            <img src="../static/img/yellow-glow.png" style="position: absolute;top: 285vh;left: 30%;z-index: -1;">
+            <img src="../static/img/yellow-glow.svg" style="position: absolute;top: 285vh;left: 30%;z-index: -1;">
         </div>
         <div style="height: 0px;">
             <img src="../static/img/white-glow.png" style="    position: absolute;top: 15%;left: -166%;height: 131vh;z-index: -1;opacity: .5;">
@@ -624,7 +613,7 @@
             <ul class="products appearence-on-scroll" id="products">
                 <li class="product">
                     <div style="height: 0px;">
-                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 40vw;transform: translateY(-15vw) translateX(12vw);filter: blur(50px);">
+                        <img src="../static/img/yellow-glow.svg" class="card-shadow" style="width: 40vw;transform: translateY(-15vw) translateX(12vw);filter: blur(50px);">
                     </div>
                     <h3 class="product-header">Стеллажи <span class="product-arrow">→</span></h3>
                     <span class="product-desc">
@@ -651,12 +640,12 @@
                     </button>
                     <span style="font-size: 15px;padding-top: 15px;opacity: .5;" id="productModels">STANDART / SB / SBL / HARD / STRONG</span>
                     <div style="height: 0px;">
-                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
+                        <img src="../static/img/yellow-glow.svg" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
                     </div>
                 </li>
                 <li style="margin-top: 25px;" class="product">
                     <div style="height: 0px;">
-                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 40vw;transform: translateY(-15vw) translateX(12vw);filter: blur(50px);">
+                        <img src="../static/img/yellow-glow.svg" class="card-shadow" style="width: 40vw;transform: translateY(-15vw) translateX(12vw);filter: blur(50px);">
                     </div>
                     <h3 class="product-header">Шкафы  <span class="product-arrow">→</span></h3>
                     <span class="product-desc">
@@ -679,12 +668,12 @@
                     </button>
                     <span style="font-size: 15px;padding-top: 15px;opacity: .5;">HILFE / ПРАКТИК</span>
                     <div style="height: 0px;">
-                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
+                        <img src="../static/img/yellow-glow.svg" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
                     </div>
                 </li>
                 <li style="margin-top: 0px;" class="product">
                     <div style="height: 0px;">
-                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 40vw;transform: translateY(-15vw) translateX(12vw);filter: blur(50px);">
+                        <img src="../static/img/yellow-glow.svg" class="card-shadow" style="width: 40vw;transform: translateY(-15vw) translateX(12vw);filter: blur(50px);">
                     </div>
                     <h3 class="product-header">Сейфы  <span class="product-arrow">→</span></h3>
                     <span class="product-desc">
@@ -706,12 +695,12 @@
                         <span class="order-btn-arrow">→</span>
                     </button>
                     <div style="height: 0px;">
-                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
+                        <img src="../static/img/yellow-glow.svg" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
                     </div>
                 </li>
                 <li style="margin-top: 25px;" class="product">
                     <div style="height: 0px;">
-                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 40vw;transform: translateY(-15vw) translateX(12vw);filter: blur(50px);">
+                        <img src="../static/img/yellow-glow.svg" class="card-shadow" style="width: 40vw;transform: translateY(-15vw) translateX(12vw);filter: blur(50px);">
                     </div>
                     <h3 class="product-header">Гардеробные  <span class="product-arrow">→</span></h3>
                     <span class="product-desc">
@@ -733,12 +722,12 @@
                         <span class="order-btn-arrow">→</span>
                     </button>
                     <div style="height: 0px;">
-                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
+                        <img src="../static/img/yellow-glow.svg" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
                     </div>
                 </li>
                 <li style="margin-top: 0px;" class="product">
                     <div style="height: 0px;">
-                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 40vw;transform: translateY(-15vw) translateX(12vw);filter: blur(50px);">
+                        <img src="../static/img/yellow-glow.svg" class="card-shadow" style="width: 40vw;transform: translateY(-15vw) translateX(12vw);filter: blur(50px);">
                     </div>
                     <h3 class="product-header">Верстаки  <span class="product-arrow">→</span></h3>
                     <span class="product-desc">
@@ -761,7 +750,7 @@
                     </button>
                     <span style="font-size: 15px;padding-top: 15px;opacity: .5;">PROFI W / EXPERT T / EXPERT WS / GARAGE</span>
                     <div style="height: 0px;">
-                        <img src="../static/img/yellow-glow.png" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
+                        <img src="../static/img/yellow-glow.svg" class="card-shadow" style="width: 20vw;transform: translateY(-50%) translateX(-50%);filter: blur(50px);">
                     </div>
                 </li>
             </ul>
@@ -805,11 +794,7 @@
                 <div class="footer-glow-wrapper" style="opacity: .5;">
                     <img src="../static/img/white-glow.png">
                 </div>
-                <!--                <h2 class="about-h contacts-h">-->
-<!--                    <span class="appearence-on-scroll from-down" style="display: block;transition: all 1s ease;">МЫ НАЙДЕМ</span>-->
-<!--                    <span class="appearence-on-scroll from-down" style="display: block;transition: all 1s .25s ease;">РЕШЕНИЕ</span>-->
-<!--                    <span class="appearence-on-scroll from-down h-colorized" style="display: block;transition: all 1s .5s ease;">ДЛЯ ВАС!</span>-->
-<!--                </h2>-->
+
                 <h2 class="about-h contacts-h" id="orderH">
                     <span class="appearence-on-scroll from-down" style="transition: all 1s ease;display: flex;align-items: center;justify-content: center;gap: 25px;"><span class="" style="display: block;transition: all 1s ease;min-width: fit-content;">МЫ НАЙДЕМ</span><span style="height: 5px;background: #ffffff00;width: -webkit-fill-available;"></span></span>
                     <span class="appearence-on-scroll from-down" style="transition: all 1s ease;display: flex;align-items: center;flex-direction: row-reverse;gap: 25px;"><span style="height: 5px;background: #ffffff00;width: -webkit-fill-available;"></span><span class="" style="display: block;transition: all 1s .25s ease;">РЕШЕНИЕ</span></span>
@@ -867,9 +852,6 @@
                         ">→</span>
                     </button>
                     <label class="contacts-disclaimer" style="margin-inline: auto;"><a href="tel:+79066002377">+7 906 600 23 77</a> · <a href="mailto:nick-login-off@yandex.ru">nick-login-off@yandex.ru</a></label>
-                    <!--                    <button type="submit" class="product-order" style="width: auto;background: transparent;color: #c68a51 !important;-webkit-text-fill-color: #c68a51 !important;">-->
-<!--                        +7 906 600 23 77-->
-<!--                    </button>-->
                 </form>
             </div>
             <div style="height: 0px;width: 0px;transition: all 2s ease;" class="contacts-glow">
@@ -901,6 +883,17 @@
         </aside>
         <div id="footerHeightTrigger"></div>
         <footer class="appearence-on-scroll" id="footer" style="position: sticky;top: 20vh;">
+            <div class="footer-glow-wrapper" style="">
+                <img src="../static/img/bg.png" id="footerBg" style="
+                    width: 100vw;
+                    position: relative;
+                    opacity: .75;
+                    top: 25vh!important;
+                    left: 44vw;
+                    z-index: -1;
+                    filter: grayscale(1) brightness(0.5);
+                ">
+            </div>
             <div style="height: 0px;display: flex;align-items: flex-start;justify-content: center;">
                 <img class="footer-img appearence-on-scroll from-down" src="../static/img/safe.png">
             </div>
@@ -929,7 +922,6 @@
                 <div></div>
                 <div>ИНН: 312348585325</div>
             </div>
-    <!--        <img src="../static/img/big-logo.png">-->
 
             <span class="footer-big-text" id="footerBigText">ЖЕЛЕЗНЫЙ<br>АРГУМЕНТ</span>
             <div class="footer-info-row">
@@ -937,7 +929,6 @@
                 <span>Сайт не является публичной офертой!</span>
             </div>
         </footer>
-<!--        <div style="height: 100vh;"></div>-->
     </section>
 
     <script>

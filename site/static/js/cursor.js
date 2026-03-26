@@ -82,25 +82,3 @@ document.querySelectorAll('#shelf, #wardrobe, #safe, #dressing, #workbench').for
         document.getElementById("cursor").style.left = ' -10vw';
     });
 })
-
-// document.getElementById('shelf').addEventListener('mouseover', () => {
-//     document.getElementById("cursor").src = '../static/img/shelf.png';
-//     document.getElementById("cursor").style.filter = 'none';
-//     document.getElementById("cursor").style.opacity = '1';
-//     document.getElementById("cursor").style.width = '20ch';
-//     document.getElementById("cursor").style.top = '0ch';
-//     document.getElementById("cursor").style.left = '0ch';
-//     // document.getElementById("cursor").style.background = '#121212';
-//     // document.getElementById("cursor").style.padding = '1ch';
-// })
-//
-// document.getElementById('shelf').addEventListener('mouseleave', () => {
-//     document.getElementById("cursor").src = '../static/img/yellow-glow.png';
-//     document.getElementById("cursor").style.filter = 'blur(50px)';
-//     document.getElementById("cursor").style.opacity = '.5';
-//     document.getElementById("cursor").style.width = '20vw';
-//     document.getElementById("cursor").style.top = '-9vw';
-//     document.getElementById("cursor").style.left = ' -10vw';
-//     // document.getElementById("cursor").style.background = 'transparent';
-//     // document.getElementById("cursor").style.padding = '1ch';
-// })

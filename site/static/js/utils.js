@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', checkElements);
     window.addEventListener('scroll', shiftHeroBg);
 
-    checkElements();
     if (ratio >= 1) {
         shiftHeroBg();
     }
@@ -74,37 +73,13 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', checkElements);
     window.addEventListener('scroll', shiftHeroBg);
 
-    checkElements();
     shiftHeroBg();
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('secondSection').style.display = 'none';
-    document.getElementById('hero').style.display = 'none';
-    document.querySelector('.hero-bg').style.display = 'none';
-
-    setTimeout(() => {
-        document.getElementById('secondSection').style.display = 'block';
-        document.getElementById('hero').style.display = 'flex';
-        document.querySelector('.hero-bg').style.display = 'block';
-
-        setTimeout(() => {
-            document.addEventListener("mousemove", (e) => {
-                objParallax(e);
-            })
-        }, 3000)
-
-        document.getElementById('loaderScreenBg').style.opacity = '0';
-        document.getElementById('loaderScreenBg').style.transform = 'translateY(-100%)';
-    }, 50)
-
-});
-
 
 const windowInnerWidth = document.documentElement.clientWidth
 const windowInnerHeight = document.documentElement.clientHeight
 
-let followers = document.querySelectorAll(".gear");
+let followers = document.querySelectorAll(".gear, .product-switch");
 let objFollowers = document.querySelectorAll(".safe");
 let mainBg = document.querySelectorAll(".hero-bg");
 
@@ -127,8 +102,13 @@ let gearsParallax = (e) => {
     let y = (e.clientY - (windowInnerWidth / 2))/20;
 
     followers.forEach((f) => {
-        f.style.transform = `translateY(${y}px) translateX(${x}px)`;
-        f.style.transition = `opacity .2s ease`;
+        if (f.classList.contains('product-switch')) {
+            f.style.transform = `translateY(${y/2}px) translateX(${x/2}px)`;
+            f.style.transition = `opacity .2s ease`;
+        } else {
+            f.style.transform = `translateY(${y}px) translateX(${x}px)`;
+            f.style.transition = `opacity .2s ease`;
+        }
     })
 }
 
