@@ -877,7 +877,9 @@ main {
         width: 86vw;
         margin-block: auto;
     }
-
+    #loaderScreen {
+        display: none!important;
+    }
     .order-btn-arrow-wrapper {
         width: min-content;
         display: initial!important;
